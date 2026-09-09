@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
+<title>Titis Surya | Electrical Engineering Portfolio</title>
+<style>
+:root{
+  --bg:#07111f; --panel:#0d1a2b; --panel2:#102238; --text:#eaf2fb;
+  --muted:#9eb0c5; --line:#20344b; --accent:#67e8f9; --accent2:#a78bfa;
+  --max:1120px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#06101d 0%,#081525 55%,#06101d 100%);
+color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.container{width:min(var(--max),92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(6,16,29,.78);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;letter-spacing:.5px}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--text)}
+.hero{min-height:92vh;display:grid;place-items:center;padding-top:90px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:55px;align-items:center}
+.kicker{color:var(--accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;margin:16px 0}
+h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--muted);max-width:720px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 18px;border:1px solid var(--line);border-radius:12px;font-weight:700}
+.btn.primary{background:var(--text);color:#07111f;border-color:var(--text)}
+.btn:hover{transform:translateY(-2px)}
+.profile-card{background:linear-gradient(145deg,rgba(16,34,56,.9),rgba(10,23,39,.85));border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.3)}
+.avatar{width:112px;height:112px;border-radius:24px;display:grid;place-items:center;font-size:38px;font-weight:900;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07111f;margin-bottom:22px}
+.stat{display:flex;justify-content:space-between;padding:13px 0;border-bottom:1px solid var(--line);color:var(--muted)}.stat:last-child{border:0}
+section{padding:92px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+h2{font-size:34px;margin:0}.section-head p{color:var(--muted);max-width:600px;margin:0}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px}.card{background:rgba(13,26,43,.72);border:1px solid var(--line);border-radius:20px;padding:25px}
+.card h3{margin-top:0}.muted{color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project{min-height:260px;display:flex;flex-direction:column;justify-content:space-between}
+.tag{display:inline-block;padding:5px 9px;border:1px solid var(--line);border-radius:999px;color:var(--accent);font-size:12px;margin:3px 4px 3px 0}
+.timeline{position:relative;border-left:1px solid var(--line);margin-left:8px;padding-left:28px}
+.item{position:relative;margin:0 0 30px}.item:before{content:"";position:absolute;left:-34px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px #07111f;border:1px solid var(--accent)}
+.date{color:var(--accent);font-size:13px;font-weight:700}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.skillbox ul{padding-left:18px;color:var(--muted)}
+.certs{display:grid;grid-template-columns:1fr 1fr;gap:18px}.cert{padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}.contact a{display:block;padding:15px;border:1px solid var(--line);border-radius:14px;margin-top:10px;color:var(--muted)}
+footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.reveal{opacity:0;transform:translateY(18px);transition:.7s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:850px){.hero-grid,.about,.contact{grid-template-columns:1fr}.projects,.skills,.certs{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:560px){.projects,.skills,.certs{grid-template-columns:1fr}section{padding:70px 0}.hero{min-height:auto;padding:125px 0 70px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav">
+  <a class="logo" href="#home">Titis<span>.</span>Surya</a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a>
+    <a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main id="home">
+<section class="hero"><div class="container hero-grid">
+  <div class="reveal">
+    <div class="kicker">Electrical Engineering Portfolio</div>
+    <h1>Titis Septian<br><span>Dwi Surya</span></h1>
+    <p class="lead">Electrical Engineering graduate with interests and practical experience in embedded systems, automatic control, electrical/MEP work, and UAV technology.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="cv-titis-surya.pdf" download>Download CV</a>
+      <a class="btn" href="https://www.linkedin.com/in/titissurya/" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+  <aside class="profile-card reveal">
+    <div class="avatar">TS</div>
+    <h3>Electrical Engineer</h3>
+    <p class="muted">Embedded Systems · Control Systems · MEP · UAV</p>
+    <div class="stat"><span>Education</span><strong>UNNES</strong></div>
+    <div class="stat"><span>GPA</span><strong>3.51 / 4.00</strong></div>
+    <div class="stat"><span>Focus</span><strong>Engineering</strong></div>
+  </aside>
+</div></section>
+
+<section id="about"><div class="container">
+  <div class="section-head"><div><div class="kicker">Profile</div><h2>About Me</h2></div></div>
+  <div class="about">
+    <div class="card reveal"><h3>Engineering Background</h3>
+      <p class="muted">Lulusan S1 Teknik Elektro Universitas Negeri Semarang (UNNES), IPK 3.51/4.00. Memiliki dasar Teknik Instalasi Tenaga Listrik dari SMKN 2 Purwodadi.</p>
+      <p class="muted">Fokus tugas akhir pada embedded systems, sistem kendali otomatis, dan teknik optimasi Particle Swarm Optimization (PSO).</p>
+    </div>
+    <div class="card reveal"><h3>Professional Strength</h3>
+      <p class="muted">Pengalaman Quality Control pada proyek Summarecon Mall Bekasi 2 dengan fokus MEP, inspeksi instalasi kelistrikan, verifikasi material, testing & commissioning, serta pengecekan terhadap shop drawing.</p>
+      <p class="muted">Terbiasa bekerja di lingkungan lapangan dan memiliki pengalaman organisasi robotika pada divisi mekanik UAV.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="container">
+  <div class="section-head"><div><div class="kicker">Selected Work</div><h2>Featured Projects</h2></div>
+  <p>Beberapa pengalaman teknis yang paling relevan dengan profil Electrical Engineering saya.</p></div>
+  <div class="projects">
+    <article class="card project reveal"><div><span class="tag">Embedded</span><span class="tag">Control</span><span class="tag">UAV</span>
+      <h3>2-Axis Automatic UAV Antenna Tracker</h3><p class="muted">Merancang prototipe antena pelacak UAV 2-axis untuk mendukung optimalisasi sinyal Ground Control Station.</p>
+      <p class="muted">Integrasi PID dan Particle Swarm Optimization (PSO) dilakukan menggunakan MATLAB untuk meningkatkan akurasi dan stabilitas penjejakan.</p></div><strong>PID · PSO · MATLAB · Arduino/ESP32/Pixhawk</strong></article>
+    <article class="card project reveal"><div><span class="tag">MEP</span><span class="tag">Quality Control</span><span class="tag">Electrical</span>
+      <h3>Quality Control — Summarecon Mall Bekasi 2</h3><p class="muted">Inspeksi dan pengawasan kualitas teknis sistem MEP pada proyek pembangunan, termasuk panel distribusi daya, wiring, pencahayaan, grounding, material, dan testing & commissioning.</p></div><strong>Shop Drawing · Inspection · MEP · T&C</strong></article>
+    <article class="card project reveal"><div><span class="tag">Robotics</span><span class="tag">Mechanical</span><span class="tag">UAV</span>
+      <h3>Suvifor Racing Plane — Robotika UNNES</h3><p class="muted">Bertanggung jawab pada perancangan, manufaktur, dan aspek aerodinamika struktur mekanik UAV fixed-wing.</p></div><strong>Mechanical Design · Manufacturing · Aerodynamics</strong></article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="container">
+  <div class="section-head"><div><div class="kicker">Career</div><h2>Experience</h2></div></div>
+  <div class="timeline">
+    <div class="item reveal"><div class="date">JAN 2025 — JUN 2025</div><h3>Quality Control Project — PT. Garindo Mitra Sejati</h3><p class="muted">Summarecon Mall Bekasi 2 · Bekasi</p><p class="muted">Melakukan inspeksi kualitas teknis, pengawasan material MEP, testing & commissioning, serta inspeksi instalasi listrik, plumbing, mekanikal, panel, wiring, lighting, dan grounding.</p></div>
+    <div class="item reveal"><div class="date">OCT 2021 — NOV 2021</div><h3>Electrical Intern — El Nusa AC</h3><p class="muted">Grobogan</p><p class="muted">Terlibat dalam pemasangan dan perawatan instalasi pada RSUD Grobogan serta instalasi AC indoor/outdoor pada Gedung Kejaksaan Negeri Grobogan dan Sekretariat Daerah Grobogan.</p></div>
+    <div class="item reveal"><div class="date">JAN 2024 — DEC 2024</div><h3>Mechanical Division — Suvifor Racing Plane</h3><p class="muted">Robotika Universitas Negeri Semarang</p><p class="muted">Perancangan, manufaktur, dan aerodinamika struktur mekanik UAV fixed-wing.</p></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="section-head"><div><div class="kicker">Capabilities</div><h2>Skills</h2></div></div>
+  <div class="skills">
+    <div class="card skillbox reveal"><h3>Electrical & MEP</h3><ul><li>Electrical Installation</li><li>Electrical Measurement</li><li>Wiring & Grounding</li><li>Shop Drawing</li><li>MEP Inspection</li></ul></div>
+    <div class="card skillbox reveal"><h3>Embedded & Control</h3><ul><li>Arduino</li><li>ESP32 / ESP8266</li><li>Pixhawk</li><li>PID Control</li><li>Particle Swarm Optimization</li></ul></div>
+    <div class="card skillbox reveal"><h3>Software & Tools</h3><ul><li>MATLAB / Simulink</li><li>Arduino IDE</li><li>Microsoft Word</li><li>Microsoft PowerPoint</li><li>Canva</li></ul></div>
+  </div>
+</div></section>
+
+<section id="certificates"><div class="container">
+  <div class="section-head"><div><div class="kicker">Credentials</div><h2>Certificates & Achievements</h2></div></div>
+  <div class="certs">
+    <div class="cert reveal">Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa</div>
+    <div class="cert reveal">Magang Teknisi Instalasi AC — El Nusa Teknik</div>
+    <div class="cert reveal">Magang Quality Control — PT. Garindo Mitra Sejati</div>
+    <div class="cert reveal">AI Basic: Overview of Artificial Intelligence — Huawei</div>
+    <div class="cert reveal">Paten: Sistem Kendali Posisi Pada Antena Pelacak Terhadap Pesawat Tanpa Awak — No. 001376287</div>
+    <div class="cert reveal">Hak Cipta: Video Profil Desa Dawungsari — No. 001045354</div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="section-head"><div><div class="kicker">Let's Connect</div><h2>Contact</h2></div></div>
+  <div class="contact">
+    <div class="card reveal"><h3>Open to opportunities</h3><p class="muted">Saya siap berkontribusi di lingkungan industri maupun keteknikan, khususnya bidang electrical, MEP, embedded systems, control, dan engineering.</p></div>
+    <div class="card reveal">
+      <a href="mailto:titisseptian02@gmail.com">✉ titisseptian02@gmail.com</a>
+      <a href="https://www.linkedin.com/in/titissurya/" target="_blank">in LinkedIn — titissurya</a>
+    </div>
+  </div>
+</div></section>
+</main>
+<footer><div class="container">© 2026 Titis Septian Dwi Surya · Electrical Engineering Portfolio</div></footer>
+<script>
+const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
