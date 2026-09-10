@@ -369,8 +369,8 @@ h2{
 
 .krti-gallery img{
   width:100%;
-  height:380px;
-  object-fit:cover;
+  height:300px;
+  object-fit:contain;
   border-radius:16px;
   border:1px solid var(--line);
   display:block;
@@ -380,6 +380,21 @@ h2{
 
 .krti-gallery img:hover{
   transform:translateY(-4px);
+}
+
+/* =========================
+   EL NUSA EXPERIENCE
+========================= */
+
+.elnusa-item{
+  margin-top:90px;
+}
+
+.elnusa-item .date,
+.elnusa-item h3,
+.elnusa-item p{
+  position:relative;
+  left:-18px;
 }
 
 /* =========================
@@ -518,6 +533,16 @@ footer{
   .experience-gallery img,
   .krti-gallery img{
     height:auto;
+  }
+
+  .elnusa-item{
+    margin-top:70px;
+  }
+
+  .elnusa-item .date,
+  .elnusa-item h3,
+  .elnusa-item p{
+    left:0;
   }
 
   .avatar{
@@ -999,10 +1024,9 @@ footer{
       </div>
 
     
-      <!-- EL NUSA AC
-           TANPA FOTO UNTUK SEMENTARA -->
+      <!-- EL NUSA AC -->
 
-      <div class="item reveal">
+      <div class="item reveal elnusa-item">
 
         <div class="date">
           OCT 2021 — NOV 2021
