@@ -357,6 +357,32 @@ h2{
 }
 
 /* =========================
+   KRTI PHOTO GALLERY
+========================= */
+
+.krti-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:22px;
+}
+
+.krti-gallery img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:16px;
+  border:1px solid var(--line);
+  display:block;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  transition:.3s ease;
+}
+
+.krti-gallery img:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================
    SKILLS
 ========================= */
 
@@ -484,11 +510,13 @@ footer{
     padding:125px 0 70px;
   }
 
-  .experience-gallery{
+  .experience-gallery,
+  .krti-gallery{
     grid-template-columns:1fr;
   }
 
-  .experience-gallery img{
+  .experience-gallery img,
+  .krti-gallery img{
     height:auto;
   }
 
@@ -972,6 +1000,41 @@ footer{
           Perancangan, manufaktur, dan aerodinamika struktur
           mekanik UAV fixed-wing.
         </p>
+
+      </div>
+
+
+      <!-- KRTI -->
+
+      <div class="item reveal">
+
+        <div class="date">
+          KRTI — ROBOTIKA UNNES
+        </div>
+
+        <h3>
+          Kontes Robot Terbang Indonesia (KRTI)
+        </h3>
+
+        <p class="muted">
+          Robotika Universitas Negeri Semarang
+        </p>
+
+        <p class="muted">
+          Terlibat dalam kegiatan KRTI sebagai bagian dari
+          tim Robotika UNNES, khususnya pada pengembangan dan
+          persiapan UAV fixed-wing serta kegiatan kompetisi.
+        </p>
+
+        <div class="krti-gallery">
+
+          <img
+            src="KRTI_event.jpeg"
+            alt="Dokumentasi kegiatan Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
+            loading="lazy"
+          >
+
+        </div>
 
       </div>
 
