@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
 
 <title>Titis Surya | Portfolio</title>
+
 
 <style>
 
@@ -59,6 +65,7 @@ a{
   margin:auto;
 }
 
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -100,6 +107,7 @@ nav{
 .navlinks a:hover{
   color:var(--text);
 }
+
 
 /* =========================
    HERO
@@ -175,6 +183,7 @@ h1 span{
   transform:translateY(-2px);
 }
 
+
 /* =========================
    PROFILE CARD
 ========================= */
@@ -215,6 +224,7 @@ h1 span{
   border:0;
 }
 
+
 /* =========================
    SECTION
 ========================= */
@@ -246,6 +256,7 @@ h2{
   color:var(--muted);
 }
 
+
 /* =========================
    ABOUT
 ========================= */
@@ -266,6 +277,7 @@ h2{
 .card h3{
   margin-top:0;
 }
+
 
 /* =========================
    PROJECTS
@@ -293,6 +305,7 @@ h2{
   font-size:12px;
   margin:3px 4px 3px 0;
 }
+
 
 /* =========================
    EXPERIENCE
@@ -330,6 +343,7 @@ h2{
   font-weight:700;
 }
 
+
 /* =========================
    SUMMARECON PHOTO GALLERY
 ========================= */
@@ -355,6 +369,7 @@ h2{
 .experience-gallery img:hover{
   transform:translateY(-4px);
 }
+
 
 /* =========================
    KRTI PHOTO GALLERY
@@ -382,6 +397,7 @@ h2{
   transform:translateY(-4px);
 }
 
+
 /* =========================
    EL NUSA EXPERIENCE
 ========================= */
@@ -397,8 +413,9 @@ h2{
   left:-18px;
 }
 
+
 /* =========================
-   SKILLS
+   SKILLS — VISUAL SHOWCASE
 ========================= */
 
 .skills{
@@ -407,10 +424,181 @@ h2{
   gap:18px;
 }
 
-.skillbox ul{
-  padding-left:18px;
+.skillbox{
+  min-height:230px;
+  position:relative;
+  overflow:hidden;
+  transition:.3s ease;
+}
+
+.skillbox:hover{
+  transform:translateY(-5px);
+  border-color:var(--accent);
+}
+
+.skillbox h3{
+  margin-top:0;
+  margin-bottom:24px;
+}
+
+.skill-icons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:18px;
+  align-items:flex-start;
+}
+
+.skill-item{
+  width:68px;
+  text-align:center;
+}
+
+.skill-icon{
+  width:64px;
+  height:64px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.025);
+  transition:.25s ease;
+  margin:auto;
+}
+
+.skill-icon:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+  background:rgba(103,232,249,.06);
+}
+
+.skill-icon img{
+  width:36px;
+  height:36px;
+  object-fit:contain;
+}
+
+.skill-name{
+  margin-top:7px;
+  font-size:11px;
+  line-height:1.3;
   color:var(--muted);
 }
+
+.custom-icon{
+  font-size:29px;
+  font-weight:800;
+  color:var(--text);
+}
+
+.custom-icon.small{
+  font-size:19px;
+}
+
+
+/* =========================
+   DRONE FEATURE
+========================= */
+
+.drone-skill{
+  grid-column:1 / -1;
+  min-height:390px;
+  padding:0;
+  overflow:hidden;
+  position:relative;
+}
+
+.drone-media{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:390px;
+  object-fit:cover;
+  display:block;
+  background:#050d18;
+  transition:.5s ease;
+}
+
+.drone-skill:hover .drone-media{
+  transform:scale(1.025);
+}
+
+.drone-placeholder{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:10px;
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(103,232,249,.10),
+      transparent 35%
+    ),
+    linear-gradient(
+      145deg,
+      #0c1b2d,
+      #07111f
+    );
+}
+
+.drone-placeholder .drone-icon{
+  font-size:64px;
+}
+
+.drone-placeholder span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+.drone-overlay{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:30px;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 25%,
+      rgba(7,17,31,.18) 48%,
+      rgba(7,17,31,.96) 100%
+    );
+  pointer-events:none;
+}
+
+.drone-overlay h3{
+  margin:0 0 7px;
+  font-size:25px;
+}
+
+.drone-overlay p{
+  margin:0;
+  color:#d5dfeb;
+  max-width:650px;
+}
+
+.drone-tags{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:14px;
+}
+
+.drone-tag{
+  padding:5px 10px;
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:999px;
+  font-size:11px;
+  color:#fff;
+  background:rgba(0,0,0,.28);
+}
+
 
 /* =========================
    CERTIFICATES
@@ -428,6 +616,7 @@ h2{
   border-radius:16px;
   background:var(--panel);
 }
+
 
 /* =========================
    CONTACT
@@ -454,6 +643,7 @@ h2{
   border-color:var(--accent);
 }
 
+
 /* =========================
    FOOTER
 ========================= */
@@ -464,6 +654,7 @@ footer{
   color:var(--muted);
   font-size:14px;
 }
+
 
 /* =========================
    ANIMATION
@@ -479,6 +670,7 @@ footer{
   opacity:1;
   transform:none;
 }
+
 
 /* =========================
    TABLET
@@ -498,11 +690,16 @@ footer{
     grid-template-columns:1fr 1fr;
   }
 
+  .drone-skill{
+    grid-column:1 / -1;
+  }
+
   .navlinks{
     display:none;
   }
 
 }
+
 
 /* =========================
    MOBILE
@@ -550,19 +747,35 @@ footer{
     height:120px;
   }
 
+  .drone-skill{
+    grid-column:auto;
+  }
+
+  .drone-media,
+  .drone-placeholder{
+    height:310px;
+  }
+
+  .drone-overlay{
+    padding:20px;
+  }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
+
 
 <!-- =========================
      NAVIGATION
 ========================= -->
 
 <nav>
+
   <div class="container nav">
 
     <a class="logo" href="#home">
@@ -570,14 +783,17 @@ footer{
     </a>
 
     <div class="navlinks">
+
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
+
     </div>
 
   </div>
+
 </nav>
 
 
@@ -591,6 +807,7 @@ footer{
 <section class="hero">
 
   <div class="container hero-grid">
+
 
     <div class="reveal">
 
@@ -609,11 +826,16 @@ footer{
         electrical/MEP work, and UAV technology.
       </p>
 
+
       <div class="btns">
 
-        <a class="btn primary" href="#projects">
+        <a
+          class="btn primary"
+          href="#projects"
+        >
           View Projects
         </a>
+
 
         <a
           class="btn"
@@ -622,6 +844,7 @@ footer{
         >
           Download CV
         </a>
+
 
         <a
           class="btn"
@@ -654,6 +877,7 @@ footer{
         Embedded Systems · Control Systems · MEP · UAV
       </p>
 
+
       <div class="stat">
         <span>Education</span>
         <strong>UNNES</strong>
@@ -684,9 +908,11 @@ footer{
 
   <div class="container">
 
+
     <div class="section-head">
 
       <div>
+
         <div class="kicker">
           Profile
         </div>
@@ -694,12 +920,14 @@ footer{
         <h2>
           About Me
         </h2>
+
       </div>
 
     </div>
 
 
     <div class="about">
+
 
       <div class="card reveal">
 
@@ -742,6 +970,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -756,6 +985,7 @@ footer{
 <section id="projects">
 
   <div class="container">
+
 
     <div class="section-head">
 
@@ -799,6 +1029,7 @@ footer{
             UAV
           </span>
 
+
           <h3>
             2-Axis Automatic UAV Antenna Tracker
           </h3>
@@ -816,6 +1047,7 @@ footer{
           </p>
 
         </div>
+
 
         <strong>
           PID · PSO · MATLAB · Arduino/ESP32/Pixhawk
@@ -842,6 +1074,7 @@ footer{
             Electrical
           </span>
 
+
           <h3>
             Quality Control — Summarecon Mall Bekasi 2
           </h3>
@@ -854,6 +1087,7 @@ footer{
           </p>
 
         </div>
+
 
         <strong>
           Shop Drawing · Inspection · MEP · T&C
@@ -880,6 +1114,7 @@ footer{
             UAV
           </span>
 
+
           <h3>
             Suvifor Racing Plane — Robotika UNNES
           </h3>
@@ -892,11 +1127,13 @@ footer{
 
         </div>
 
+
         <strong>
           Mechanical Design · Manufacturing · Aerodynamics
         </strong>
 
       </article>
+
 
     </div>
 
@@ -912,6 +1149,7 @@ footer{
 <section id="experience">
 
   <div class="container">
+
 
     <div class="section-head">
 
@@ -977,7 +1215,8 @@ footer{
 
       </div>
 
-<!-- SUVIFOR / KRTI -->
+
+      <!-- SUVIFOR / KRTI -->
 
       <div class="item reveal">
 
@@ -996,13 +1235,14 @@ footer{
 
         <p class="muted">
           Terlibat dalam peserta KRTI 2024 sebagai bagian dari
-          tim Robotika UNNES, KRTI merupakan kompetisi tahunan 
-          yang diselenggarakan oleh  Kementerian Pendidikan, Kebudayaan, 
-          Riset, dan Teknologi (Kemendikbudristek) 
-          melalui Balai Pengembangan Talenta Indonesia (BPTI) 
-          dan Pusat Prestasi Nasional (Puspresnas) di Lapangan Terbang 
-          Gading, Kabupaten Gunungkidul, Yogyakarta.
+          tim Robotika UNNES, KRTI merupakan kompetisi tahunan
+          yang diselenggarakan oleh Kementerian Pendidikan,
+          Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
+          melalui Balai Pengembangan Talenta Indonesia (BPTI)
+          dan Pusat Prestasi Nasional (Puspresnas) di Lapangan
+          Terbang Gading, Kabupaten Gunungkidul, Yogyakarta.
         </p>
+
 
         <div class="krti-gallery">
 
@@ -1021,6 +1261,7 @@ footer{
         </div>
 
       </div>
+
 
       <!-- EL NUSA AC -->
 
@@ -1047,6 +1288,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1061,6 +1303,7 @@ footer{
 <section id="skills">
 
   <div class="container">
+
 
     <div class="section-head">
 
@@ -1082,38 +1325,88 @@ footer{
     <div class="skills">
 
 
+      <!-- =========================
+           ELECTRICAL & MEP
+      ========================= -->
+
       <div class="card skillbox reveal">
 
         <h3>
           Electrical & MEP
         </h3>
 
-        <ul>
 
-          <li>
-            Electrical Installation
-          </li>
+        <div class="skill-icons">
 
-          <li>
-            Electrical Measurement
-          </li>
 
-          <li>
-            Wiring & Grounding
-          </li>
+          <div class="skill-item">
 
-          <li>
-            Shop Drawing
-          </li>
+            <div class="skill-icon">
+              <span class="custom-icon">
+                ⚡
+              </span>
+            </div>
 
-          <li>
-            MEP Inspection
-          </li>
+            <div class="skill-name">
+              Installation
+            </div>
 
-        </ul>
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+              <span class="custom-icon">
+                🔌
+              </span>
+            </div>
+
+            <div class="skill-name">
+              Electrical
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+              <span class="custom-icon">
+                📐
+              </span>
+            </div>
+
+            <div class="skill-name">
+              Shop Drawing
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+              <span class="custom-icon">
+                🔧
+              </span>
+            </div>
+
+            <div class="skill-name">
+              MEP
+            </div>
+
+          </div>
+
+
+        </div>
 
       </div>
 
+
+      <!-- =========================
+           EMBEDDED & CONTROL
+      ========================= -->
 
       <div class="card skillbox reveal">
 
@@ -1121,32 +1414,105 @@ footer{
           Embedded & Control
         </h3>
 
-        <ul>
 
-          <li>
-            Arduino
-          </li>
+        <div class="skill-icons">
 
-          <li>
-            ESP32 / ESP8266
-          </li>
 
-          <li>
-            Pixhawk
-          </li>
+          <div class="skill-item">
 
-          <li>
-            PID Control
-          </li>
+            <div class="skill-icon">
 
-          <li>
-            Particle Swarm Optimization
-          </li>
+              <img
+                src="https://cdn.simpleicons.org/arduino/eaf2fb"
+                alt="Arduino"
+              >
 
-        </ul>
+            </div>
+
+            <div class="skill-name">
+              Arduino
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <img
+                src="https://cdn.simpleicons.org/espressif/eaf2fb"
+                alt="ESP32"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              ESP32
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon">
+                ✈
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              Pixhawk
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon small">
+                PID
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              PID Control
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon small">
+                PSO
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              Optimization
+            </div>
+
+          </div>
+
+
+        </div>
 
       </div>
 
+
+      <!-- =========================
+           SOFTWARE & TOOLS
+      ========================= -->
 
       <div class="card skillbox reveal">
 
@@ -1154,57 +1520,196 @@ footer{
           Software & Tools
         </h3>
 
-        <ul>
 
-          <li>
-            MATLAB / Simulink
-          </li>
+        <div class="skill-icons">
 
-          <li>
-            Arduino IDE
-          </li>
 
-          <li>
-            Microsoft Word
-          </li>
+          <!-- MATLAB -->
 
-          <li>
-            Microsoft PowerPoint
-          </li>
+          <div class="skill-item">
 
-          <li>
-            Canva
-          </li>
+            <div class="skill-icon">
 
-        </ul>
+              <img
+                src="https://cdn.simpleicons.org/matlab/eaf2fb"
+                alt="MATLAB"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              MATLAB
+            </div>
+
+          </div>
+
+
+          <!-- ARDUINO IDE -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <img
+                src="https://cdn.simpleicons.org/arduino/eaf2fb"
+                alt="Arduino IDE"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              Arduino IDE
+            </div>
+
+          </div>
+
+
+          <!-- WORD -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <img
+                src="https://cdn.simpleicons.org/microsoftword/eaf2fb"
+                alt="Microsoft Word"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              Word
+            </div>
+
+          </div>
+
+
+          <!-- POWERPOINT -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <img
+                src="https://cdn.simpleicons.org/microsoftpowerpoint/eaf2fb"
+                alt="Microsoft PowerPoint"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              PowerPoint
+            </div>
+
+          </div>
+
+
+          <!-- CANVA -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <img
+                src="https://cdn.simpleicons.org/canva/eaf2fb"
+                alt="Canva"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              Canva
+            </div>
+
+          </div>
+
+
+        </div>
 
       </div>
-      
- <div class="card skillbox reveal">
 
-        <h3>
-          Drone Aerial
-        </h3>
 
-        <ul>
+      <!-- =========================
+           DRONE AERIAL
+      ========================= -->
 
-          <li>
-            Cinematic
-          </li>
-          
-          <li>
-            Navigasi & Orientasi
-          </li>
-          
-          <li>
-            Hovering & Stabilisasi
-          </li>
+      <div class="card drone-skill reveal">
 
-       </ul>
+
+        <!--
+          VIDEO DRONE ANDA
+
+          Struktur GitHub:
+
+          video-drone/
+          └── drone-mistik.mp4
+
+        -->
+
+        <video
+          class="drone-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+        >
+
+          <source
+            src="video-drone/drone-mistik.mp4"
+            type="video/mp4"
+          >
+
+          Browser Anda tidak mendukung video.
+
+        </video>
+
+
+        <!-- Overlay -->
+
+        <div class="drone-overlay">
+
+
+          <h3>
+            Drone Aerial
+          </h3>
+
+
+          <p>
+            Aerial photography, cinematic drone operation,
+            navigation, orientation, hovering, and stabilization.
+          </p>
+
+
+          <div class="drone-tags">
+
+            <span class="drone-tag">
+              Cinematic
+            </span>
+
+            <span class="drone-tag">
+              UAV
+            </span>
+
+            <span class="drone-tag">
+              Navigation
+            </span>
+
+            <span class="drone-tag">
+              Stabilization
+            </span>
+
+          </div>
+
+
+        </div>
+
+
       </div>
-   
+
+
     </div>
-    
+
   </div>
 
 </section>
@@ -1217,6 +1722,7 @@ footer{
 <section id="certificates">
 
   <div class="container">
+
 
     <div class="section-head">
 
@@ -1237,30 +1743,37 @@ footer{
 
     <div class="certs">
 
+
       <div class="cert reveal">
         Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
       </div>
+
 
       <div class="cert reveal">
         Magang Teknisi Instalasi AC — El Nusa Teknik
       </div>
 
+
       <div class="cert reveal">
         Magang Quality Control — PT. Garindo Mitra Sejati
       </div>
 
+
       <div class="cert reveal">
         AI Basic: Overview of Artificial Intelligence — Huawei
       </div>
+
 
       <div class="cert reveal">
         Paten: Sistem Kendali Posisi Pada Antena Pelacak
         Terhadap Pesawat Tanpa Awak — No. 001376287
       </div>
 
+
       <div class="cert reveal">
         Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
       </div>
+
 
     </div>
 
@@ -1276,6 +1789,7 @@ footer{
 <section id="contact">
 
   <div class="container">
+
 
     <div class="section-head">
 
@@ -1314,9 +1828,11 @@ footer{
 
       <div class="card reveal">
 
+
         <a href="mailto:titisseptian02@gmail.com">
           ✉ titisseptian02@gmail.com
         </a>
+
 
         <a
           href="https://www.linkedin.com/in/titissurya/"
@@ -1324,6 +1840,7 @@ footer{
         >
           in LinkedIn — titissurya
         </a>
+
 
       </div>
 
@@ -1361,9 +1878,11 @@ footer{
 <script>
 
 const obs = new IntersectionObserver(
+
   entries => {
 
     entries.forEach(
+
       e => {
 
         if(e.isIntersecting){
@@ -1373,12 +1892,15 @@ const obs = new IntersectionObserver(
         }
 
       }
+
     );
 
   },
+
   {
     threshold:.12
   }
+
 );
 
 
@@ -1392,4 +1914,5 @@ document
 
 
 </body>
+
 </html>
