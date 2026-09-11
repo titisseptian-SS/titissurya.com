@@ -202,7 +202,7 @@ nav{
 
 
 /* =========================================================
-   HERO NAME
+   HERO NAME (Font Baru Dipertegas)
 ========================================================= */
 
 .hero h1{
@@ -236,6 +236,10 @@ nav{
 .hero h1 span{
   display:inline-block;
 
+  font-family:
+    "Plus Jakarta Sans",
+    sans-serif;
+
   background:
     linear-gradient(
       135deg,
@@ -256,7 +260,7 @@ nav{
 
 
 /* =========================================================
-   HERO BUTTONS (Profesional, Clean)
+   HERO BUTTONS (Disamakan Warnanya Semua)
 ========================================================= */
 
 .hero .btns{
@@ -285,9 +289,9 @@ nav{
 
   border-radius:12px;
 
-  border:1px solid rgba(56, 189, 248, 0.4);
+  border:1px solid rgba(56, 189, 248, 0.35);
 
-  background:linear-gradient(135deg, rgba(13, 26, 43, 0.9), rgba(16, 34, 56, 0.9));
+  background:linear-gradient(135deg, rgba(13, 26, 43, 0.85), rgba(16, 34, 56, 0.85));
 
   color:#f8fafc;
 
@@ -309,20 +313,7 @@ nav{
 }
 
 
-/* Tombol Utama */
-.hero .btn.primary{
-  background:linear-gradient(135deg, #0284c7, #0369a1);
-
-  color:#ffffff;
-
-  border-color:#38bdf8;
-
-  box-shadow:
-    0 6px 22px rgba(2, 132, 199, 0.25);
-}
-
-
-/* Hover */
+/* Hover untuk Semua Tombol */
 .hero .btn:hover{
   transform:translateY(-3px);
 
@@ -334,13 +325,6 @@ nav{
 
   box-shadow:
     0 8px 25px rgba(56,189,248,.15);
-}
-
-.hero .btn.primary:hover{
-  background:linear-gradient(135deg, #0369a1, #075985);
-  border-color:#7dd3fc;
-  box-shadow:
-    0 8px 28px rgba(56,189,248,.25);
 }
 
 
@@ -1472,7 +1456,7 @@ footer{
 
       <div class="btns">
 
-        <a class="btn primary" href="#projects">
+        <a class="btn" href="#projects">
           View Projects
         </a>
 
