@@ -137,17 +137,17 @@ nav{
 
 
 /* =========================================================
-   HERO (Digeser ke bawah agar muka tidak tertutup)
+   HERO (Diturunkan lebih jauh ke bawah)
 ========================================================= */
 
 .hero{
-  min-height:96vh;
+  min-height:98vh;
 
   display:flex;
   align-items:flex-end;
 
-  padding-top:160px;
-  padding-bottom:70px;
+  padding-top:200px;
+  padding-bottom:80px;
 
   position:relative;
   overflow:hidden;
@@ -191,16 +191,19 @@ nav{
   max-width:850px;
 }
 
+/* Kicker dipindah ke atas sendiri & warna putih samar */
 .kicker{
-  color:var(--accent);
+  color:rgba(255, 255, 255, 0.65);
 
   font-weight:700;
 
-  letter-spacing:2px;
+  letter-spacing:2.5px;
 
   text-transform:uppercase;
 
-  font-size:13px;
+  font-size:12px;
+
+  margin-bottom: 4px;
 }
 
 
@@ -221,7 +224,7 @@ nav{
 
   letter-spacing:-1.5px;
 
-  margin:16px 0 0;
+  margin:0 0 0;
 
   max-width:850px;
 
@@ -263,7 +266,7 @@ nav{
 
 
 /* =========================================================
-   HERO BUTTONS (Digeser lebih ke bawah)
+   HERO BUTTONS (Diturunkan lagi agar tidak nempel)
 ========================================================= */
 
 .hero .btns{
@@ -273,7 +276,7 @@ nav{
 
   flex-wrap:wrap;
 
-  margin-top:36px;
+  margin-top:42px;
 
   padding-top:4px;
 }
@@ -1449,7 +1452,7 @@ footer{
     <div class="reveal">
 
       <div class="kicker">
-        MY-Portfolio
+        MY PORTFOLIO
       </div>
 
       <h1>
@@ -2111,7 +2114,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embedded/ARDUINOO.png"
+                src="embeded/ARDUINOO.png"
                 alt="Arduino"
                 loading="eager"
               >
@@ -2130,7 +2133,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embedded/ESP.jpeg"
+                src="embeded/ESP.jpeg"
                 alt="ESP32"
                 loading="eager"
               >
@@ -2166,7 +2169,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embedded/PID.jpeg"
+                src="embeded/PID.jpeg"
                 alt="PID Control"
                 loading="eager"
               >
@@ -2185,7 +2188,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embedded/pso.jpeg"
+                src="embeded/pso.jpeg"
                 alt="Optimization"
                 loading="eager"
               >
