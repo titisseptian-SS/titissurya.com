@@ -11,6 +11,11 @@ content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded 
 
 <title>Titis Surya | Portfolio</title>
 
+<!-- Google Font Professional -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 /* =========================================================
@@ -24,8 +29,8 @@ content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded 
   --text:#eaf2fb;
   --muted:#9eb0c5;
   --line:#20344b;
-  --accent:#67e8f9;
-  --accent2:#a78bfa;
+  --accent:#38bdf8;
+  --accent2:#818cf8;
   --max:1120px;
 }
 
@@ -53,6 +58,7 @@ body{
   color:var(--text);
 
   font-family:
+    "Plus Jakarta Sans",
     Inter,
     system-ui,
     -apple-system,
@@ -201,18 +207,16 @@ nav{
 
 .hero h1{
   font-family:
-    "Trebuchet MS",
-    "Segoe UI",
-    Arial,
+    "Plus Jakarta Sans",
     sans-serif;
 
   font-size:clamp(42px,7vw,76px);
 
-  line-height:1.02;
+  line-height:1.05;
 
   font-weight:800;
 
-  letter-spacing:-2.2px;
+  letter-spacing:-1.5px;
 
   margin:16px 0 0;
 
@@ -221,12 +225,12 @@ nav{
   color:#ffffff;
 
   text-shadow:
-    0 4px 24px rgba(0,0,0,.18);
+    0 4px 24px rgba(0,0,0,.25);
 }
 
 
 /* =========================================================
-   HERO GRADIENT NAME
+   HERO GRADIENT NAME (Elegan, Tidak Neon)
 ========================================================= */
 
 .hero h1 span{
@@ -234,10 +238,10 @@ nav{
 
   background:
     linear-gradient(
-      90deg,
-      #67e8f9 0%,
-      #8b9cfb 45%,
-      #c084fc 100%
+      135deg,
+      #fef08a 0%,
+      #cbd5e1 55%,
+      #38bdf8 100%
     );
 
   -webkit-background-clip:text;
@@ -247,16 +251,12 @@ nav{
 
   color:transparent;
 
-  letter-spacing:-2.5px;
-
-  text-shadow:
-    0 0 28px rgba(103,232,249,.08);
+  letter-spacing:-1.8px;
 }
 
 
 /* =========================================================
-   HERO BUTTONS
-   SEMUA TOMBOL SAMA WARNA
+   HERO BUTTONS (Profesional, Clean)
 ========================================================= */
 
 .hero .btns{
@@ -281,22 +281,24 @@ nav{
 
   justify-content:center;
 
-  padding:12px 20px;
+  padding:12px 22px;
 
-  border-radius:13px;
+  border-radius:12px;
 
-  border:1px solid var(--accent);
+  border:1px solid rgba(56, 189, 248, 0.4);
 
-  background:var(--accent);
+  background:linear-gradient(135deg, rgba(13, 26, 43, 0.9), rgba(16, 34, 56, 0.9));
 
-  color:#07111f;
+  color:#f8fafc;
 
-  font-weight:700;
+  font-weight:600;
 
-  letter-spacing:.1px;
+  font-size:14px;
+
+  letter-spacing:.2px;
 
   box-shadow:
-    0 8px 28px rgba(103,232,249,.18);
+    0 4px 20px rgba(0,0,0,.2);
 
   transition:
     transform .25s ease,
@@ -307,32 +309,38 @@ nav{
 }
 
 
-/* Semua tombol tetap warna sama */
+/* Tombol Utama */
 .hero .btn.primary{
-  background:var(--accent);
+  background:linear-gradient(135deg, #0284c7, #0369a1);
 
-  color:#07111f;
+  color:#ffffff;
 
-  border-color:var(--accent);
+  border-color:#38bdf8;
 
   box-shadow:
-    0 8px 28px rgba(103,232,249,.18);
+    0 6px 22px rgba(2, 132, 199, 0.25);
 }
 
 
 /* Hover */
-.hero .btn:hover,
-.hero .btn.primary:hover{
+.hero .btn:hover{
   transform:translateY(-3px);
 
-  background:#67e8f9;
+  border-color:#38bdf8;
 
-  color:#07111f;
+  background:linear-gradient(135deg, rgba(20, 40, 68, 0.95), rgba(28, 54, 88, 0.95));
 
-  border-color:#67e8f9;
+  color:#ffffff;
 
   box-shadow:
-    0 12px 35px rgba(103,232,249,.28);
+    0 8px 25px rgba(56,189,248,.15);
+}
+
+.hero .btn.primary:hover{
+  background:linear-gradient(135deg, #0369a1, #075985);
+  border-color:#7dd3fc;
+  box-shadow:
+    0 8px 28px rgba(56,189,248,.25);
 }
 
 
@@ -934,7 +942,7 @@ h2{
 
   border-color:var(--accent);
 
-  background:rgba(103,232,249,.06);
+  background:rgba(56,189,248,.06);
 }
 
 .skill-icon img{
@@ -1013,7 +1021,7 @@ h2{
 .software-logo:hover{
   border-color:var(--accent);
 
-  background:rgba(103,232,249,.06);
+  background:rgba(56,189,248,.06);
 
   transform:translateY(-4px);
 }
@@ -1285,11 +1293,11 @@ footer{
   }
 
   .hero h1{
-    letter-spacing:-1.5px;
+    letter-spacing:-1.2px;
   }
 
   .hero h1 span{
-    letter-spacing:-1.8px;
+    letter-spacing:-1.4px;
   }
 
   .hero .btns{
@@ -1373,11 +1381,11 @@ footer{
   .hero h1{
     font-size:40px;
 
-    letter-spacing:-1.2px;
+    letter-spacing:-1.1px;
   }
 
   .hero h1 span{
-    letter-spacing:-1.4px;
+    letter-spacing:-1.2px;
   }
 
   .hero .btns{
@@ -2116,7 +2124,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embeded/ARDUINOO.png"
+                src="embedded/ARDUINOO.png"
                 alt="Arduino"
                 loading="eager"
               >
@@ -2135,7 +2143,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embeded/ESP.jpeg"
+                src="embedded/ESP.jpeg"
                 alt="ESP32"
                 loading="eager"
               >
@@ -2171,7 +2179,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embeded/PID.jpeg"
+                src="embedded/PID.jpeg"
                 alt="PID Control"
                 loading="eager"
               >
@@ -2190,7 +2198,7 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="embeded/pso.jpeg"
+                src="embedded/pso.jpeg"
                 alt="Optimization"
                 loading="eager"
               >
