@@ -2,6 +2,7 @@
 <html lang="id">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,6 +16,7 @@
 /* =========================================================
    ROOT
 ========================================================= */
+
 :root{
   --bg:#07111f;
   --panel:#0d1a2b;
@@ -31,6 +33,7 @@
 /* =========================================================
    RESET
 ========================================================= */
+
 *{
   box-sizing:border-box;
   scroll-behavior:smooth;
@@ -38,6 +41,7 @@
 
 body{
   margin:0;
+
   background:
     linear-gradient(
       180deg,
@@ -75,11 +79,13 @@ a{
 /* =========================================================
    NAVIGATION
 ========================================================= */
+
 nav{
   position:fixed;
   top:0;
   left:0;
   right:0;
+
   z-index:100;
 
   background:rgba(6,16,29,.82);
@@ -127,6 +133,7 @@ nav{
 /* =========================================================
    HERO
 ========================================================= */
+
 .hero{
   min-height:92vh;
 
@@ -261,6 +268,7 @@ h1 span{
 /* =========================================================
    SECTIONS
 ========================================================= */
+
 section{
   padding:92px 0;
 }
@@ -299,6 +307,7 @@ h2{
 /* =========================================================
    ABOUT
 ========================================================= */
+
 .about{
   display:grid;
 
@@ -325,6 +334,7 @@ h2{
 /* =========================================================
    PROJECTS
 ========================================================= */
+
 .projects{
   display:grid;
 
@@ -351,6 +361,7 @@ h2{
 /* =========================================================
    TAG
 ========================================================= */
+
 .tag{
   display:inline-block;
 
@@ -371,6 +382,7 @@ h2{
 /* =========================================================
    PROJECT 1
 ========================================================= */
+
 .project-feature{
   position:relative;
 
@@ -499,6 +511,7 @@ h2{
 /* =========================================================
    PROJECT 2 & 3
 ========================================================= */
+
 .project-normal{
   min-height:360px;
 
@@ -537,6 +550,7 @@ h2{
 /* =========================================================
    EXPERIENCE
 ========================================================= */
+
 .timeline{
   position:relative;
 
@@ -587,6 +601,7 @@ h2{
 /* =========================================================
    SUMMARECON GALLERY
 ========================================================= */
+
 .experience-gallery{
   display:grid;
 
@@ -623,6 +638,7 @@ h2{
 /* =========================================================
    KRTI GALLERY
 ========================================================= */
+
 .krti-gallery{
   display:grid;
 
@@ -659,6 +675,7 @@ h2{
 /* =========================================================
    EL NUSA
 ========================================================= */
+
 .elnusa-item{
   margin-top:90px;
 }
@@ -675,6 +692,7 @@ h2{
 /* =========================================================
    SKILLS
 ========================================================= */
+
 .skills{
   display:grid;
 
@@ -709,6 +727,7 @@ h2{
 /* =========================================================
    SKILL ICONS
 ========================================================= */
+
 .skill-icons{
   display:flex;
 
@@ -790,48 +809,65 @@ h2{
 
 /* =========================================================
    SOFTWARE LOGO
+   FOLDER:
+   software
+
+   FILE:
+   matlab.jpeg
+   arduino.jpeg
+   easy.jpeg
+   canva.jpeg
 ========================================================= */
-      
-      .software-logo{
-        width:64px;
-        height:64px;
-        padding:10px;
-        color:var(--text);
-        background:rgba(255,255,255,.035);
-        overflow:hidden;
-      }
-      
-      .software-logo img{
-        width:100%;
-        height:100%;
-        object-fit:contain;
-        display:block;
-        border-radius:6px;
-      }
-      
-      .software-logo:hover{
-        border-color:var(--accent);
-        background:rgba(103,232,249,.06);
-      }
-/* =========================================================
-   GAMBAR ERROR
-========================================================= */
-.image-error{
-  font-size:10px;
 
-  color:#64748b;
+.software-logo{
+  width:64px;
 
-  text-align:center;
+  height:64px;
 
-  padding:4px;
+  padding:9px;
 
-  line-height:1.2;
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:rgba(255,255,255,.035);
+
+  overflow:hidden;
+
+  transition:.25s ease;
+}
+
+.software-logo img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+  display:block;
+
+  border-radius:7px;
+}
+
+.software-logo:hover{
+  border-color:var(--accent);
+
+  background:rgba(103,232,249,.06);
+
+  transform:translateY(-4px);
 }
 
 
 /* =========================================================
    DRONE AERIAL
 ========================================================= */
+
 .drone-skill{
   grid-column:1 / -1;
 
@@ -936,6 +972,7 @@ h2{
 /* =========================================================
    CERTIFICATES
 ========================================================= */
+
 .certs{
   display:grid;
 
@@ -958,6 +995,7 @@ h2{
 /* =========================================================
    CONTACT
 ========================================================= */
+
 .contact{
   display:grid;
 
@@ -992,6 +1030,7 @@ h2{
 /* =========================================================
    FOOTER
 ========================================================= */
+
 footer{
   padding:35px 0;
 
@@ -1006,6 +1045,7 @@ footer{
 /* =========================================================
    ANIMATION
 ========================================================= */
+
 .reveal{
   opacity:0;
 
@@ -1024,6 +1064,7 @@ footer{
 /* =========================================================
    TABLET
 ========================================================= */
+
 @media(max-width:900px){
 
   .hero-grid{
@@ -1065,6 +1106,7 @@ footer{
 /* =========================================================
    MOBILE
 ========================================================= */
+
 @media(max-width:650px){
 
   .navlinks{
@@ -1136,6 +1178,7 @@ footer{
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
+
 @media(max-width:400px){
 
   h1{
@@ -1165,6 +1208,7 @@ footer{
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
+
 <nav>
 
   <div class="container nav">
@@ -1200,6 +1244,7 @@ footer{
 <!-- =========================================================
      HERO
 ========================================================= -->
+
 <section class="hero">
 
   <div class="container hero-grid">
@@ -1252,6 +1297,7 @@ footer{
 <!-- =========================================================
      ABOUT
 ========================================================= -->
+
 <section id="about">
 
   <div class="container">
@@ -1327,6 +1373,7 @@ footer{
 <!-- =========================================================
      PROJECTS
 ========================================================= -->
+
 <section id="projects">
 
   <div class="container">
@@ -1357,6 +1404,7 @@ footer{
 
 
       <!-- PROJECT 1 -->
+
       <article class="project project-feature reveal">
 
         <video
@@ -1416,6 +1464,7 @@ footer{
 
 
       <!-- PROJECT 2 -->
+
       <article class="card project project-normal reveal">
 
         <div>
@@ -1454,6 +1503,7 @@ footer{
 
 
       <!-- PROJECT 3 -->
+
       <article class="card project project-normal reveal">
 
         <div>
@@ -1500,6 +1550,7 @@ footer{
 <!-- =========================================================
      EXPERIENCE
 ========================================================= -->
+
 <section id="experience">
 
   <div class="container">
@@ -1525,6 +1576,7 @@ footer{
 
 
       <!-- SUMMARECON -->
+
       <div class="item reveal">
 
         <div class="date">
@@ -1568,6 +1620,7 @@ footer{
 
 
       <!-- KRTI -->
+
       <div class="item reveal">
 
         <div class="date">
@@ -1614,6 +1667,7 @@ footer{
 
 
       <!-- EL NUSA -->
+
       <div class="item reveal elnusa-item">
 
         <div class="date">
@@ -1648,6 +1702,7 @@ footer{
 <!-- =========================================================
      SKILLS
 ========================================================= -->
+
 <section id="skills">
 
   <div class="container">
@@ -1675,6 +1730,7 @@ footer{
       <!-- =====================================================
            ELECTRICAL
       ====================================================== -->
+
       <div class="card skillbox reveal">
 
         <h3>
@@ -1760,6 +1816,7 @@ footer{
       <!-- =====================================================
            EMBEDDED
       ====================================================== -->
+
       <div class="card skillbox reveal">
 
         <h3>
@@ -1859,89 +1916,112 @@ footer{
       </div>
 
 
-      <!-- =========================================================
-     SOFTWARE & TOOLS
-========================================================= -->
+      <!-- =====================================================
+           SOFTWARE & TOOLS
+      ====================================================== -->
+
       <div class="card skillbox reveal">
-      
-        <h3>Software & Tools</h3>
-      
+
+        <h3>
+          Software & Tools
+        </h3>
+
         <div class="skill-icons">
-      
+
+
           <!-- MATLAB -->
+
           <div class="skill-item">
+
             <div class="skill-icon software-logo">
+
               <img
-                src="./software&tools/matlab.jpeg"
+                src="software/matlab.jpeg"
                 alt="MATLAB"
-                loading="lazy"
-                onerror="this.style.display='none';"
+                loading="eager"
               >
+
             </div>
-      
+
             <div class="skill-name">
               MATLAB
             </div>
+
           </div>
-      
-      
+
+
           <!-- ARDUINO -->
+
           <div class="skill-item">
+
             <div class="skill-icon software-logo">
+
               <img
-                src="./software&tools/arduino.jpeg"
+                src="software/arduino.jpeg"
                 alt="Arduino IDE"
-                loading="lazy"
-                onerror="this.style.display='none';"
+                loading="eager"
               >
+
             </div>
-      
+
             <div class="skill-name">
               Arduino IDE
             </div>
+
           </div>
-      
-      
+
+
           <!-- EASYEDA -->
+
           <div class="skill-item">
+
             <div class="skill-icon software-logo">
+
               <img
-                src="./software&tools/easyeda.webp"
+                src="software/easy.jpeg"
                 alt="EasyEDA"
-                loading="lazy"
-                onerror="this.style.display='none';"
+                loading="eager"
               >
+
             </div>
-      
+
             <div class="skill-name">
               EasyEDA
             </div>
+
           </div>
-      
-      
+
+
           <!-- CANVA -->
+
           <div class="skill-item">
+
             <div class="skill-icon software-logo">
+
               <img
-                src="./software&tools/canva.jpeg"
+                src="software/canva.jpeg"
                 alt="Canva"
-                loading="lazy"
-                onerror="this.style.display='none';"
+                loading="eager"
               >
+
             </div>
-      
+
             <div class="skill-name">
               Canva
             </div>
+
           </div>
-      
+
+
         </div>
+
       </div>
 
 
       <!-- =====================================================
            DRONE AERIAL
       ====================================================== -->
+
       <div class="card drone-skill reveal">
 
         <video
@@ -2011,6 +2091,7 @@ footer{
 <!-- =========================================================
      CERTIFICATES
 ========================================================= -->
+
 <section id="certificates">
 
   <div class="container">
@@ -2076,6 +2157,7 @@ footer{
 <!-- =========================================================
      CONTACT
 ========================================================= -->
+
 <section id="contact">
 
   <div class="container">
@@ -2146,6 +2228,7 @@ footer{
 <!-- =========================================================
      FOOTER
 ========================================================= -->
+
 <footer>
 
   <div class="container">
@@ -2161,8 +2244,8 @@ footer{
 <!-- =========================================================
      JAVASCRIPT
 ========================================================= -->
-<script>
 
+<script>
 
 /* =========================================================
    REVEAL ANIMATION
@@ -2196,111 +2279,6 @@ document
   .forEach(element =>
     observer.observe(element)
   );
-
-
-/* =========================================================
-   SOFTWARE & TOOLS IMAGE LOADER
-   TIDAK MENGUBAH NAMA FOLDER / FILE
-========================================================= */
-
-/*
-   Folder asli Anda:
-
-   software&tools
-
-   File:
-
-   matlab.jpeg
-   arduino.jpeg
-   easyeda.webp
-   canva.jpeg
-*/
-
-
-const softwareFolder =
-  "software" + "&" + "tools";
-
-
-document
-  .querySelectorAll(".software-image")
-  .forEach(img => {
-
-    const fileName =
-      img.dataset.software;
-
-
-    /*
-       Browser akan otomatis menangani
-       karakter "&" sebagai bagian dari URL.
-    */
-
-    const imagePath =
-      "./" +
-      softwareFolder +
-      "/" +
-      fileName;
-
-
-    img.src = imagePath;
-
-
-    /*
-       Jika gambar gagal dimuat,
-       coba URL encoded sebagai fallback.
-    */
-
-    img.onerror = function(){
-
-      if(
-        !this.dataset.fallback
-      ){
-
-        this.dataset.fallback = "true";
-
-
-        const encodedFolder =
-          encodeURIComponent(
-            softwareFolder
-          );
-
-
-        this.src =
-          "./" +
-          encodedFolder +
-          "/" +
-          fileName;
-
-      }
-
-    };
-
-  });
-
-
-/* =========================================================
-   IMAGE ERROR HANDLING
-========================================================= */
-
-document
-  .querySelectorAll("img")
-  .forEach(img => {
-
-    img.addEventListener(
-      "error",
-      function(){
-
-        /*
-           Jangan mengubah gambar menjadi tulisan.
-           Biarkan browser menangani gambar yang gagal.
-        */
-
-        this.style.opacity = "0.15";
-
-      }
-    );
-
-  });
-
 
 </script>
 
