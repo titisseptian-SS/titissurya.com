@@ -240,15 +240,21 @@ h1 span{
 
 
 /* =========================================================
-   PROFILE
+   PROFILE CARD
+   FOTO PROFILE SEBAGAI BACKGROUND SAMAR
 ========================================================= */
 
 .profile-card{
+
+  position:relative;
+
+  overflow:hidden;
+
   background:
     linear-gradient(
       145deg,
-      rgba(16,34,56,.9),
-      rgba(10,23,39,.85)
+      rgba(16,34,56,.94),
+      rgba(10,23,39,.94)
     );
 
   border:
@@ -262,24 +268,79 @@ h1 span{
     0 25px 80px rgba(0,0,0,.3);
 }
 
-.avatar{
-  width:140px;
-  height:140px;
 
-  border-radius:24px;
+/* FOTO BACKGROUND */
 
-  object-fit:cover;
+.profile-card::before{
 
-  display:block;
+  content:"";
 
-  margin-bottom:22px;
+  position:absolute;
 
-  border:
-    1px solid var(--line);
+  inset:0;
 
-  box-shadow:
-    0 12px 35px rgba(0,0,0,.3);
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(7,17,31,.88),
+      rgba(7,17,31,.68)
+    ),
+    url("foto/profile.jpeg");
+
+  background-size:cover;
+
+  background-position:center;
+
+  opacity:.30;
+
+  filter:
+    saturate(.65)
+    contrast(.9)
+    blur(.3px);
+
+  transform:scale(1.04);
+
+  z-index:0;
 }
+
+
+/* LAPISAN GELAP TAMBAHAN */
+
+.profile-card::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,17,31,.28),
+      rgba(7,17,31,.72)
+    );
+
+  z-index:0;
+}
+
+
+/* SEMUA ISI PROFILE DI ATAS FOTO */
+
+.profile-card > *{
+
+  position:relative;
+
+  z-index:1;
+}
+
+
+/* FOTO LAMA DIHILANGKAN */
+
+.avatar{
+  display:none;
+}
+
 
 .stat{
   display:flex;
@@ -289,7 +350,7 @@ h1 span{
   padding:13px 0;
 
   border-bottom:
-    1px solid var(--line);
+    1px solid rgba(255,255,255,.12);
 
   color:var(--muted);
 }
@@ -378,7 +439,7 @@ h2{
   display:grid;
 
   grid-template-columns:
-    repeat(3, minmax(0, 1fr));
+    repeat(3, minmax(0,1fr));
 
   gap:18px;
 
@@ -425,7 +486,6 @@ h2{
 /* =========================================================
    PROJECT 1
    VIDEO 1:1
-   OVERLAY JUDUL DI ATAS
 ========================================================= */
 
 .project-feature{
@@ -452,7 +512,7 @@ h2{
 }
 
 
-/* VIDEO */
+/* VIDEO PROJECT */
 
 .project-feature-media{
 
@@ -487,7 +547,6 @@ h2{
 
 /* =========================================================
    PROJECT OVERLAY
-   JUDUL TETAP DI ATAS
 ========================================================= */
 
 .project-feature-overlay{
@@ -519,8 +578,6 @@ h2{
     );
 }
 
-
-/* CONTENT */
 
 .project-feature-content{
 
@@ -1208,11 +1265,6 @@ footer{
       1fr;
   }
 
-  /*
-     Tetap 3 kolom pada layar tablet besar,
-     tetapi dibuat lebih rapat.
-  */
-
   .projects{
 
     grid-template-columns:
@@ -1275,11 +1327,6 @@ footer{
     grid-template-columns:
       1fr;
   }
-
-  /*
-     Di HP dibuat satu kolom agar
-     video tetap nyaman dilihat.
-  */
 
   .project-feature{
 
@@ -1402,29 +1449,17 @@ footer{
 
     <div class="navlinks">
 
-      <a href="#about">
-        About
-      </a>
+      <a href="#about">About</a>
 
-      <a href="#projects">
-        Projects
-      </a>
+      <a href="#projects">Projects</a>
 
-      <a href="#experience">
-        Experience
-      </a>
+      <a href="#experience">Experience</a>
 
-      <a href="#skills">
-        Skills
-      </a>
+      <a href="#skills">Skills</a>
 
-      <a href="#certificates">
-        Certificates
-      </a>
+      <a href="#certificates">Certificates</a>
 
-      <a href="#contact">
-        Contact
-      </a>
+      <a href="#contact">Contact</a>
 
     </div>
 
@@ -1505,15 +1540,11 @@ footer{
     </div>
 
 
-    <!-- PROFILE -->
+    <!-- =====================================================
+         PROFILE CARD
+    ====================================================== -->
 
     <aside class="profile-card reveal">
-
-      <img
-        class="avatar"
-        src="4x6.jpg.jpeg"
-        alt="Foto profil Titis Septian Dwi Surya"
-      >
 
 
       <h3>
@@ -1564,6 +1595,7 @@ footer{
 
       </div>
 
+
     </aside>
 
   </div>
@@ -1578,7 +1610,6 @@ footer{
 <section id="about">
 
   <div class="container">
-
 
     <div class="section-head">
 
@@ -1693,10 +1724,6 @@ footer{
     </div>
 
 
-    <!-- =====================================================
-         3 PROJECT SEJAJAR
-    ====================================================== -->
-
     <div class="projects">
 
 
@@ -1709,7 +1736,9 @@ footer{
       >
 
 
-        <!-- VIDEO PROJECT -->
+        <!-- VIDEO:
+             video-drone/drone-project.mp4
+        -->
 
         <video
           class="project-feature-media"
@@ -1718,10 +1747,12 @@ footer{
           loop
           playsinline
           controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
         >
 
           <source
-            src="video%20drone/drone-project.mp4"
+            src="video-drone/drone-project.mp4"
             type="video/mp4"
           >
 
@@ -1729,8 +1760,6 @@ footer{
 
         </video>
 
-
-        <!-- OVERLAY ATAS -->
 
         <div class="project-feature-overlay">
 
@@ -2526,10 +2555,12 @@ footer{
           loop
           playsinline
           controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
         >
 
           <source
-            src="video%20drone/drone%20mistik.mp4"
+            src="video-drone/drone-mistik.mp4"
             type="video/mp4"
           >
 
