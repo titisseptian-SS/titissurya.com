@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="id">
 
 <head>
@@ -8,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-   content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
+content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
 
 <title>Titis Surya | Portfolio</title>
 
@@ -257,6 +256,7 @@ nav{
 
 /* =========================================================
    HERO BUTTONS
+   SEMUA TOMBOL SAMA WARNA
 ========================================================= */
 
 .hero .btns{
@@ -272,10 +272,6 @@ nav{
 }
 
 
-/* =========================================================
-   GENERAL BUTTON
-========================================================= */
-
 .hero .btn{
   min-height:48px;
 
@@ -289,83 +285,54 @@ nav{
 
   border-radius:13px;
 
-  border:1px solid rgba(103,232,249,.28);
+  border:1px solid var(--accent);
 
-  background:
-    rgba(7,17,31,.58);
+  background:var(--accent);
 
-  color:#eaf2fb;
+  color:#07111f;
 
   font-weight:700;
 
   letter-spacing:.1px;
 
-  backdrop-filter:blur(12px);
-
-  -webkit-backdrop-filter:blur(12px);
-
   box-shadow:
-    0 8px 25px rgba(0,0,0,.18);
+    0 8px 28px rgba(103,232,249,.18);
 
   transition:
     transform .25s ease,
     border-color .25s ease,
     background .25s ease,
+    color .25s ease,
     box-shadow .25s ease;
 }
 
 
-/* =========================================================
-   PRIMARY BUTTON
-========================================================= */
-
+/* Semua tombol tetap warna sama */
 .hero .btn.primary{
-  background:
-    linear-gradient(
-      135deg,
-      rgba(103,232,249,.95),
-      rgba(167,139,250,.95)
-    );
+  background:var(--accent);
 
   color:#07111f;
 
-  border-color:transparent;
+  border-color:var(--accent);
 
   box-shadow:
     0 8px 28px rgba(103,232,249,.18);
 }
 
 
-/* =========================================================
-   BUTTON HOVER
-========================================================= */
-
-.hero .btn:hover{
+/* Hover */
+.hero .btn:hover,
+.hero .btn.primary:hover{
   transform:translateY(-3px);
 
-  border-color:rgba(103,232,249,.65);
+  background:#67e8f9;
 
-  background:
-    rgba(13,34,56,.82);
+  color:#07111f;
 
-  box-shadow:
-    0 12px 32px rgba(0,0,0,.30);
-}
-
-.hero .btn.primary:hover{
-  background:
-    linear-gradient(
-      135deg,
-      #67e8f9,
-      #c084fc
-    );
-
-  color:#06101d;
-
-  border-color:transparent;
+  border-color:#67e8f9;
 
   box-shadow:
-    0 12px 35px rgba(103,232,249,.25);
+    0 12px 35px rgba(103,232,249,.28);
 }
 
 
@@ -778,18 +745,19 @@ h2{
 
 /* =========================================================
    EL NUSA
+   MENYATU DENGAN TIMELINE
 ========================================================= */
 
 .elnusa-item{
-  margin-top:90px;
+  margin-top:0;
+  margin-bottom:0;
 }
 
 .elnusa-item .date,
 .elnusa-item h3,
 .elnusa-item p{
-  position:relative;
-
-  left:-18px;
+  position:static;
+  left:auto;
 }
 
 
@@ -1361,14 +1329,17 @@ footer{
     height:auto;
   }
 
+  /* El Nusa tetap menyatu dengan timeline */
   .elnusa-item{
-    margin-top:70px;
+    margin-top:0;
+    margin-bottom:0;
   }
 
   .elnusa-item .date,
   .elnusa-item h3,
   .elnusa-item p{
-    left:0;
+    position:static;
+    left:auto;
   }
 
   .drone-skill{
@@ -1426,6 +1397,7 @@ footer{
 
 <body>
 
+
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
@@ -1434,35 +1406,35 @@ footer{
 
   <div class="container nav">
 
-```
-<a class="logo" href="#home">
-  Titis<span>.</span>Surya
-</a>
+    <a class="logo" href="#home">
+      Titis<span>.</span>Surya
+    </a>
 
-<div class="navlinks">
+    <div class="navlinks">
 
-  <a href="#about">About</a>
+      <a href="#about">About</a>
 
-  <a href="#projects">Projects</a>
+      <a href="#projects">Projects</a>
 
-  <a href="#experience">Experience</a>
+      <a href="#experience">Experience</a>
 
-  <a href="#community-service">Community</a>
+      <a href="#community-service">Community</a>
 
-  <a href="#skills">Skills</a>
+      <a href="#skills">Skills</a>
 
-  <a href="#certificates">Certificates</a>
+      <a href="#certificates">Certificates</a>
 
-  <a href="#contact">Contact</a>
+      <a href="#contact">Contact</a>
 
-</div>
-```
+    </div>
 
   </div>
 
 </nav>
 
+
 <main id="home">
+
 
 <!-- =========================================================
      HERO
@@ -1472,45 +1444,44 @@ footer{
 
   <div class="container hero-grid">
 
-```
-<div class="reveal">
+    <div class="reveal">
 
-  <div class="kicker">
-    MY-Portfolio
-  </div>
+      <div class="kicker">
+        MY-Portfolio
+      </div>
 
-  <h1>
-    Titis Septian<br>
-    <span>Dwi Surya</span>
-  </h1>
+      <h1>
+        Titis Septian<br>
+        <span>Dwi Surya</span>
+      </h1>
 
-  <div class="btns">
+      <div class="btns">
 
-    <a class="btn primary" href="#projects">
-      View Projects
-    </a>
+        <a class="btn primary" href="#projects">
+          View Projects
+        </a>
 
-    <a class="btn" href="cv-titis-surya.pdf" download>
-      Download CV
-    </a>
+        <a class="btn" href="cv-titis-surya.pdf" download>
+          Download CV
+        </a>
 
-    <a
-      class="btn"
-      href="https://www.linkedin.com/in/titissurya/"
-      target="_blank"
-      rel="noopener"
-    >
-      LinkedIn ↗
-    </a>
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/titissurya/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
 
-  </div>
+      </div>
 
-</div>
-```
+    </div>
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      ABOUT
@@ -1520,73 +1491,72 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Profile
+        <div class="kicker">
+          Profile
+        </div>
+
+        <h2>
+          About Me
+        </h2>
+
+      </div>
+
     </div>
 
-    <h2>
-      About Me
-    </h2>
 
-  </div>
+    <div class="about">
 
-</div>
+      <div class="card reveal">
 
+        <h3>
+          Engineering Background
+        </h3>
 
-<div class="about">
+        <p class="muted">
+          Lulusan S1 Teknik Elektro Universitas Negeri Semarang
+          (UNNES), IPK 3.51/4.00. Memiliki dasar Teknik Instalasi
+          Tenaga Listrik dari SMKN 2 Purwodadi.
+        </p>
 
-  <div class="card reveal">
+        <p class="muted">
+          Fokus tugas akhir pada embedded systems, sistem kendali
+          otomatis, dan teknik optimasi Particle Swarm Optimization
+          (PSO).
+        </p>
 
-    <h3>
-      Engineering Background
-    </h3>
-
-    <p class="muted">
-      Lulusan S1 Teknik Elektro Universitas Negeri Semarang
-      (UNNES), IPK 3.51/4.00. Memiliki dasar Teknik Instalasi
-      Tenaga Listrik dari SMKN 2 Purwodadi.
-    </p>
-
-    <p class="muted">
-      Fokus tugas akhir pada embedded systems, sistem kendali
-      otomatis, dan teknik optimasi Particle Swarm Optimization
-      (PSO).
-    </p>
-
-  </div>
+      </div>
 
 
-  <div class="card reveal">
+      <div class="card reveal">
 
-    <h3>
-      Professional Strength
-    </h3>
+        <h3>
+          Professional Strength
+        </h3>
 
-    <p class="muted">
-      Pengalaman Quality Control pada proyek Summarecon Mall
-      Bekasi 2 dengan fokus MEP, inspeksi instalasi kelistrikan,
-      verifikasi material, testing & commissioning, serta
-      pengecekan terhadap shop drawing.
-    </p>
+        <p class="muted">
+          Pengalaman Quality Control pada proyek Summarecon Mall
+          Bekasi 2 dengan fokus MEP, inspeksi instalasi kelistrikan,
+          verifikasi material, testing & commissioning, serta
+          pengecekan terhadap shop drawing.
+        </p>
 
-    <p class="muted">
-      Terbiasa bekerja di lingkungan lapangan dan memiliki
-      pengalaman organisasi robotika pada divisi mekanik UAV.
-    </p>
+        <p class="muted">
+          Terbiasa bekerja di lingkungan lapangan dan memiliki
+          pengalaman organisasi robotika pada divisi mekanik UAV.
+        </p>
 
-  </div>
+      </div>
 
-</div>
-```
+    </div>
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      PROJECTS
@@ -1596,175 +1566,174 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Selected Work
+        <div class="kicker">
+          Selected Work
+        </div>
+
+        <h2>
+          Featured Projects
+        </h2>
+
+      </div>
+
+      <p>
+        Beberapa pengalaman saya saat kuliah di
+        Universitas Negeri Semarang.
+      </p>
+
     </div>
 
-    <h2>
-      Featured Projects
-    </h2>
 
-  </div>
-
-  <p>
-    Beberapa pengalaman saya saat kuliah di
-    Universitas Negeri Semarang.
-  </p>
-
-</div>
+    <div class="projects">
 
 
-<div class="projects">
+      <!-- PROJECT 1 -->
+
+      <article class="project project-feature reveal">
+
+        <video
+          class="project-feature-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
+        >
+
+          <source
+            src="video-drone/drone-project.mp4"
+            type="video/mp4"
+          >
+
+          Browser Anda tidak mendukung video.
+
+        </video>
 
 
-  <!-- PROJECT 1 -->
+        <div class="project-feature-overlay">
 
-  <article class="project project-feature reveal">
+          <div class="project-feature-content">
 
-    <video
-      class="project-feature-media"
-      autoplay
-      muted
-      loop
-      playsinline
-      controls
-      preload="metadata"
-      poster="video-drone/drone-footage.jpeg"
-    >
+            <h3>
+              2-Axis Automatic UAV Antenna Tracker
+            </h3>
 
-      <source
-        src="video-drone/drone-project.mp4"
-        type="video/mp4"
-      >
+            <div class="project-tags">
 
-      Browser Anda tidak mendukung video.
+              <span class="tag">
+                Embedded
+              </span>
 
-    </video>
+              <span class="tag">
+                Control
+              </span>
+
+              <span class="tag">
+                UAV
+              </span>
+
+            </div>
+
+            <p>
+              PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
 
 
-    <div class="project-feature-overlay">
+      <!-- PROJECT 2 -->
 
-      <div class="project-feature-content">
+      <article class="card project project-normal reveal">
 
-        <h3>
-          2-Axis Automatic UAV Antenna Tracker
-        </h3>
-
-        <div class="project-tags">
+        <div>
 
           <span class="tag">
-            Embedded
+            MEP
           </span>
 
           <span class="tag">
-            Control
+            Quality Control
+          </span>
+
+          <span class="tag">
+            Electrical
+          </span>
+
+          <h3>
+            Quality Control —
+            Summarecon Mall Bekasi 2
+          </h3>
+
+          <p class="muted">
+            Inspeksi dan pengawasan kualitas teknis sistem
+            MEP pada proyek pembangunan, termasuk panel
+            distribusi daya, wiring, pencahayaan, grounding,
+            material, dan testing & commissioning.
+          </p>
+
+        </div>
+
+        <strong>
+          Shop Drawing · Inspection · MEP · T&C
+        </strong>
+
+      </article>
+
+
+      <!-- PROJECT 3 -->
+
+      <article class="card project project-normal reveal">
+
+        <div>
+
+          <span class="tag">
+            Robotics
+          </span>
+
+          <span class="tag">
+            Mechanical
           </span>
 
           <span class="tag">
             UAV
           </span>
 
+          <h3>
+            Suvifor Racing Plane —
+            Robotika UNNES
+          </h3>
+
+          <p class="muted">
+            Bertanggung jawab pada perancangan,
+            manufaktur, dan aspek aerodinamika struktur
+            mekanik UAV fixed-wing.
+          </p>
+
         </div>
 
-        <p>
-          PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk
-        </p>
+        <strong>
+          Mechanical Design · Manufacturing · Aerodynamics
+        </strong>
 
-      </div>
+      </article>
+
 
     </div>
-
-  </article>
-
-
-  <!-- PROJECT 2 -->
-
-  <article class="card project project-normal reveal">
-
-    <div>
-
-      <span class="tag">
-        MEP
-      </span>
-
-      <span class="tag">
-        Quality Control
-      </span>
-
-      <span class="tag">
-        Electrical
-      </span>
-
-      <h3>
-        Quality Control —
-        Summarecon Mall Bekasi 2
-      </h3>
-
-      <p class="muted">
-        Inspeksi dan pengawasan kualitas teknis sistem
-        MEP pada proyek pembangunan, termasuk panel
-        distribusi daya, wiring, pencahayaan, grounding,
-        material, dan testing & commissioning.
-      </p>
-
-    </div>
-
-    <strong>
-      Shop Drawing · Inspection · MEP · T&C
-    </strong>
-
-  </article>
-
-
-  <!-- PROJECT 3 -->
-
-  <article class="card project project-normal reveal">
-
-    <div>
-
-      <span class="tag">
-        Robotics
-      </span>
-
-      <span class="tag">
-        Mechanical
-      </span>
-
-      <span class="tag">
-        UAV
-      </span>
-
-      <h3>
-        Suvifor Racing Plane —
-        Robotika UNNES
-      </h3>
-
-      <p class="muted">
-        Bertanggung jawab pada perancangan,
-        manufaktur, dan aspek aerodinamika struktur
-        mekanik UAV fixed-wing.
-      </p>
-
-    </div>
-
-    <strong>
-      Mechanical Design · Manufacturing · Aerodynamics
-    </strong>
-
-  </article>
-
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      EXPERIENCE
@@ -1774,150 +1743,149 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Career
-    </div>
+        <div class="kicker">
+          Career
+        </div>
 
-    <h2>
-      Experience
-    </h2>
+        <h2>
+          Experience
+        </h2>
 
-  </div>
-
-</div>
-
-
-<div class="timeline">
-
-
-  <!-- SUMMARECON -->
-
-  <div class="item reveal">
-
-    <div class="date">
-      JAN 2025 — JUN 2025
-    </div>
-
-    <h3>
-      Quality Control Project —
-      PT. Garindo Mitra Sejati
-    </h3>
-
-    <p class="muted">
-      Summarecon Mall Bekasi 2 · Bekasi
-    </p>
-
-    <p class="muted">
-      Melakukan inspeksi kualitas teknis, pengawasan
-      material MEP, testing & commissioning, serta
-      inspeksi instalasi listrik, plumbing, mekanikal,
-      panel, wiring, lighting, dan grounding.
-    </p>
-
-
-    <div class="experience-gallery">
-
-      <img
-        src="foto magang/magang.png"
-        alt="Dokumentasi Quality Control Summarecon Mall Bekasi 2"
-        loading="lazy"
-      >
-
-      <img
-        src="foto magang/magang 1.png"
-        alt="Dokumentasi kegiatan Quality Control Summarecon Mall Bekasi 2"
-        loading="lazy"
-      >
+      </div>
 
     </div>
 
-  </div>
+
+    <div class="timeline">
 
 
-  <!-- KRTI -->
+      <!-- SUMMARECON -->
 
-  <div class="item reveal">
+      <div class="item reveal">
 
-    <div class="date">
-      JAN 2024 — DEC 2024
+        <div class="date">
+          JAN 2025 — JUN 2025
+        </div>
+
+        <h3>
+          Quality Control Project —
+          PT. Garindo Mitra Sejati
+        </h3>
+
+        <p class="muted">
+          Summarecon Mall Bekasi 2 · Bekasi
+        </p>
+
+        <p class="muted">
+          Melakukan inspeksi kualitas teknis, pengawasan
+          material MEP, testing & commissioning, serta
+          inspeksi instalasi listrik, plumbing, mekanikal,
+          panel, wiring, lighting, dan grounding.
+        </p>
+
+
+        <div class="experience-gallery">
+
+          <img
+            src="foto magang/magang.png"
+            alt="Dokumentasi Quality Control Summarecon Mall Bekasi 2"
+            loading="lazy"
+          >
+
+          <img
+            src="foto magang/magang 1.png"
+            alt="Dokumentasi kegiatan Quality Control Summarecon Mall Bekasi 2"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- KRTI -->
+
+      <div class="item reveal">
+
+        <div class="date">
+          JAN 2024 — DEC 2024
+        </div>
+
+        <h3>
+          Kontes Robot Terbang Indonesia (KRTI)
+          — Suvifor Racing Plane
+        </h3>
+
+        <p class="muted">
+          Robotika Universitas Negeri Semarang
+        </p>
+
+        <p class="muted">
+          Terlibat dalam peserta KRTI 2024 sebagai bagian dari
+          tim Robotika UNNES. KRTI merupakan kompetisi tahunan
+          yang diselenggarakan oleh Kementerian Pendidikan,
+          Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
+          melalui Balai Pengembangan Talenta Indonesia (BPTI)
+          dan Pusat Prestasi Nasional (Puspresnas) di Lapangan
+          Terbang Gading, Kabupaten Gunungkidul, Yogyakarta.
+        </p>
+
+
+        <div class="krti-gallery">
+
+          <img
+            src="KRTI event.jpeg"
+            alt="Dokumentasi Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
+            loading="lazy"
+          >
+
+          <img
+            src="KRTI event2.jpeg"
+            alt="Dokumentasi KRTI Robotika UNNES"
+            loading="lazy"
+          >
+
+        </div>
+
+      </div>
+
+
+      <!-- EL NUSA -->
+
+      <div class="item reveal elnusa-item">
+
+        <div class="date">
+          OCT 2021 — NOV 2021
+        </div>
+
+        <h3>
+          Electrical Intern — El Nusa AC
+        </h3>
+
+        <p class="muted">
+          Grobogan
+        </p>
+
+        <p class="muted">
+          Terlibat dalam pemasangan dan perawatan instalasi
+          pada RSUD Grobogan serta instalasi AC indoor/outdoor
+          pada Gedung Kejaksaan Negeri Grobogan dan
+          Sekretariat Daerah Grobogan.
+        </p>
+
+      </div>
+
+
     </div>
-
-    <h3>
-      Kontes Robot Terbang Indonesia (KRTI)
-      — Suvifor Racing Plane
-    </h3>
-
-    <p class="muted">
-      Robotika Universitas Negeri Semarang
-    </p>
-
-    <p class="muted">
-      Terlibat dalam peserta KRTI 2024 sebagai bagian dari
-      tim Robotika UNNES. KRTI merupakan kompetisi tahunan
-      yang diselenggarakan oleh Kementerian Pendidikan,
-      Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
-      melalui Balai Pengembangan Talenta Indonesia (BPTI)
-      dan Pusat Prestasi Nasional (Puspresnas) di Lapangan
-      Terbang Gading, Kabupaten Gunungkidul, Yogyakarta.
-    </p>
-
-
-    <div class="krti-gallery">
-
-      <img
-        src="KRTI event.jpeg"
-        alt="Dokumentasi Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
-        loading="lazy"
-      >
-
-      <img
-        src="KRTI event2.jpeg"
-        alt="Dokumentasi KRTI Robotika UNNES"
-        loading="lazy"
-      >
-
-    </div>
-
-  </div>
-
-
-  <!-- EL NUSA -->
-
-  <div class="item reveal elnusa-item">
-
-    <div class="date">
-      OCT 2021 — NOV 2021
-    </div>
-
-    <h3>
-      Electrical Intern — El Nusa AC
-    </h3>
-
-    <p class="muted">
-      Grobogan
-    </p>
-
-    <p class="muted">
-      Terlibat dalam pemasangan dan perawatan instalasi
-      pada RSUD Grobogan serta instalasi AC indoor/outdoor
-      pada Gedung Kejaksaan Negeri Grobogan dan
-      Sekretariat Daerah Grobogan.
-    </p>
-
-  </div>
-
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      COMMUNITY SERVICE
@@ -1927,104 +1895,103 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Social Engagement
-    </div>
+        <div class="kicker">
+          Social Engagement
+        </div>
 
-    <h2>
-      Community Service & Social Engagement
-    </h2>
+        <h2>
+          Community Service & Social Engagement
+        </h2>
 
-  </div>
-
-</div>
-
-
-<div class="timeline">
-
-
-  <!-- KKN -->
-
-  <div class="item reveal kkn-item">
-
-    <div class="date">
-      OCT 2025 · DAWUNGSARI, KENDAL
-    </div>
-
-    <p class="muted">
-      Desa Dawungsari · Kecamatan Pegandon · Kabupaten Kendal
-    </p>
-
-
-    <p class="muted kkn-description">
-      Sebagai bentuk pengabdian kepada masyarakat penyuluhan
-      mengenai manfaat biopori untuk meningkatkan resapan
-      air dan membantu mengurangi genangan.
-    </p>
-
-
-    <div class="kkn-tags">
-
-      <span class="kkn-tag">
-        Community Service
-      </span>
-
-      <span class="kkn-tag">
-        Social Engagement
-      </span>
-
-      <span class="kkn-tag">
-        Biopori
-      </span>
-
-      <span class="kkn-tag">
-        Community Development
-      </span>
+      </div>
 
     </div>
 
 
-    <div class="kkn-gallery">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
-        <source
-          src="Community Service/kkn2.mp4"
-          type="video/mp4"
-        >
-
-        Browser Anda tidak mendukung video.
-
-      </video>
+    <div class="timeline">
 
 
-      <img
-        src="Community Service/kkn3.jpeg"
-        alt="Dokumentasi kegiatan KKN Desa Dawungsari"
-        loading="lazy"
-      >
+      <!-- KKN -->
+
+      <div class="item reveal kkn-item">
+
+        <div class="date">
+          OCT 2025 · DAWUNGSARI, KENDAL
+        </div>
+
+        <p class="muted">
+          Desa Dawungsari · Kecamatan Pegandon · Kabupaten Kendal
+        </p>
+
+
+        <p class="muted kkn-description">
+          Sebagai bentuk pengabdian kepada masyarakat penyuluhan
+          mengenai manfaat biopori untuk meningkatkan resapan
+          air dan membantu mengurangi genangan.
+        </p>
+
+
+        <div class="kkn-tags">
+
+          <span class="kkn-tag">
+            Community Service
+          </span>
+
+          <span class="kkn-tag">
+            Social Engagement
+          </span>
+
+          <span class="kkn-tag">
+            Biopori
+          </span>
+
+          <span class="kkn-tag">
+            Community Development
+          </span>
+
+        </div>
+
+
+        <div class="kkn-gallery">
+
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="Community Service/kkn2.mp4"
+              type="video/mp4"
+            >
+
+            Browser Anda tidak mendukung video.
+
+          </video>
+
+
+          <img
+            src="Community Service/kkn3.jpeg"
+            alt="Dokumentasi kegiatan KKN Desa Dawungsari"
+            loading="lazy"
+          >
+
+        </div>
+
+
+      </div>
+
 
     </div>
-
-
-  </div>
-
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      SKILLS
@@ -2034,371 +2001,370 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Capabilities
-    </div>
-
-    <h2>
-      Skills
-    </h2>
-
-  </div>
-
-</div>
-
-
-<div class="skills">
-
-
-  <!-- ELECTRICAL -->
-
-  <div class="card skillbox reveal">
-
-    <h3>
-      Electrical & MEP
-    </h3>
-
-    <div class="skill-icons">
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            ⚡
-          </span>
-
+        <div class="kicker">
+          Capabilities
         </div>
 
-        <div class="skill-name">
-          Installation
-        </div>
+        <h2>
+          Skills
+        </h2>
 
       </div>
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            🔌
-          </span>
-
-        </div>
-
-        <div class="skill-name">
-          Electrical
-        </div>
-
-      </div>
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            📐
-          </span>
-
-        </div>
-
-        <div class="skill-name">
-          Shop Drawing
-        </div>
-
-      </div>
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            🔧
-          </span>
-
-        </div>
-
-        <div class="skill-name">
-          MEP
-        </div>
-
-      </div>
-
 
     </div>
 
-  </div>
+
+    <div class="skills">
 
 
-  <!-- EMBEDDED -->
+      <!-- ELECTRICAL -->
 
-  <div class="card skillbox reveal">
+      <div class="card skillbox reveal">
 
-    <h3>
-      Embedded & Control
-    </h3>
+        <h3>
+          Electrical & MEP
+        </h3>
 
-    <div class="skill-icons">
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            ∞
-          </span>
-
-        </div>
-
-        <div class="skill-name">
-          Arduino
-        </div>
-
-      </div>
+        <div class="skill-icons">
 
 
-      <div class="skill-item">
+          <div class="skill-item">
 
-        <div class="skill-icon">
+            <div class="skill-icon">
 
-          <span class="custom-icon small">
-            ESP32
-          </span>
+              <span class="custom-icon">
+                ⚡
+              </span>
 
-        </div>
+            </div>
 
-        <div class="skill-name">
-          ESP32
-        </div>
+            <div class="skill-name">
+              Installation
+            </div>
 
-      </div>
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon">
-
-          <span class="custom-icon">
-            ✈
-          </span>
-
-        </div>
-
-        <div class="skill-name">
-          Pixhawk
-        </div>
-
-      </div>
+          </div>
 
 
-      <div class="skill-item">
+          <div class="skill-item">
 
-        <div class="skill-icon">
+            <div class="skill-icon">
 
-          <span class="custom-icon small">
-            PID
-          </span>
+              <span class="custom-icon">
+                🔌
+              </span>
 
-        </div>
+            </div>
 
-        <div class="skill-name">
-          PID Control
-        </div>
+            <div class="skill-name">
+              Electrical
+            </div>
 
-      </div>
+          </div>
 
 
-      <div class="skill-item">
+          <div class="skill-item">
 
-        <div class="skill-icon">
+            <div class="skill-icon">
 
-          <span class="custom-icon small">
-            PSO
-          </span>
+              <span class="custom-icon">
+                📐
+              </span>
 
-        </div>
+            </div>
 
-        <div class="skill-name">
-          Optimization
+            <div class="skill-name">
+              Shop Drawing
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon">
+                🔧
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              MEP
+            </div>
+
+          </div>
+
+
         </div>
 
       </div>
 
 
-    </div>
+      <!-- EMBEDDED -->
 
-  </div>
+      <div class="card skillbox reveal">
 
+        <h3>
+          Embedded & Control
+        </h3>
 
-  <!-- SOFTWARE -->
-
-  <div class="card skillbox reveal">
-
-    <h3>
-      Software & Tools
-    </h3>
-
-    <div class="skill-icons">
+        <div class="skill-icons">
 
 
-      <div class="skill-item">
+          <div class="skill-item">
 
-        <div class="skill-icon software-logo">
+            <div class="skill-icon">
 
-          <img
-            src="software/matlab.png"
-            alt="MATLAB"
-            loading="eager"
+              <span class="custom-icon">
+                ∞
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              Arduino
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon small">
+                ESP32
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              ESP32
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon">
+                ✈
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              Pixhawk
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon small">
+                PID
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              PID Control
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon">
+
+              <span class="custom-icon small">
+                PSO
+              </span>
+
+            </div>
+
+            <div class="skill-name">
+              Optimization
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- SOFTWARE -->
+
+      <div class="card skillbox reveal">
+
+        <h3>
+          Software & Tools
+        </h3>
+
+        <div class="skill-icons">
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <img
+                src="software/matlab.png"
+                alt="MATLAB"
+                loading="eager"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              MATLAB
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <img
+                src="software/arduino.png"
+                alt="Arduino IDE"
+                loading="eager"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              Arduino IDE
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <img
+                src="software/easy.png"
+                alt="EasyEDA"
+                loading="eager"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              EasyEDA
+            </div>
+
+          </div>
+
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <img
+                src="software/canva.png"
+                alt="Canva"
+                loading="eager"
+              >
+
+            </div>
+
+            <div class="skill-name">
+              Canva
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- DRONE AERIAL -->
+
+      <div class="card drone-skill reveal">
+
+        <video
+          class="drone-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
+        >
+
+          <source
+            src="video-drone/drone-mistik.mp4"
+            type="video/mp4"
           >
 
-        </div>
+          Browser Anda tidak mendukung video.
 
-        <div class="skill-name">
-          MATLAB
-        </div>
-
-      </div>
+        </video>
 
 
-      <div class="skill-item">
+        <div class="drone-overlay">
 
-        <div class="skill-icon software-logo">
+          <h3>
+            Drone Aerial
+          </h3>
 
-          <img
-            src="software/arduino.png"
-            alt="Arduino IDE"
-            loading="eager"
-          >
+          <p>
+            Aerial photography, cinematic drone operation,
+            navigation, orientation, hovering, and stabilization.
+          </p>
 
-        </div>
+          <div class="drone-tags">
 
-        <div class="skill-name">
-          Arduino IDE
-        </div>
+            <span class="drone-tag">
+              Cinematic
+            </span>
 
-      </div>
+            <span class="drone-tag">
+              UAV
+            </span>
 
+            <span class="drone-tag">
+              Navigation
+            </span>
 
-      <div class="skill-item">
+            <span class="drone-tag">
+              Stabilization
+            </span>
 
-        <div class="skill-icon software-logo">
+          </div>
 
-          <img
-            src="software/easy.png"
-            alt="EasyEDA"
-            loading="eager"
-          >
-
-        </div>
-
-        <div class="skill-name">
-          EasyEDA
-        </div>
-
-      </div>
-
-
-      <div class="skill-item">
-
-        <div class="skill-icon software-logo">
-
-          <img
-            src="software/canva.png"
-            alt="Canva"
-            loading="eager"
-          >
-
-        </div>
-
-        <div class="skill-name">
-          Canva
         </div>
 
       </div>
 
 
     </div>
-
-  </div>
-
-
-  <!-- DRONE AERIAL -->
-
-  <div class="card drone-skill reveal">
-
-    <video
-      class="drone-media"
-      autoplay
-      muted
-      loop
-      playsinline
-      controls
-      preload="metadata"
-      poster="video-drone/drone-footage.jpeg"
-    >
-
-      <source
-        src="video-drone/drone-mistik.mp4"
-        type="video/mp4"
-      >
-
-      Browser Anda tidak mendukung video.
-
-    </video>
-
-
-    <div class="drone-overlay">
-
-      <h3>
-        Drone Aerial
-      </h3>
-
-      <p>
-        Aerial photography, cinematic drone operation,
-        navigation, orientation, hovering, and stabilization.
-      </p>
-
-      <div class="drone-tags">
-
-        <span class="drone-tag">
-          Cinematic
-        </span>
-
-        <span class="drone-tag">
-          UAV
-        </span>
-
-        <span class="drone-tag">
-          Navigation
-        </span>
-
-        <span class="drone-tag">
-          Stabilization
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-
-</div>
-```
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      CERTIFICATES
@@ -2408,64 +2374,63 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Credentials
+        <div class="kicker">
+          Credentials
+        </div>
+
+        <h2>
+          Certificates & Achievements
+        </h2>
+
+      </div>
+
     </div>
 
-    <h2>
-      Certificates & Achievements
-    </h2>
 
-  </div>
-
-</div>
+    <div class="certs">
 
 
-<div class="certs">
+      <div class="cert reveal">
+        Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
+      </div>
 
 
-  <div class="cert reveal">
-    Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
-  </div>
+      <div class="cert reveal">
+        Magang Teknisi Instalasi AC — El Nusa Teknik
+      </div>
 
 
-  <div class="cert reveal">
-    Magang Teknisi Instalasi AC — El Nusa Teknik
-  </div>
+      <div class="cert reveal">
+        Magang Quality Control — PT. Garindo Mitra Sejati
+      </div>
 
 
-  <div class="cert reveal">
-    Magang Quality Control — PT. Garindo Mitra Sejati
-  </div>
+      <div class="cert reveal">
+        AI Basic: Overview of Artificial Intelligence — Huawei
+      </div>
 
 
-  <div class="cert reveal">
-    AI Basic: Overview of Artificial Intelligence — Huawei
-  </div>
+      <div class="cert reveal">
+        Paten: Sistem Kendali Posisi Pada Antena Pelacak
+        Terhadap Pesawat Tanpa Awak — No. 001376287
+      </div>
 
 
-  <div class="cert reveal">
-    Paten: Sistem Kendali Posisi Pada Antena Pelacak
-    Terhadap Pesawat Tanpa Awak — No. 001376287
-  </div>
+      <div class="cert reveal">
+        Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
+      </div>
 
 
-  <div class="cert reveal">
-    Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
-  </div>
-
-
-</div>
-```
+    </div>
 
   </div>
 
 </section>
+
 
 <!-- =========================================================
      CONTACT
@@ -2475,68 +2440,68 @@ footer{
 
   <div class="container">
 
-```
-<div class="section-head">
+    <div class="section-head">
 
-  <div>
+      <div>
 
-    <div class="kicker">
-      Let's Connect
+        <div class="kicker">
+          Let's Connect
+        </div>
+
+        <h2>
+          Contact
+        </h2>
+
+      </div>
+
     </div>
 
-    <h2>
-      Contact
-    </h2>
 
-  </div>
-
-</div>
+    <div class="contact">
 
 
-<div class="contact">
+      <div class="card reveal">
+
+        <h3>
+          Open to opportunities
+        </h3>
+
+        <p class="muted">
+          Saya siap berkontribusi di lingkungan industri
+          maupun keteknikan, bidang electrical,
+          MEP, embedded systems, control, dan engineering.
+        </p>
+
+      </div>
 
 
-  <div class="card reveal">
+      <div class="card reveal">
 
-    <h3>
-      Open to opportunities
-    </h3>
-
-    <p class="muted">
-      Saya siap berkontribusi di lingkungan industri
-      maupun keteknikan, bidang electrical,
-      MEP, embedded systems, control, dan engineering.
-    </p>
-
-  </div>
+        <a href="mailto:titisseptian02@gmail.com">
+          ✉ titisseptian02@gmail.com
+        </a>
 
 
-  <div class="card reveal">
+        <a
+          href="https://www.linkedin.com/in/titissurya/"
+          target="_blank"
+          rel="noopener"
+        >
+          in LinkedIn — titissurya
+        </a>
 
-    <a href="mailto:titisseptian02@gmail.com">
-      ✉ titisseptian02@gmail.com
-    </a>
-
-
-    <a
-      href="https://www.linkedin.com/in/titissurya/"
-      target="_blank"
-      rel="noopener"
-    >
-      in LinkedIn — titissurya
-    </a>
-
-  </div>
+      </div>
 
 
-</div>
-```
+    </div>
 
   </div>
 
 </section>
 
+
 </main>
+
 
 <!-- =========================================================
      FOOTER
@@ -2546,14 +2511,13 @@ footer{
 
   <div class="container">
 
-```
-© 2026 Titis Septian Dwi Surya ·
-Electrical Engineering Portfolio
-```
+    © 2026 Titis Septian Dwi Surya ·
+    Electrical Engineering Portfolio
 
   </div>
 
 </footer>
+
 
 <!-- =========================================================
      JAVASCRIPT
