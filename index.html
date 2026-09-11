@@ -791,35 +791,28 @@ h2{
 /* =========================================================
    SOFTWARE LOGO
 ========================================================= */
-.software-logo{
-  color:var(--text);
-
-  background:rgba(255,255,255,.025);
-
-  overflow:hidden;
-}
-
-.software-logo img{
-  width:42px;
-
-  height:42px;
-
-  object-fit:contain;
-
-  display:block;
-
-  border-radius:8px;
-
-  max-width:100%;
-
-  max-height:100%;
-}
-
-.software-logo:hover{
-  border-color:var(--accent);
-}
-
-
+      
+      .software-logo{
+        width:64px;
+        height:64px;
+        padding:10px;
+        color:var(--text);
+        background:rgba(255,255,255,.035);
+        overflow:hidden;
+      }
+      
+      .software-logo img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        display:block;
+        border-radius:6px;
+      }
+      
+      .software-logo:hover{
+        border-color:var(--accent);
+        background:rgba(103,232,249,.06);
+      }
 /* =========================================================
    GAMBAR ERROR
 ========================================================= */
@@ -1866,104 +1859,83 @@ footer{
       </div>
 
 
-      <!-- =====================================================
-           SOFTWARE & TOOLS
-      ====================================================== -->
+      <!-- =========================================================
+     SOFTWARE & TOOLS
+========================================================= -->
       <div class="card skillbox reveal">
-
-        <h3>
-          Software & Tools
-        </h3>
-
+      
+        <h3>Software & Tools</h3>
+      
         <div class="skill-icons">
-
-
+      
           <!-- MATLAB -->
           <div class="skill-item">
-
             <div class="skill-icon software-logo">
-
               <img
-                class="software-image"
-                data-software="matlab.jpeg"
+                src="./software&tools/matlab.jpeg"
                 alt="MATLAB"
                 loading="lazy"
+                onerror="this.style.display='none';"
               >
-
             </div>
-
+      
             <div class="skill-name">
               MATLAB
             </div>
-
           </div>
-
-
+      
+      
           <!-- ARDUINO -->
           <div class="skill-item">
-
             <div class="skill-icon software-logo">
-
               <img
-                class="software-image"
-                data-software="arduino.jpeg"
+                src="./software&tools/arduino.jpeg"
                 alt="Arduino IDE"
                 loading="lazy"
+                onerror="this.style.display='none';"
               >
-
             </div>
-
+      
             <div class="skill-name">
               Arduino IDE
             </div>
-
           </div>
-
-
+      
+      
           <!-- EASYEDA -->
           <div class="skill-item">
-
             <div class="skill-icon software-logo">
-
               <img
-                class="software-image"
-                data-software="easyeda.webp"
+                src="./software&tools/easyeda.webp"
                 alt="EasyEDA"
                 loading="lazy"
+                onerror="this.style.display='none';"
               >
-
             </div>
-
+      
             <div class="skill-name">
               EasyEDA
             </div>
-
           </div>
-
-
+      
+      
           <!-- CANVA -->
           <div class="skill-item">
-
             <div class="skill-icon software-logo">
-
               <img
-                class="software-image"
-                data-software="canva.jpeg"
+                src="./software&tools/canva.jpeg"
                 alt="Canva"
                 loading="lazy"
+                onerror="this.style.display='none';"
               >
-
             </div>
-
+      
             <div class="skill-name">
               Canva
             </div>
-
           </div>
-
-
+      
         </div>
-
       </div>
 
 
