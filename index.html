@@ -16,6 +16,10 @@
 
 <style>
 
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
   --bg:#07111f;
   --panel:#0d1a2b;
@@ -28,6 +32,11 @@
   --max:1120px;
 }
 
+
+/* =========================================================
+   RESET
+========================================================= */
+
 *{
   box-sizing:border-box;
   scroll-behavior:smooth;
@@ -35,6 +44,7 @@
 
 body{
   margin:0;
+
   background:
     linear-gradient(
       180deg,
@@ -42,7 +52,9 @@ body{
       #081525 55%,
       #06101d 100%
     );
+
   color:var(--text);
+
   font-family:
     Inter,
     system-ui,
@@ -52,6 +64,7 @@ body{
     Roboto,
     Arial,
     sans-serif;
+
   line-height:1.6;
 }
 
@@ -66,25 +79,33 @@ a{
 }
 
 
-/* =========================
+/* =========================================================
    NAVIGATION
-========================= */
+========================================================= */
 
 nav{
   position:fixed;
   top:0;
   left:0;
   right:0;
-  z-index:20;
+
+  z-index:100;
+
   background:rgba(6,16,29,.78);
+
   backdrop-filter:blur(14px);
-  border-bottom:1px solid rgba(255,255,255,.06);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.06);
 }
 
 .nav{
   height:72px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 }
 
@@ -100,8 +121,14 @@ nav{
 .navlinks{
   display:flex;
   gap:26px;
+
   color:var(--muted);
+
   font-size:14px;
+}
+
+.navlinks a{
+  transition:.25s ease;
 }
 
 .navlinks a:hover{
@@ -109,35 +136,49 @@ nav{
 }
 
 
-/* =========================
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 .hero{
   min-height:92vh;
+
   display:grid;
+
   place-items:center;
+
   padding-top:90px;
 }
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.25fr .75fr;
+
+  grid-template-columns:
+    1.25fr .75fr;
+
   gap:55px;
+
   align-items:center;
 }
 
 .kicker{
   color:var(--accent);
+
   font-weight:700;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
   font-size:13px;
 }
 
 h1{
-  font-size:clamp(42px,7vw,76px);
+  font-size:
+    clamp(42px,7vw,76px);
+
   line-height:1.02;
+
   margin:16px 0;
 }
 
@@ -148,34 +189,48 @@ h1 span{
       var(--accent),
       var(--accent2)
     );
+
   -webkit-background-clip:text;
+
   color:transparent;
 }
 
 .lead{
   font-size:18px;
+
   color:var(--muted);
+
   max-width:720px;
 }
 
 .btns{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
+
   margin-top:28px;
 }
 
 .btn{
   padding:12px 18px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:12px;
+
   font-weight:700;
+
   transition:.25s ease;
 }
 
 .btn.primary{
   background:var(--text);
+
   color:#07111f;
+
   border-color:var(--text);
 }
 
@@ -184,9 +239,9 @@ h1 span{
 }
 
 
-/* =========================
-   PROFILE CARD
-========================= */
+/* =========================================================
+   PROFILE
+========================================================= */
 
 .profile-card{
   background:
@@ -195,28 +250,47 @@ h1 span{
       rgba(16,34,56,.9),
       rgba(10,23,39,.85)
     );
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:24px;
+
   padding:28px;
-  box-shadow:0 25px 80px rgba(0,0,0,.3);
+
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.3);
 }
 
 .avatar{
   width:140px;
   height:140px;
+
   border-radius:24px;
+
   object-fit:cover;
+
   display:block;
+
   margin-bottom:22px;
-  border:1px solid var(--line);
-  box-shadow:0 12px 35px rgba(0,0,0,.3);
+
+  border:
+    1px solid var(--line);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,.3);
 }
 
 .stat{
   display:flex;
+
   justify-content:space-between;
+
   padding:13px 0;
-  border-bottom:1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+
   color:var(--muted);
 }
 
@@ -225,9 +299,9 @@ h1 span{
 }
 
 
-/* =========================
+/* =========================================================
    SECTION
-========================= */
+========================================================= */
 
 section{
   padding:92px 0;
@@ -235,20 +309,27 @@ section{
 
 .section-head{
   display:flex;
+
   justify-content:space-between;
+
   gap:30px;
+
   align-items:end;
+
   margin-bottom:34px;
 }
 
 h2{
   font-size:34px;
+
   margin:0;
 }
 
 .section-head p{
   color:var(--muted);
+
   max-width:600px;
+
   margin:0;
 }
 
@@ -257,20 +338,28 @@ h2{
 }
 
 
-/* =========================
+/* =========================================================
    ABOUT
-========================= */
+========================================================= */
 
 .about{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:24px;
 }
 
 .card{
-  background:rgba(13,26,43,.72);
-  border:1px solid var(--line);
+  background:
+    rgba(13,26,43,.72);
+
+  border:
+    1px solid var(--line);
+
   border-radius:20px;
+
   padding:25px;
 }
 
@@ -279,157 +368,351 @@ h2{
 }
 
 
-/* =========================
+/* =========================================================
    PROJECTS
-========================= */
+========================================================= */
 
 .projects{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:18px;
 }
 
 .project{
   min-height:260px;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:space-between;
 }
 
 .tag{
   display:inline-block;
+
   padding:5px 9px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:999px;
+
   color:var(--accent);
+
   font-size:12px;
+
   margin:3px 4px 3px 0;
 }
 
-/* =========================
-   PROJECT VIDEO 1:1
-========================= */
 
-.project-video{
-  width:100%;
-  aspect-ratio:1 / 1;
-  object-fit:cover;
-  display:block;
-  border-radius:14px;
-  background:#050d18;
-  border:1px solid var(--line);
-  margin-bottom:22px;
-}
+/* =========================================================
+   PROJECT 1
+   VIDEO 1:1 + OVERLAY ATAS
+========================================================= */
 
-.project-video-wrap{
+.project-feature{
+
+  grid-column:1 / -1;
+
   width:100%;
-  aspect-ratio:1 / 1;
+
+  max-width:760px;
+
+  margin:0 auto;
+
+  padding:0;
+
+  position:relative;
+
   overflow:hidden;
-  border-radius:14px;
-  margin-bottom:22px;
+
+  aspect-ratio:1 / 1;
+
+  min-height:0;
+
   background:#050d18;
+
+  border-radius:20px;
+
+  border:
+    1px solid var(--line);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.30);
 }
 
-.project-video-wrap video{
+.project-feature-media{
+
+  position:absolute;
+
+  inset:0;
+
   width:100%;
+
   height:100%;
-  object-fit:cover;
+
   display:block;
+
+  object-fit:cover;
+
+  background:#050d18;
+
+  transition:
+    transform .6s ease;
 }
-/* =========================
+
+.project-feature:hover
+.project-feature-media{
+  transform:scale(1.025);
+}
+
+
+/* Overlay */
+
+.project-feature-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:flex-start;
+
+  padding:28px;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,17,31,.94) 0%,
+      rgba(7,17,31,.65) 15%,
+      rgba(7,17,31,.18) 38%,
+      transparent 62%,
+      rgba(7,17,31,.12) 100%
+    );
+}
+
+.project-feature-content{
+  max-width:680px;
+}
+
+.project-feature-content h3{
+
+  margin:0 0 12px;
+
+  font-size:
+    clamp(22px,3vw,30px);
+
+  line-height:1.2;
+
+  color:#fff;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,.35);
+}
+
+
+/* Project tags */
+
+.project-tags{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:7px;
+}
+
+.project-tags .tag{
+
+  margin:0;
+
+  color:#fff;
+
+  border-color:
+    rgba(255,255,255,.28);
+
+  background:
+    rgba(0,0,0,.28);
+
+  backdrop-filter:blur(7px);
+}
+
+
+/* Technology */
+
+.project-feature-content p{
+
+  margin:12px 0 0;
+
+  color:#d5dfeb;
+
+  font-size:13px;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
    EXPERIENCE
-========================= */
+========================================================= */
 
 .timeline{
+
   position:relative;
-  border-left:1px solid var(--line);
+
+  border-left:
+    1px solid var(--line);
+
   margin-left:8px;
+
   padding-left:28px;
 }
 
 .item{
+
   position:relative;
+
   margin:0 0 42px;
 }
 
 .item:before{
+
   content:"";
+
   position:absolute;
+
   left:-34px;
+
   top:8px;
+
   width:9px;
+
   height:9px;
+
   border-radius:50%;
+
   background:var(--accent);
+
   box-shadow:
     0 0 0 5px #07111f;
-  border:1px solid var(--accent);
+
+  border:
+    1px solid var(--accent);
 }
 
 .date{
+
   color:var(--accent);
+
   font-size:13px;
+
   font-weight:700;
 }
 
 
-/* =========================
-   SUMMARECON PHOTO GALLERY
-========================= */
+/* =========================================================
+   SUMMARECON GALLERY
+========================================================= */
 
 .experience-gallery{
+
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap:16px;
+
   margin-top:22px;
 }
 
 .experience-gallery img{
+
   width:100%;
+
   height:280px;
+
   object-fit:cover;
+
   border-radius:16px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   display:block;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
   transition:.3s ease;
 }
 
 .experience-gallery img:hover{
-  transform:translateY(-4px);
+
+  transform:
+    translateY(-4px);
 }
 
 
-/* =========================
-   KRTI PHOTO GALLERY
-========================= */
+/* =========================================================
+   KRTI GALLERY
+========================================================= */
 
 .krti-gallery{
+
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+    repeat(2,1fr);
+
   gap:16px;
+
   margin-top:22px;
 }
 
 .krti-gallery img{
+
   width:100%;
+
   height:300px;
+
   object-fit:cover;
+
   border-radius:16px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   display:block;
-  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+
   transition:.3s ease;
 }
 
 .krti-gallery img:hover{
-  transform:translateY(-4px);
+
+  transform:
+    translateY(-4px);
 }
 
 
-/* =========================
-   EL NUSA EXPERIENCE
-========================= */
+/* =========================================================
+   EL NUSA
+========================================================= */
 
 .elnusa-item{
   margin-top:90px;
@@ -438,191 +721,234 @@ h2{
 .elnusa-item .date,
 .elnusa-item h3,
 .elnusa-item p{
+
   position:relative;
+
   left:-18px;
 }
 
 
-/* =========================
-   SKILLS — VISUAL SHOWCASE
-========================= */
+/* =========================================================
+   SKILLS
+========================================================= */
 
 .skills{
+
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(3,1fr);
+
   gap:18px;
 }
 
 .skillbox{
+
   min-height:230px;
+
   position:relative;
+
   overflow:hidden;
+
   transition:.3s ease;
 }
 
 .skillbox:hover{
-  transform:translateY(-5px);
-  border-color:var(--accent);
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    var(--accent);
 }
 
 .skillbox h3{
+
   margin-top:0;
+
   margin-bottom:24px;
 }
 
+
+/* =========================================================
+   SKILL ICONS
+========================================================= */
+
 .skill-icons{
+
   display:flex;
+
   flex-wrap:wrap;
+
   gap:18px;
+
   align-items:flex-start;
 }
 
 .skill-item{
+
   width:68px;
+
   text-align:center;
 }
 
 .skill-icon{
+
   width:64px;
+
   height:64px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:16px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
-  background:rgba(255,255,255,.025);
+
+  background:
+    rgba(255,255,255,.025);
+
   transition:.25s ease;
+
   margin:auto;
 }
 
 .skill-icon:hover{
-  transform:translateY(-4px);
-  border-color:var(--accent);
-  background:rgba(103,232,249,.06);
+
+  transform:
+    translateY(-4px);
+
+  border-color:
+    var(--accent);
+
+  background:
+    rgba(103,232,249,.06);
 }
 
 .skill-icon img{
+
   width:36px;
+
   height:36px;
+
   object-fit:contain;
 }
-/* =========================
-   SOFTWARE LOGOS
-========================= */
 
-.software-logo{
-  color:var(--text);
-}
-
-.software-logo svg{
-  width:40px;
-  height:40px;
-  display:block;
-}
-
-.matlab-logo{
-  color:#eaf2fb;
-}
-
-.arduino-logo{
-  color:#eaf2fb;
-}
-
-.office-logo{
-  color:#eaf2fb;
-}
-
-.canva-logo{
-  color:#eaf2fb;
-}
-
-.software-logo:hover{
-  color:var(--accent);
-}
 .skill-name{
+
   margin-top:7px;
+
   font-size:11px;
+
   line-height:1.3;
+
   color:var(--muted);
 }
 
 .custom-icon{
+
   font-size:29px;
+
   font-weight:800;
+
   color:var(--text);
 }
 
 .custom-icon.small{
+
   font-size:19px;
 }
 
 
-/* =========================
-   DRONE FEATURE
-========================= */
+/* =========================================================
+   SOFTWARE SVG LOGOS
+========================================================= */
+
+.software-logo{
+
+  color:var(--text);
+}
+
+.software-logo svg{
+
+  width:40px;
+
+  height:40px;
+
+  display:block;
+}
+
+.software-logo:hover{
+
+  color:var(--accent);
+}
+
+
+/* =========================================================
+   DRONE AERIAL
+========================================================= */
 
 .drone-skill{
+
   grid-column:1 / -1;
+
   min-height:390px;
+
   padding:0;
+
   overflow:hidden;
+
   position:relative;
+
+  border-radius:20px;
 }
 
 .drone-media{
+
   position:relative;
+
   z-index:1;
+
   width:100%;
+
   height:390px;
+
   object-fit:cover;
+
   display:block;
+
   background:#050d18;
+
   transition:.5s ease;
 }
 
-.drone-skill:hover .drone-media{
-  transform:scale(1.025);
-}
+.drone-skill:hover
+.drone-media{
 
-.drone-placeholder{
-  position:absolute;
-  inset:0;
-  z-index:0;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  gap:10px;
-  background:
-    radial-gradient(
-      circle at 50% 35%,
-      rgba(103,232,249,.10),
-      transparent 35%
-    ),
-    linear-gradient(
-      145deg,
-      #0c1b2d,
-      #07111f
-    );
-}
-
-.drone-placeholder .drone-icon{
-  font-size:64px;
-}
-
-.drone-placeholder span{
-  color:var(--muted);
-  font-size:13px;
+  transform:
+    scale(1.025);
 }
 
 .drone-overlay{
+
   position:absolute;
+
   inset:0;
+
   z-index:2;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:flex-end;
+
   padding:30px;
+
   background:
     linear-gradient(
       180deg,
@@ -630,194 +956,301 @@ h2{
       rgba(7,17,31,.18) 48%,
       rgba(7,17,31,.96) 100%
     );
+
   pointer-events:none;
 }
 
 .drone-overlay h3{
+
   margin:0 0 7px;
+
   font-size:25px;
 }
 
 .drone-overlay p{
+
   margin:0;
+
   color:#d5dfeb;
+
   max-width:650px;
 }
 
 .drone-tags{
+
   display:flex;
+
   gap:8px;
+
   flex-wrap:wrap;
+
   margin-top:14px;
 }
 
 .drone-tag{
+
   padding:5px 10px;
-  border:1px solid rgba(255,255,255,.2);
+
+  border:
+    1px solid rgba(255,255,255,.2);
+
   border-radius:999px;
+
   font-size:11px;
+
   color:#fff;
-  background:rgba(0,0,0,.28);
+
+  background:
+    rgba(0,0,0,.28);
 }
 
 
-/* =========================
+/* =========================================================
    CERTIFICATES
-========================= */
+========================================================= */
 
 .certs{
+
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:18px;
 }
 
 .cert{
+
   padding:18px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:16px;
+
   background:var(--panel);
 }
 
 
-/* =========================
+/* =========================================================
    CONTACT
-========================= */
+========================================================= */
 
 .contact{
+
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:20px;
 }
 
 .contact a{
+
   display:block;
+
   padding:15px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid var(--line);
+
   border-radius:14px;
+
   margin-top:10px;
+
   color:var(--muted);
+
   transition:.25s ease;
 }
 
 .contact a:hover{
+
   color:var(--text);
-  border-color:var(--accent);
+
+  border-color:
+    var(--accent);
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer{
+
   padding:35px 0;
-  border-top:1px solid var(--line);
+
+  border-top:
+    1px solid var(--line);
+
   color:var(--muted);
+
   font-size:14px;
 }
 
 
-/* =========================
-   ANIMATION
-========================= */
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
 
 .reveal{
+
   opacity:0;
-  transform:translateY(18px);
-  transition:.7s ease;
+
+  transform:
+    translateY(18px);
+
+  transition:
+    .7s ease;
 }
 
 .reveal.show{
+
   opacity:1;
+
   transform:none;
 }
 
 
-/* =========================
+/* =========================================================
    TABLET
-========================= */
+========================================================= */
 
 @media(max-width:850px){
 
   .hero-grid,
   .about,
   .contact{
+
     grid-template-columns:1fr;
   }
 
   .projects,
   .skills,
   .certs{
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .project-feature{
+
+    grid-column:
+      1 / -1;
+
+    max-width:
+      650px;
   }
 
   .drone-skill{
-    grid-column:1 / -1;
+
+    grid-column:
+      1 / -1;
   }
 
   .navlinks{
+
     display:none;
   }
 
 }
 
 
-/* =========================
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
 @media(max-width:560px){
 
   .projects,
   .skills,
   .certs{
-    grid-template-columns:1fr;
+
+    grid-template-columns:
+      1fr;
   }
 
   section{
-    padding:70px 0;
+
+    padding:
+      70px 0;
   }
 
   .hero{
+
     min-height:auto;
-    padding:125px 0 70px;
+
+    padding:
+      125px 0 70px;
   }
 
   .experience-gallery,
   .krti-gallery{
-    grid-template-columns:1fr;
+
+    grid-template-columns:
+      1fr;
   }
 
   .experience-gallery img,
   .krti-gallery img{
+
     height:auto;
   }
 
   .elnusa-item{
-    margin-top:70px;
+
+    margin-top:
+      70px;
   }
 
   .elnusa-item .date,
   .elnusa-item h3,
   .elnusa-item p{
+
     left:0;
   }
 
   .avatar{
+
     width:120px;
+
     height:120px;
   }
 
+  .project-feature{
+
+    grid-column:auto;
+
+    width:100%;
+
+    aspect-ratio:
+      1 / 1;
+  }
+
+  .project-feature-overlay{
+
+    padding:
+      20px;
+  }
+
+  .project-feature-content h3{
+
+    font-size:22px;
+  }
+
   .drone-skill{
+
     grid-column:auto;
   }
 
-  .drone-media,
-  .drone-placeholder{
+  .drone-media{
+
     height:310px;
   }
 
   .drone-overlay{
+
     padding:20px;
   }
 
@@ -831,25 +1264,47 @@ footer{
 <body>
 
 
-<!-- =========================
+<!-- =========================================================
      NAVIGATION
-========================= -->
+========================================================= -->
 
 <nav>
 
   <div class="container nav">
 
-    <a class="logo" href="#home">
+    <a
+      class="logo"
+      href="#home"
+    >
       Titis<span>.</span>Surya
     </a>
 
+
     <div class="navlinks">
 
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#experience">
+        Experience
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a href="#certificates">
+        Certificates
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
 
     </div>
 
@@ -861,9 +1316,9 @@ footer{
 <main id="home">
 
 
-<!-- =========================
+<!-- =========================================================
      HERO
-========================= -->
+========================================================= -->
 
 <section class="hero">
 
@@ -876,15 +1331,24 @@ footer{
         MY-Portfolio
       </div>
 
+
       <h1>
+
         Titis Septian<br>
-        <span>Dwi Surya</span>
+
+        <span>
+          Dwi Surya
+        </span>
+
       </h1>
 
+
       <p class="lead">
-        Electrical Engineering graduate with interests and practical
-        experience in embedded systems, automatic control,
-        electrical/MEP work, and UAV technology.
+
+        Electrical Engineering graduate with interests and
+        practical experience in embedded systems, automatic
+        control, electrical/MEP work, and UAV technology.
+
       </p>
 
 
@@ -911,6 +1375,7 @@ footer{
           class="btn"
           href="https://www.linkedin.com/in/titissurya/"
           target="_blank"
+          rel="noopener"
         >
           LinkedIn ↗
         </a>
@@ -920,7 +1385,7 @@ footer{
     </div>
 
 
-    <!-- PROFILE CARD -->
+    <!-- PROFILE -->
 
     <aside class="profile-card reveal">
 
@@ -930,9 +1395,11 @@ footer{
         alt="Foto profil Titis Septian Dwi Surya"
       >
 
+
       <h3>
         Electrical Engineer
       </h3>
+
 
       <p class="muted">
         Embedded Systems · Control Systems · MEP · UAV
@@ -940,18 +1407,41 @@ footer{
 
 
       <div class="stat">
-        <span>Education</span>
-        <strong>UNNES</strong>
+
+        <span>
+          Education
+        </span>
+
+        <strong>
+          UNNES
+        </strong>
+
       </div>
 
-      <div class="stat">
-        <span>GPA</span>
-        <strong>3.51 / 4.00</strong>
-      </div>
 
       <div class="stat">
-        <span>Focus</span>
-        <strong>Engineering</strong>
+
+        <span>
+          GPA
+        </span>
+
+        <strong>
+          3.51 / 4.00
+        </strong>
+
+      </div>
+
+
+      <div class="stat">
+
+        <span>
+          Focus
+        </span>
+
+        <strong>
+          Engineering
+        </strong>
+
       </div>
 
     </aside>
@@ -961,9 +1451,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      ABOUT
-========================= -->
+========================================================= -->
 
 <section id="about">
 
@@ -996,16 +1486,22 @@ footer{
           Engineering Background
         </h3>
 
+
         <p class="muted">
+
           Lulusan S1 Teknik Elektro Universitas Negeri Semarang
           (UNNES), IPK 3.51/4.00. Memiliki dasar Teknik Instalasi
           Tenaga Listrik dari SMKN 2 Purwodadi.
+
         </p>
 
+
         <p class="muted">
+
           Fokus tugas akhir pada embedded systems, sistem kendali
           otomatis, dan teknik optimasi Particle Swarm Optimization
           (PSO).
+
         </p>
 
       </div>
@@ -1017,16 +1513,22 @@ footer{
           Professional Strength
         </h3>
 
+
         <p class="muted">
+
           Pengalaman Quality Control pada proyek Summarecon Mall
           Bekasi 2 dengan fokus MEP, inspeksi instalasi kelistrikan,
           verifikasi material, testing & commissioning, serta
           pengecekan terhadap shop drawing.
+
         </p>
 
+
         <p class="muted">
+
           Terbiasa bekerja di lingkungan lapangan dan memiliki
           pengalaman organisasi robotika pada divisi mekanik UAV.
+
         </p>
 
       </div>
@@ -1039,9 +1541,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      PROJECTS
-========================= -->
+========================================================= -->
 
 <section id="projects">
 
@@ -1062,8 +1564,10 @@ footer{
 
       </div>
 
+
       <p>
-        Beberapa Pengalaman saya saat kuliah di UNIVERSITAS NEGERI SEMARANG.
+        Beberapa pengalaman saya saat kuliah di
+        Universitas Negeri Semarang.
       </p>
 
     </div>
@@ -1072,69 +1576,89 @@ footer{
     <div class="projects">
 
 
-      <!-- PROJECT 1 -->
+      <!-- ===================================================
+           PROJECT 1
+           ANTENNA TRACKER
+      ==================================================== -->
 
-<article class="card project reveal">
-
-  <div>
-
-    <!-- VIDEO PROJECT 1 -->
-
-    <div class="project-video-wrap">
-
-      <video
-        class="project-video"
-        autoplay
-        muted
-        loop
-        playsinline
-        controls
+      <article
+        class="project project-feature reveal"
       >
 
-        <source
-          src="video-drone/drone-project.mp4"
-          type="video/mp4"
+
+        <!-- VIDEO 1:1 -->
+
+        <video
+          class="project-feature-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
         >
 
-        Browser Anda tidak mendukung video.
+          <source
+            src="video%20drone/drone-project.mp4"
+            type="video/mp4"
+          >
 
-      </video>
+          Browser Anda tidak mendukung video.
 
-    </div>
-
-
-    <span class="tag">
-      Embedded
-    </span>
-
-    <span class="tag">
-      Control
-    </span>
-
-    <span class="tag">
-      UAV
-    </span>
+        </video>
 
 
-    <h3>
-      2-Axis Automatic UAV Antenna Tracker
-    </h3>
+        <!-- OVERLAY ATAS -->
 
-  </div>
+        <div class="project-feature-overlay">
 
-
-  <strong>
-    PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk
-  </strong>
-
-</article>
+          <div class="project-feature-content">
 
 
-      <!-- PROJECT 2 -->
+            <h3>
+              2-Axis Automatic UAV Antenna Tracker
+            </h3>
 
-      <article class="card project reveal">
+
+            <div class="project-tags">
+
+              <span class="tag">
+                Embedded
+              </span>
+
+              <span class="tag">
+                Control
+              </span>
+
+              <span class="tag">
+                UAV
+              </span>
+
+            </div>
+
+
+            <p>
+              PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk
+            </p>
+
+
+          </div>
+
+        </div>
+
+
+      </article>
+
+
+      <!-- ===================================================
+           PROJECT 2
+      ==================================================== -->
+
+      <article
+        class="card project reveal"
+      >
 
         <div>
+
 
           <span class="tag">
             MEP
@@ -1153,12 +1677,16 @@ footer{
             Quality Control — Summarecon Mall Bekasi 2
           </h3>
 
+
           <p class="muted">
+
             Inspeksi dan pengawasan kualitas teknis sistem
             MEP pada proyek pembangunan, termasuk panel
             distribusi daya, wiring, pencahayaan, grounding,
             material, dan testing & commissioning.
+
           </p>
+
 
         </div>
 
@@ -1167,14 +1695,20 @@ footer{
           Shop Drawing · Inspection · MEP · T&C
         </strong>
 
+
       </article>
 
 
-      <!-- PROJECT 3 -->
+      <!-- ===================================================
+           PROJECT 3
+      ==================================================== -->
 
-      <article class="card project reveal">
+      <article
+        class="card project reveal"
+      >
 
         <div>
+
 
           <span class="tag">
             Robotics
@@ -1193,11 +1727,15 @@ footer{
             Suvifor Racing Plane — Robotika UNNES
           </h3>
 
+
           <p class="muted">
+
             Bertanggung jawab pada perancangan,
             manufaktur, dan aspek aerodinamika struktur
             mekanik UAV fixed-wing.
+
           </p>
+
 
         </div>
 
@@ -1205,6 +1743,7 @@ footer{
         <strong>
           Mechanical Design · Manufacturing · Aerodynamics
         </strong>
+
 
       </article>
 
@@ -1216,9 +1755,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      EXPERIENCE
-========================= -->
+========================================================= -->
 
 <section id="experience">
 
@@ -1245,33 +1784,40 @@ footer{
     <div class="timeline">
 
 
-      <!-- SUMMARECON -->
+      <!-- ===================================================
+           SUMMARECON
+      ==================================================== -->
 
       <div class="item reveal">
+
 
         <div class="date">
           JAN 2025 — JUN 2025
         </div>
 
+
         <h3>
           Quality Control Project — PT. Garindo Mitra Sejati
         </h3>
+
 
         <p class="muted">
           Summarecon Mall Bekasi 2 · Bekasi
         </p>
 
+
         <p class="muted">
+
           Melakukan inspeksi kualitas teknis, pengawasan
           material MEP, testing & commissioning, serta
           inspeksi instalasi listrik, plumbing, mekanikal,
           panel, wiring, lighting, dan grounding.
+
         </p>
 
 
-        <!-- FOTO SUMMARECON -->
-
         <div class="experience-gallery">
+
 
           <img
             src="foto%20magang/magang.png"
@@ -1279,46 +1825,58 @@ footer{
             loading="lazy"
           >
 
+
           <img
             src="foto%20magang/magang%201.png"
             alt="Dokumentasi kegiatan Quality Control Summarecon Mall Bekasi 2"
             loading="lazy"
           >
 
+
         </div>
+
 
       </div>
 
 
-      <!-- SUVIFOR / KRTI -->
+      <!-- ===================================================
+           KRTI
+      ==================================================== -->
 
       <div class="item reveal">
+
 
         <div class="date">
           JAN 2024 — DEC 2024
         </div>
+
 
         <h3>
           Kontes Robot Terbang Indonesia (KRTI)
           — Suvifor Racing Plane
         </h3>
 
+
         <p class="muted">
           Robotika Universitas Negeri Semarang
         </p>
 
+
         <p class="muted">
+
           Terlibat dalam peserta KRTI 2024 sebagai bagian dari
-          tim Robotika UNNES, KRTI merupakan kompetisi tahunan
+          tim Robotika UNNES. KRTI merupakan kompetisi tahunan
           yang diselenggarakan oleh Kementerian Pendidikan,
           Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
           melalui Balai Pengembangan Talenta Indonesia (BPTI)
           dan Pusat Prestasi Nasional (Puspresnas) di Lapangan
           Terbang Gading, Kabupaten Gunungkidul, Yogyakarta.
+
         </p>
 
 
         <div class="krti-gallery">
+
 
           <img
             src="KRTI%20event.jpeg"
@@ -1326,39 +1884,51 @@ footer{
             loading="lazy"
           >
 
+
           <img
             src="KRTI%20event2.jpeg"
-            alt="Dokumentasi Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
+            alt="Dokumentasi KRTI Robotika UNNES"
             loading="lazy"
           >
 
+
         </div>
+
 
       </div>
 
 
-      <!-- EL NUSA AC -->
+      <!-- ===================================================
+           EL NUSA
+      ==================================================== -->
 
       <div class="item reveal elnusa-item">
+
 
         <div class="date">
           OCT 2021 — NOV 2021
         </div>
 
+
         <h3>
           Electrical Intern — El Nusa AC
         </h3>
+
 
         <p class="muted">
           Grobogan
         </p>
 
+
         <p class="muted">
+
           Terlibat dalam pemasangan dan perawatan instalasi
           pada RSUD Grobogan serta instalasi AC indoor/outdoor
           pada Gedung Kejaksaan Negeri Grobogan dan
           Sekretariat Daerah Grobogan.
+
         </p>
+
 
       </div>
 
@@ -1370,9 +1940,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      SKILLS
-========================= -->
+========================================================= -->
 
 <section id="skills">
 
@@ -1399,9 +1969,9 @@ footer{
     <div class="skills">
 
 
-      <!-- =========================
-           ELECTRICAL & MEP
-      ========================= -->
+      <!-- ===================================================
+           ELECTRICAL
+      ==================================================== -->
 
       <div class="card skillbox reveal">
 
@@ -1416,9 +1986,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon">
                 ⚡
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1431,9 +2003,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon">
                 🔌
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1446,9 +2020,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon">
                 📐
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1461,9 +2037,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon">
                 🔧
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1478,9 +2056,9 @@ footer{
       </div>
 
 
-      <!-- =========================
-           EMBEDDED & CONTROL
-      ========================= -->
+      <!-- ===================================================
+           EMBEDDED
+      ==================================================== -->
 
       <div class="card skillbox reveal">
 
@@ -1492,14 +2070,49 @@ footer{
         <div class="skill-icons">
 
 
+          <!-- ARDUINO -->
+
           <div class="skill-item">
 
-            <div class="skill-icon">
+            <div class="skill-icon software-logo">
 
-              <img
-                src="https://cdn.simpleicons.org/arduino/eaf2fb"
-                alt="Arduino"
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
               >
+
+                <path
+                  d="
+                    M14 32
+                    C14 23 21 17 29 17
+                    C35 17 39 21 42 26
+                    C45 21 49 17 55 17
+                    C63 17 69 23 69 32
+                    C69 41 63 47 55 47
+                    C49 47 45 43 42 38
+                    C39 43 35 47 29 47
+                    C21 47 14 41 14 32Z
+                  "
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                />
+
+                <path
+                  d="M22 32 H36 M29 25 V39"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+                <circle
+                  cx="53"
+                  cy="32"
+                  r="2.5"
+                  fill="currentColor"
+                />
+
+              </svg>
 
             </div>
 
@@ -1510,14 +2123,15 @@ footer{
           </div>
 
 
+          <!-- ESP32 -->
+
           <div class="skill-item">
 
             <div class="skill-icon">
 
-              <img
-                src="https://cdn.simpleicons.org/espressif/eaf2fb"
-                alt="ESP32"
-              >
+              <span class="custom-icon small">
+                ESP32
+              </span>
 
             </div>
 
@@ -1527,6 +2141,8 @@ footer{
 
           </div>
 
+
+          <!-- PIXHAWK -->
 
           <div class="skill-item">
 
@@ -1545,6 +2161,8 @@ footer{
           </div>
 
 
+          <!-- PID -->
+
           <div class="skill-item">
 
             <div class="skill-icon">
@@ -1561,6 +2179,8 @@ footer{
 
           </div>
 
+
+          <!-- PSO -->
 
           <div class="skill-item">
 
@@ -1582,268 +2202,259 @@ footer{
         </div>
 
       </div>
-<!-- =========================
-     SOFTWARE & TOOLS
-========================= -->
-
-<div class="card skillbox reveal">
-
-  <h3>
-    Software & Tools
-  </h3>
-
-  <div class="skill-icons">
 
 
-    <!-- MATLAB -->
+      <!-- ===================================================
+           SOFTWARE & TOOLS
+      ==================================================== -->
 
-    <div class="skill-item">
+      <div class="card skillbox reveal">
 
-      <div class="skill-icon software-logo matlab-logo">
+        <h3>
+          Software & Tools
+        </h3>
 
-        <svg
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="MATLAB"
-        >
 
-          <path
-            d="M8 45
-               C13 45 14 18 23 18
-               C31 18 31 43 38 43
-               C45 43 47 22 56 22"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="5"
-            stroke-linecap="round"
-          />
+        <div class="skill-icons">
 
-          <path
-            d="M8 45 L17 45"
-            stroke="currentColor"
-            stroke-width="5"
-            stroke-linecap="round"
-          />
 
-        </svg>
+          <!-- MATLAB -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <path
+                  d="
+                    M8 45
+                    C13 45 14 18 23 18
+                    C31 18 31 43 38 43
+                    C45 43 47 22 56 22
+                  "
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+
+                <path
+                  d="M8 45 L17 45"
+                  stroke="currentColor"
+                  stroke-width="5"
+                  stroke-linecap="round"
+                />
+
+              </svg>
+
+            </div>
+
+            <div class="skill-name">
+              MATLAB
+            </div>
+
+          </div>
+
+
+          <!-- ARDUINO IDE -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <path
+                  d="
+                    M14 32
+                    C14 23 21 17 29 17
+                    C35 17 39 21 42 26
+                    C45 21 49 17 55 17
+                    C63 17 69 23 69 32
+                    C69 41 63 47 55 47
+                    C49 47 45 43 42 38
+                    C39 43 35 47 29 47
+                    C21 47 14 41 14 32Z
+                  "
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                />
+
+                <path
+                  d="M22 32 H36 M29 25 V39"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+
+                <circle
+                  cx="53"
+                  cy="32"
+                  r="2.5"
+                  fill="currentColor"
+                />
+
+              </svg>
+
+            </div>
+
+            <div class="skill-name">
+              Arduino IDE
+            </div>
+
+          </div>
+
+
+          <!-- WORD -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <rect
+                  x="18"
+                  y="9"
+                  width="38"
+                  height="46"
+                  rx="5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+
+                <text
+                  x="37"
+                  y="42"
+                  text-anchor="middle"
+                  font-size="29"
+                  font-weight="800"
+                  fill="currentColor"
+                  font-family="Arial, sans-serif"
+                >
+                  W
+                </text>
+
+              </svg>
+
+            </div>
+
+            <div class="skill-name">
+              Word
+            </div>
+
+          </div>
+
+
+          <!-- POWERPOINT -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="22"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+
+                <text
+                  x="32"
+                  y="42"
+                  text-anchor="middle"
+                  font-size="29"
+                  font-weight="800"
+                  fill="currentColor"
+                  font-family="Arial, sans-serif"
+                >
+                  P
+                </text>
+
+              </svg>
+
+            </div>
+
+            <div class="skill-name">
+              PowerPoint
+            </div>
+
+          </div>
+
+
+          <!-- CANVA -->
+
+          <div class="skill-item">
+
+            <div class="skill-icon software-logo">
+
+              <svg
+                viewBox="0 0 64 64"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+
+                <circle
+                  cx="32"
+                  cy="32"
+                  r="25"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                />
+
+                <text
+                  x="32"
+                  y="41"
+                  text-anchor="middle"
+                  font-size="25"
+                  font-weight="700"
+                  fill="currentColor"
+                  font-family="Arial, sans-serif"
+                >
+                  C
+                </text>
+
+              </svg>
+
+            </div>
+
+            <div class="skill-name">
+              Canva
+            </div>
+
+          </div>
+
+
+        </div>
 
       </div>
 
-      <div class="skill-name">
-        MATLAB
-      </div>
 
-    </div>
-
-
-    <!-- ARDUINO -->
-
-    <div class="skill-item">
-
-      <div class="skill-icon software-logo arduino-logo">
-
-        <svg
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Arduino"
-        >
-
-          <path
-            d="M14 32
-               C14 23 21 17 29 17
-               C35 17 39 21 42 26
-               C45 21 49 17 55 17
-               C63 17 69 23 69 32
-               C69 41 63 47 55 47
-               C49 47 45 43 42 38
-               C39 43 35 47 29 47
-               C21 47 14 41 14 32Z"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="4"
-          />
-
-          <path
-            d="M22 32 H36 M29 25 V39"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-          />
-
-          <circle
-            cx="53"
-            cy="32"
-            r="2.5"
-            fill="currentColor"
-          />
-
-        </svg>
-
-      </div>
-
-      <div class="skill-name">
-        Arduino IDE
-      </div>
-
-    </div>
-
-
-    <!-- MICROSOFT WORD -->
-
-    <div class="skill-item">
-
-      <div class="skill-icon software-logo office-logo">
-
-        <svg
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Microsoft Word"
-        >
-
-          <rect
-            x="18"
-            y="9"
-            width="38"
-            height="46"
-            rx="5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-
-          <text
-            x="37"
-            y="42"
-            text-anchor="middle"
-            font-size="29"
-            font-weight="800"
-            fill="currentColor"
-            font-family="Arial, sans-serif"
-          >
-            W
-          </text>
-
-        </svg>
-
-      </div>
-
-      <div class="skill-name">
-        Word
-      </div>
-
-    </div>
-
-
-    <!-- MICROSOFT POWERPOINT -->
-
-    <div class="skill-item">
-
-      <div class="skill-icon software-logo office-logo">
-
-        <svg
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Microsoft PowerPoint"
-        >
-
-          <circle
-            cx="32"
-            cy="32"
-            r="22"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-
-          <text
-            x="32"
-            y="42"
-            text-anchor="middle"
-            font-size="29"
-            font-weight="800"
-            fill="currentColor"
-            font-family="Arial, sans-serif"
-          >
-            P
-          </text>
-
-        </svg>
-
-      </div>
-
-      <div class="skill-name">
-        PowerPoint
-      </div>
-
-    </div>
-
-
-    <!-- CANVA -->
-
-    <div class="skill-item">
-
-      <div class="skill-icon software-logo canva-logo">
-
-        <svg
-          viewBox="0 0 64 64"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-label="Canva"
-        >
-
-          <circle
-            cx="32"
-            cy="32"
-            r="25"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-          />
-
-          <text
-            x="32"
-            y="41"
-            text-anchor="middle"
-            font-size="25"
-            font-weight="700"
-            fill="currentColor"
-            font-family="Arial, sans-serif"
-          >
-            C
-          </text>
-
-        </svg>
-
-      </div>
-
-      <div class="skill-name">
-        Canva
-      </div>
-
-    </div>
-
-
-  </div>
-
-</div>
-
-      
-
-      <!-- =========================
+      <!-- ===================================================
            DRONE AERIAL
-      ========================= -->
+      ==================================================== -->
 
       <div class="card drone-skill reveal">
 
-
-        <!--
-          VIDEO DRONE ANDA
-
-          Struktur GitHub:
-
-          video-drone/
-          └── drone-mistik.mp4
-
-        -->
 
         <video
           class="drone-media"
@@ -1855,7 +2466,7 @@ footer{
         >
 
           <source
-            src="video-drone/drone-mistik.mp4"
+            src="video%20drone/drone%20mistik.mp4"
             type="video/mp4"
           >
 
@@ -1863,8 +2474,6 @@ footer{
 
         </video>
 
-
-        <!-- Overlay -->
 
         <div class="drone-overlay">
 
@@ -1875,8 +2484,10 @@ footer{
 
 
           <p>
+
             Aerial photography, cinematic drone operation,
             navigation, orientation, hovering, and stabilization.
+
           </p>
 
 
@@ -1914,9 +2525,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      CERTIFICATES
-========================= -->
+========================================================= -->
 
 <section id="certificates">
 
@@ -1944,33 +2555,45 @@ footer{
 
 
       <div class="cert reveal">
+
         Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
+
       </div>
 
 
       <div class="cert reveal">
+
         Magang Teknisi Instalasi AC — El Nusa Teknik
+
       </div>
 
 
       <div class="cert reveal">
+
         Magang Quality Control — PT. Garindo Mitra Sejati
+
       </div>
 
 
       <div class="cert reveal">
+
         AI Basic: Overview of Artificial Intelligence — Huawei
+
       </div>
 
 
       <div class="cert reveal">
+
         Paten: Sistem Kendali Posisi Pada Antena Pelacak
         Terhadap Pesawat Tanpa Awak — No. 001376287
+
       </div>
 
 
       <div class="cert reveal">
+
         Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
+
       </div>
 
 
@@ -1981,9 +2604,9 @@ footer{
 </section>
 
 
-<!-- =========================
+<!-- =========================================================
      CONTACT
-========================= -->
+========================================================= -->
 
 <section id="contact">
 
@@ -2016,10 +2639,13 @@ footer{
           Open to opportunities
         </h3>
 
+
         <p class="muted">
+
           Saya siap berkontribusi di lingkungan industri
           maupun keteknikan, bidang electrical,
           MEP, embedded systems, control, dan engineering.
+
         </p>
 
       </div>
@@ -2029,15 +2655,20 @@ footer{
 
 
         <a href="mailto:titisseptian02@gmail.com">
+
           ✉ titisseptian02@gmail.com
+
         </a>
 
 
         <a
           href="https://www.linkedin.com/in/titissurya/"
           target="_blank"
+          rel="noopener"
         >
+
           in LinkedIn — titissurya
+
         </a>
 
 
@@ -2054,9 +2685,9 @@ footer{
 </main>
 
 
-<!-- =========================
+<!-- =========================================================
      FOOTER
-========================= -->
+========================================================= -->
 
 <footer>
 
@@ -2070,43 +2701,45 @@ footer{
 </footer>
 
 
-<!-- =========================
+<!-- =========================================================
      JAVASCRIPT
-========================= -->
+========================================================= -->
 
 <script>
 
-const obs = new IntersectionObserver(
+const observer =
+  new IntersectionObserver(
 
-  entries => {
+    entries => {
 
-    entries.forEach(
+      entries.forEach(
 
-      e => {
+        entry => {
 
-        if(e.isIntersecting){
+          if(entry.isIntersecting){
 
-          e.target.classList.add("show");
+            entry.target.classList.add("show");
+
+          }
 
         }
 
-      }
+      );
 
-    );
+    },
 
-  },
+    {
+      threshold:.12
+    }
 
-  {
-    threshold:.12
-  }
-
-);
+  );
 
 
 document
   .querySelectorAll(".reveal")
   .forEach(
-    el => obs.observe(el)
+    element =>
+      observer.observe(element)
   );
 
 </script>
