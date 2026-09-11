@@ -4,8 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description"
       content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
+
 <title>Titis Surya | Portfolio</title>
 
 <style>
@@ -25,6 +27,7 @@
   --max:1120px;
 }
 
+
 /* =========================================================
    RESET
 ========================================================= */
@@ -42,7 +45,9 @@ body{
       #081525 55%,
       #06101d 100%
     );
+
   color:var(--text);
+
   font-family:
     Inter,
     system-ui,
@@ -52,6 +57,7 @@ body{
     Roboto,
     Arial,
     sans-serif;
+
   line-height:1.6;
 }
 
@@ -65,6 +71,7 @@ a{
   margin:auto;
 }
 
+
 /* =========================================================
    NAVIGATION
 ========================================================= */
@@ -74,13 +81,17 @@ nav{
   left:0;
   right:0;
   z-index:100;
+
   background:rgba(6,16,29,.82);
+
   backdrop-filter:blur(14px);
+
   border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .nav{
   height:72px;
+
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -98,7 +109,9 @@ nav{
 .navlinks{
   display:flex;
   gap:26px;
+
   color:var(--muted);
+
   font-size:14px;
 }
 
@@ -110,14 +123,18 @@ nav{
   color:var(--text);
 }
 
+
 /* =========================================================
    HERO
 ========================================================= */
 .hero{
   min-height:92vh;
+
   display:grid;
   place-items:center;
+
   padding-top:90px;
+
   position:relative;
   overflow:hidden;
 
@@ -132,9 +149,12 @@ nav{
 
 .hero::after{
   content:"";
+
   position:absolute;
   inset:0;
+
   pointer-events:none;
+
   background:
     linear-gradient(
       90deg,
@@ -146,6 +166,7 @@ nav{
 
 .hero-grid{
   display:block;
+
   position:relative;
   z-index:1;
 }
@@ -156,15 +177,21 @@ nav{
 
 .kicker{
   color:var(--accent);
+
   font-weight:700;
+
   letter-spacing:2px;
+
   text-transform:uppercase;
+
   font-size:13px;
 }
 
 h1{
   font-size:clamp(42px,7vw,76px);
+
   line-height:1.02;
+
   margin:16px 0;
 }
 
@@ -175,44 +202,61 @@ h1 span{
       var(--accent),
       var(--accent2)
     );
+
   -webkit-background-clip:text;
   background-clip:text;
+
   color:transparent;
 }
 
 .lead{
   font-size:18px;
+
   color:#c9d6e5;
+
   max-width:720px;
+
   text-shadow:0 2px 12px rgba(0,0,0,.45);
 }
 
 .btns{
   display:flex;
+
   gap:12px;
+
   flex-wrap:wrap;
+
   margin-top:28px;
 }
 
 .btn{
   padding:12px 18px;
+
   border:1px solid rgba(160,190,220,.35);
+
   border-radius:12px;
+
   font-weight:700;
+
   transition:.25s ease;
+
   background:rgba(7,17,31,.28);
+
   backdrop-filter:blur(8px);
 }
 
 .btn.primary{
   background:var(--text);
+
   color:#07111f;
+
   border-color:var(--text);
 }
 
 .btn:hover{
   transform:translateY(-2px);
 }
+
 
 /* =========================================================
    SECTIONS
@@ -223,20 +267,27 @@ section{
 
 .section-head{
   display:flex;
+
   justify-content:space-between;
+
   gap:30px;
+
   align-items:end;
+
   margin-bottom:34px;
 }
 
 h2{
   font-size:34px;
+
   margin:0;
 }
 
 .section-head p{
   color:var(--muted);
+
   max-width:600px;
+
   margin:0;
 }
 
@@ -244,19 +295,25 @@ h2{
   color:var(--muted);
 }
 
+
 /* =========================================================
    ABOUT
 ========================================================= */
 .about{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:24px;
 }
 
 .card{
   background:rgba(13,26,43,.72);
+
   border:1px solid var(--line);
+
   border-radius:20px;
+
   padding:25px;
 }
 
@@ -264,60 +321,91 @@ h2{
   margin-top:0;
 }
 
+
 /* =========================================================
    PROJECTS
 ========================================================= */
 .projects{
   display:grid;
+
   grid-template-columns:repeat(3,minmax(0,1fr));
+
   gap:18px;
+
   align-items:stretch;
 }
 
 .project{
   min-width:0;
+
   min-height:360px;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:space-between;
 }
+
 
 /* =========================================================
    TAG
 ========================================================= */
 .tag{
   display:inline-block;
+
   padding:5px 9px;
+
   border:1px solid var(--line);
+
   border-radius:999px;
+
   color:var(--accent);
+
   font-size:11px;
+
   margin:3px 4px 3px 0;
 }
+
 
 /* =========================================================
    PROJECT 1
 ========================================================= */
 .project-feature{
   position:relative;
+
   padding:0;
+
   overflow:hidden;
+
   aspect-ratio:1 / 1;
+
   min-height:0;
+
   border-radius:20px;
+
   background:#050d18;
+
   border:1px solid var(--line);
+
   box-shadow:0 18px 55px rgba(0,0,0,.25);
 }
 
 .project-feature-media{
   position:absolute;
+
   inset:0;
+
   width:100%;
+
   height:100%;
+
   object-fit:cover;
+
   display:block;
+
   background:#050d18;
+
   transition:transform .6s ease;
 }
 
@@ -327,13 +415,21 @@ h2{
 
 .project-feature-overlay{
   position:absolute;
+
   inset:0;
+
   z-index:2;
+
   display:flex;
+
   align-items:flex-start;
+
   justify-content:flex-start;
+
   padding:22px;
+
   pointer-events:none;
+
   background:
     linear-gradient(
       180deg,
@@ -347,121 +443,175 @@ h2{
 
 .project-feature-content{
   width:100%;
+
   max-width:100%;
 }
 
 .project-feature-content h3{
   margin:0 0 10px;
+
   font-size:clamp(18px,1.7vw,24px);
+
   line-height:1.2;
+
   color:#fff;
+
   text-shadow:0 2px 10px rgba(0,0,0,.4);
 }
 
 .project-tags{
   display:flex;
+
   flex-wrap:wrap;
+
   gap:5px;
 }
 
 .project-tags .tag{
   margin:0;
+
   padding:4px 8px;
+
   color:#fff;
+
   border-color:rgba(255,255,255,.28);
+
   background:rgba(0,0,0,.30);
+
   backdrop-filter:blur(7px);
+
   font-size:10px;
 }
 
 .project-feature-content p{
   margin:9px 0 0;
+
   color:#d5dfeb;
+
   font-size:11px;
+
   line-height:1.45;
+
   text-shadow:0 2px 8px rgba(0,0,0,.5);
 }
+
 
 /* =========================================================
    PROJECT 2 & 3
 ========================================================= */
 .project-normal{
   min-height:360px;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:space-between;
 }
 
 .project-normal h3{
   font-size:21px;
+
   line-height:1.3;
+
   margin:13px 0 12px;
 }
 
 .project-normal p{
   font-size:14px;
+
   line-height:1.65;
 }
 
 .project-normal strong{
   display:block;
+
   font-size:12px;
+
   line-height:1.5;
+
   color:var(--text);
 }
+
 
 /* =========================================================
    EXPERIENCE
 ========================================================= */
 .timeline{
   position:relative;
+
   border-left:1px solid var(--line);
+
   margin-left:8px;
+
   padding-left:28px;
 }
 
 .item{
   position:relative;
+
   margin:0 0 42px;
 }
 
 .item:before{
   content:"";
+
   position:absolute;
+
   left:-34px;
+
   top:8px;
+
   width:9px;
+
   height:9px;
+
   border-radius:50%;
+
   background:var(--accent);
+
   box-shadow:0 0 0 5px #07111f;
+
   border:1px solid var(--accent);
 }
 
 .date{
   color:var(--accent);
+
   font-size:13px;
+
   font-weight:700;
 }
+
 
 /* =========================================================
    SUMMARECON GALLERY
 ========================================================= */
 .experience-gallery{
   display:grid;
+
   grid-template-columns:repeat(2,1fr);
+
   gap:16px;
+
   margin-top:22px;
 }
 
 .experience-gallery img{
   width:100%;
+
   height:280px;
+
   object-fit:cover;
+
   border-radius:16px;
+
   border:1px solid var(--line);
+
   display:block;
+
   box-shadow:0 15px 40px rgba(0,0,0,.25);
+
   transition:.3s ease;
 }
 
@@ -469,30 +619,42 @@ h2{
   transform:translateY(-4px);
 }
 
+
 /* =========================================================
    KRTI GALLERY
 ========================================================= */
 .krti-gallery{
   display:grid;
+
   grid-template-columns:repeat(2,1fr);
+
   gap:16px;
+
   margin-top:22px;
 }
 
 .krti-gallery img{
   width:100%;
+
   height:300px;
+
   object-fit:cover;
+
   border-radius:16px;
+
   border:1px solid var(--line);
+
   display:block;
+
   box-shadow:0 15px 40px rgba(0,0,0,.25);
+
   transition:.3s ease;
 }
 
 .krti-gallery img:hover{
   transform:translateY(-4px);
 }
+
 
 /* =========================================================
    EL NUSA
@@ -505,86 +667,119 @@ h2{
 .elnusa-item h3,
 .elnusa-item p{
   position:relative;
+
   left:-18px;
 }
+
 
 /* =========================================================
    SKILLS
 ========================================================= */
 .skills{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:18px;
 }
 
 .skillbox{
   min-height:230px;
+
   position:relative;
+
   overflow:hidden;
+
   transition:.3s ease;
 }
 
 .skillbox:hover{
   transform:translateY(-5px);
+
   border-color:var(--accent);
 }
 
 .skillbox h3{
   margin-top:0;
+
   margin-bottom:24px;
 }
+
 
 /* =========================================================
    SKILL ICONS
 ========================================================= */
 .skill-icons{
   display:flex;
+
   flex-wrap:wrap;
+
   gap:18px;
+
   align-items:flex-start;
 }
 
 .skill-item{
   width:68px;
+
   text-align:center;
 }
 
 .skill-icon{
   width:64px;
+
   height:64px;
+
   border:1px solid var(--line);
+
   border-radius:16px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   background:rgba(255,255,255,.025);
+
   transition:.25s ease;
+
   margin:auto;
 }
 
 .skill-icon:hover{
   transform:translateY(-4px);
+
   border-color:var(--accent);
+
   background:rgba(103,232,249,.06);
 }
 
 .skill-icon img{
   width:42px;
+
   height:42px;
+
   object-fit:contain;
+
   display:block;
 }
 
 .skill-name{
   margin-top:7px;
+
   font-size:11px;
+
   line-height:1.3;
+
   color:var(--muted);
 }
 
 .custom-icon{
   font-size:29px;
+
   font-weight:800;
+
   color:var(--text);
 }
 
@@ -592,55 +787,87 @@ h2{
   font-size:19px;
 }
 
+
 /* =========================================================
    SOFTWARE LOGO
 ========================================================= */
 .software-logo{
   color:var(--text);
+
+  background:rgba(255,255,255,.025);
+
   overflow:hidden;
 }
 
 .software-logo img{
   width:42px;
+
   height:42px;
+
   object-fit:contain;
+
   display:block;
+
   border-radius:8px;
+
+  max-width:100%;
+
+  max-height:100%;
 }
 
 .software-logo:hover{
   border-color:var(--accent);
 }
 
-/* Jika gambar gagal dimuat */
-.software-fallback{
-  font-size:11px;
-  font-weight:800;
-  color:var(--text);
+
+/* =========================================================
+   GAMBAR ERROR
+========================================================= */
+.image-error{
+  font-size:10px;
+
+  color:#64748b;
+
   text-align:center;
-  line-height:1.1;
+
+  padding:4px;
+
+  line-height:1.2;
 }
+
 
 /* =========================================================
    DRONE AERIAL
 ========================================================= */
 .drone-skill{
   grid-column:1 / -1;
+
   min-height:390px;
+
   padding:0;
+
   overflow:hidden;
+
   position:relative;
+
   border-radius:20px;
 }
 
 .drone-media{
   position:relative;
+
   z-index:1;
+
   width:100%;
+
   height:390px;
+
   object-fit:cover;
+
   display:block;
+
   background:#050d18;
+
   transition:.5s ease;
 }
 
@@ -650,12 +877,19 @@ h2{
 
 .drone-overlay{
   position:absolute;
+
   inset:0;
+
   z-index:2;
+
   display:flex;
+
   flex-direction:column;
+
   justify-content:flex-end;
+
   padding:30px;
+
   background:
     linear-gradient(
       180deg,
@@ -663,99 +897,136 @@ h2{
       rgba(7,17,31,.18) 48%,
       rgba(7,17,31,.96) 100%
     );
+
   pointer-events:none;
 }
 
 .drone-overlay h3{
   margin:0 0 7px;
+
   font-size:25px;
 }
 
 .drone-overlay p{
   margin:0;
+
   color:#d5dfeb;
+
   max-width:650px;
 }
 
 .drone-tags{
   display:flex;
+
   gap:8px;
+
   flex-wrap:wrap;
+
   margin-top:14px;
 }
 
 .drone-tag{
   padding:5px 10px;
+
   border:1px solid rgba(255,255,255,.2);
+
   border-radius:999px;
+
   font-size:11px;
+
   color:#fff;
+
   background:rgba(0,0,0,.28);
 }
+
 
 /* =========================================================
    CERTIFICATES
 ========================================================= */
 .certs{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:18px;
 }
 
 .cert{
   padding:18px;
+
   border:1px solid var(--line);
+
   border-radius:16px;
+
   background:var(--panel);
 }
+
 
 /* =========================================================
    CONTACT
 ========================================================= */
 .contact{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:20px;
 }
 
 .contact a{
   display:block;
+
   padding:15px;
+
   border:1px solid var(--line);
+
   border-radius:14px;
+
   margin-top:10px;
+
   color:var(--muted);
+
   transition:.25s ease;
 }
 
 .contact a:hover{
   color:var(--text);
+
   border-color:var(--accent);
 }
+
 
 /* =========================================================
    FOOTER
 ========================================================= */
 footer{
   padding:35px 0;
+
   border-top:1px solid var(--line);
+
   color:var(--muted);
+
   font-size:14px;
 }
+
 
 /* =========================================================
    ANIMATION
 ========================================================= */
 .reveal{
   opacity:0;
+
   transform:translateY(18px);
+
   transition:.7s ease;
 }
 
 .reveal.show{
   opacity:1;
+
   transform:none;
 }
+
 
 /* =========================================================
    TABLET
@@ -772,6 +1043,7 @@ footer{
 
   .projects{
     grid-template-columns:repeat(3,minmax(0,1fr));
+
     gap:12px;
   }
 
@@ -796,6 +1068,7 @@ footer{
   }
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
@@ -807,7 +1080,9 @@ footer{
 
   .hero{
     min-height:auto;
+
     padding:125px 0 70px;
+
     background-position:center;
   }
 
@@ -864,6 +1139,7 @@ footer{
   }
 }
 
+
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
@@ -889,7 +1165,9 @@ footer{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
      NAVIGATION
@@ -903,12 +1181,19 @@ footer{
     </a>
 
     <div class="navlinks">
+
       <a href="#about">About</a>
+
       <a href="#projects">Projects</a>
+
       <a href="#experience">Experience</a>
+
       <a href="#skills">Skills</a>
+
       <a href="#certificates">Certificates</a>
+
       <a href="#contact">Contact</a>
+
     </div>
 
   </div>
@@ -917,6 +1202,7 @@ footer{
 
 
 <main id="home">
+
 
 <!-- =========================================================
      HERO
@@ -995,6 +1281,7 @@ footer{
 
 
     <div class="about">
+
 
       <div class="card reveal">
 
@@ -1209,6 +1496,7 @@ footer{
 
       </article>
 
+
     </div>
 
   </div>
@@ -1270,13 +1558,13 @@ footer{
         <div class="experience-gallery">
 
           <img
-            src="foto%20magang/magang.png"
+            src="foto magang/magang.png"
             alt="Dokumentasi Quality Control Summarecon Mall Bekasi 2"
             loading="lazy"
           >
 
           <img
-            src="foto%20magang/magang%201.png"
+            src="foto magang/magang 1.png"
             alt="Dokumentasi kegiatan Quality Control Summarecon Mall Bekasi 2"
             loading="lazy"
           >
@@ -1316,13 +1604,13 @@ footer{
         <div class="krti-gallery">
 
           <img
-            src="KRTI%20event.jpeg"
+            src="KRTI event.jpeg"
             alt="Dokumentasi Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
             loading="lazy"
           >
 
           <img
-            src="KRTI%20event2.jpeg"
+            src="KRTI event2.jpeg"
             alt="Dokumentasi KRTI Robotika UNNES"
             loading="lazy"
           >
@@ -1355,6 +1643,7 @@ footer{
         </p>
 
       </div>
+
 
     </div>
 
@@ -1390,7 +1679,9 @@ footer{
     <div class="skills">
 
 
-      <!-- ELECTRICAL -->
+      <!-- =====================================================
+           ELECTRICAL
+      ====================================================== -->
       <div class="card skillbox reveal">
 
         <h3>
@@ -1399,10 +1690,15 @@ footer{
 
         <div class="skill-icons">
 
+
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">⚡</span>
+
+              <span class="custom-icon">
+                ⚡
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1415,7 +1711,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">🔌</span>
+
+              <span class="custom-icon">
+                🔌
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1428,7 +1728,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">📐</span>
+
+              <span class="custom-icon">
+                📐
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1441,7 +1745,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">🔧</span>
+
+              <span class="custom-icon">
+                🔧
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1450,12 +1758,15 @@ footer{
 
           </div>
 
+
         </div>
 
       </div>
 
 
-      <!-- EMBEDDED -->
+      <!-- =====================================================
+           EMBEDDED
+      ====================================================== -->
       <div class="card skillbox reveal">
 
         <h3>
@@ -1464,10 +1775,15 @@ footer{
 
         <div class="skill-icons">
 
+
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">∞</span>
+
+              <span class="custom-icon">
+                ∞
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1480,9 +1796,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon small">
                 ESP32
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1495,7 +1813,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
-              <span class="custom-icon">✈</span>
+
+              <span class="custom-icon">
+                ✈
+              </span>
+
             </div>
 
             <div class="skill-name">
@@ -1508,9 +1830,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon small">
                 PID
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1523,9 +1847,11 @@ footer{
           <div class="skill-item">
 
             <div class="skill-icon">
+
               <span class="custom-icon small">
                 PSO
               </span>
+
             </div>
 
             <div class="skill-name">
@@ -1534,15 +1860,14 @@ footer{
 
           </div>
 
+
         </div>
 
       </div>
 
 
       <!-- =====================================================
-           SOFTWARE
-           NAMA FOLDER TETAP:
-           software&tools
+           SOFTWARE & TOOLS
       ====================================================== -->
       <div class="card skillbox reveal">
 
@@ -1559,18 +1884,11 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="software&amp;tools/matlab.jpeg"
+                class="software-image"
+                data-software="matlab.jpeg"
                 alt="MATLAB"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
               >
-
-              <span
-                class="software-fallback"
-                style="display:none;"
-              >
-                MATLAB
-              </span>
 
             </div>
 
@@ -1587,18 +1905,11 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="software&amp;tools/arduino.jpeg"
+                class="software-image"
+                data-software="arduino.jpeg"
                 alt="Arduino IDE"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
               >
-
-              <span
-                class="software-fallback"
-                style="display:none;"
-              >
-                Arduino
-              </span>
 
             </div>
 
@@ -1615,18 +1926,11 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="software&amp;tools/easyeda.webp"
+                class="software-image"
+                data-software="easyeda.webp"
                 alt="EasyEDA"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
               >
-
-              <span
-                class="software-fallback"
-                style="display:none;"
-              >
-                EasyEDA
-              </span>
 
             </div>
 
@@ -1643,18 +1947,11 @@ footer{
             <div class="skill-icon software-logo">
 
               <img
-                src="software&amp;tools/canva.jpeg"
+                class="software-image"
+                data-software="canva.jpeg"
                 alt="Canva"
                 loading="lazy"
-                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
               >
-
-              <span
-                class="software-fallback"
-                style="display:none;"
-              >
-                Canva
-              </span>
 
             </div>
 
@@ -1731,6 +2028,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1764,30 +2062,37 @@ footer{
 
     <div class="certs">
 
+
       <div class="cert reveal">
         Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
       </div>
+
 
       <div class="cert reveal">
         Magang Teknisi Instalasi AC — El Nusa Teknik
       </div>
 
+
       <div class="cert reveal">
         Magang Quality Control — PT. Garindo Mitra Sejati
       </div>
 
+
       <div class="cert reveal">
         AI Basic: Overview of Artificial Intelligence — Huawei
       </div>
+
 
       <div class="cert reveal">
         Paten: Sistem Kendali Posisi Pada Antena Pelacak
         Terhadap Pesawat Tanpa Awak — No. 001376287
       </div>
 
+
       <div class="cert reveal">
         Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
       </div>
+
 
     </div>
 
@@ -1844,6 +2149,7 @@ footer{
           ✉ titisseptian02@gmail.com
         </a>
 
+
         <a
           href="https://www.linkedin.com/in/titissurya/"
           target="_blank"
@@ -1854,11 +2160,13 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 </main>
 
@@ -1883,6 +2191,11 @@ footer{
 ========================================================= -->
 <script>
 
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
 const observer =
   new IntersectionObserver(
     entries => {
@@ -1898,45 +2211,127 @@ const observer =
       });
 
     },
+
     {
       threshold:.12
     }
+
   );
 
 
 document
   .querySelectorAll(".reveal")
-  .forEach(element => {
+  .forEach(element =>
+    observer.observe(element)
+  );
 
-    observer.observe(element);
+
+/* =========================================================
+   SOFTWARE & TOOLS IMAGE LOADER
+   TIDAK MENGUBAH NAMA FOLDER / FILE
+========================================================= */
+
+/*
+   Folder asli Anda:
+
+   software&tools
+
+   File:
+
+   matlab.jpeg
+   arduino.jpeg
+   easyeda.webp
+   canva.jpeg
+*/
+
+
+const softwareFolder =
+  "software" + "&" + "tools";
+
+
+document
+  .querySelectorAll(".software-image")
+  .forEach(img => {
+
+    const fileName =
+      img.dataset.software;
+
+
+    /*
+       Browser akan otomatis menangani
+       karakter "&" sebagai bagian dari URL.
+    */
+
+    const imagePath =
+      "./" +
+      softwareFolder +
+      "/" +
+      fileName;
+
+
+    img.src = imagePath;
+
+
+    /*
+       Jika gambar gagal dimuat,
+       coba URL encoded sebagai fallback.
+    */
+
+    img.onerror = function(){
+
+      if(
+        !this.dataset.fallback
+      ){
+
+        this.dataset.fallback = "true";
+
+
+        const encodedFolder =
+          encodeURIComponent(
+            softwareFolder
+          );
+
+
+        this.src =
+          "./" +
+          encodedFolder +
+          "/" +
+          fileName;
+
+      }
+
+    };
 
   });
 
 
 /* =========================================================
-   CEK LOGO SOFTWARE
+   IMAGE ERROR HANDLING
 ========================================================= */
 
 document
-  .querySelectorAll(".software-logo img")
+  .querySelectorAll("img")
   .forEach(img => {
 
-    img.addEventListener("error", function(){
+    img.addEventListener(
+      "error",
+      function(){
 
-      this.style.display = "none";
+        /*
+           Jangan mengubah gambar menjadi tulisan.
+           Biarkan browser menangani gambar yang gagal.
+        */
 
-      const fallback =
-        this.nextElementSibling;
+        this.style.opacity = "0.15";
 
-      if(fallback){
-        fallback.style.display = "block";
       }
-
-    });
+    );
 
   });
 
+
 </script>
+
 
 </body>
 </html>
