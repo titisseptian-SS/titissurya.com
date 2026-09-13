@@ -745,7 +745,15 @@ h2{
   transition:transform .6s ease;
 }
 
-.project-feature:hover .project-feature-media{
+/* Khusus Project 2 agar gambar skema tidak ter-crop (utuh tampil di dalam kotak) */
+.project-feature-contain {
+  object-fit: contain;
+  padding: 15px;
+  background: #081525;
+}
+
+.project-feature:hover .project-feature-media,
+.project-feature:hover .project-feature-contain{
   transform:scale(1.025);
 }
 
@@ -2005,16 +2013,14 @@ footer{
       </article>
 
 
-      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID (YouTube Link) -->
+      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID (With Watch Demo Button) -->
 
       <article class="project project-feature reveal">
 
-        <a href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" target="_blank" rel="noopener" style="position: absolute; inset: 0; z-index: 3; display: block;" title="Tonton Video Penjelasan di YouTube"></a>
-
         <img 
           src="foto/rfid-project.png" 
-          alt="Prototipe Kunci Sepeda Motor Berbasis RFID (KTP)" 
-          class="project-feature-media"
+          alt="Prototipe Kunci Sepeda Motor Berbasis RFID" 
+          class="project-feature-media project-feature-contain"
           loading="lazy"
         >
 
@@ -2024,7 +2030,7 @@ footer{
           <div class="project-feature-content">
 
             <h3>
-             Prototipe Kunci Sepeda Motor Berbasis RFID (KTP)
+              Prototipe Kunci Sepeda Motor Berbasis RFID
             </h3>
 
             <div class="project-tags">
@@ -2050,6 +2056,18 @@ footer{
           </div>
 
         </div>
+
+        <!-- Tombol kecil di pojok bawah untuk menonton video YouTube -->
+        <a 
+          href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" 
+          target="_blank" 
+          rel="noopener" 
+          style="position: absolute; bottom: 18px; right: 18px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(56, 189, 248, 0.9); color: #06101d; font-weight: 700; font-size: 11px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,.4); transition: transform .2s ease, background .2s ease;"
+          onmouseover="this.style.transform='translateY(-2px)'; this.style.background='#38bdf8';"
+          onmouseout="this.style.transform='none'; this.style.background='rgba(56, 189, 248, 0.9)';"
+        >
+          ▶ Watch Demo
+        </a>
 
       </article>
 
