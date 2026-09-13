@@ -700,7 +700,7 @@ h2{
 
 
 /* =========================================================
-   PROJECT 1 & 2 (FEATURED)
+   PROJECT FEATURE (KECERAHAN DITAMBAH SEDIKIT ~0.5)
 ========================================================= */
 
 .project-feature{
@@ -745,7 +745,7 @@ h2{
   transform:scale(1.025);
 }
 
-/* KHUSUS PROJECT 2: Rasio 1:1, Utuh & Gelap Pas */
+/* KHUSUS PROJECT 2: Rasio 1:1, Utuh & Sedikit Lebih Terang */
 .project-feature-contain {
   object-fit: contain;
   padding: 10px;
@@ -768,9 +768,9 @@ h2{
   background: 
     linear-gradient(
       180deg,
-      rgba(6, 16, 29, 0.94) 0%,
-      rgba(6, 16, 29, 0.78) 55%,
-      rgba(6, 16, 29, 0.92) 100%
+      rgba(8, 20, 36, 0.88) 0%,
+      rgba(8, 20, 36, 0.70) 55%,
+      rgba(8, 20, 36, 0.86) 100%
     );
 }
 
@@ -780,9 +780,9 @@ h2{
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  background: rgba(6, 16, 29, 0.65);
+  background: rgba(8, 20, 36, 0.60);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.45);
   color: #eaf2fb;
   font-weight: 600;
   font-size: 11px;
@@ -820,9 +820,9 @@ h2{
   background:
     linear-gradient(
       180deg,
-      rgba(7,17,31,.95) 0%,
-      rgba(7,17,31,.85) 60%,
-      rgba(7,17,31,.70) 100%
+      rgba(8, 20, 36, 0.88) 0%,
+      rgba(8, 20, 36, 0.76) 60%,
+      rgba(8, 20, 36, 0.62) 100%
     );
 }
 
@@ -894,45 +894,6 @@ h2{
   line-height:1.45;
 
   text-shadow:0 2px 8px rgba(0,0,0,.5);
-}
-
-
-/* =========================================================
-   PROJECT 3 (SUVIFOR)
-========================================================= */
-
-.project-normal{
-  min-height:360px;
-
-  display:flex;
-
-  flex-direction:column;
-
-  justify-content:space-between;
-}
-
-.project-normal h3{
-  font-size:21px;
-
-  line-height:1.3;
-
-  margin:13px 0 12px;
-}
-
-.project-normal p{
-  font-size:14px;
-
-  line-height:1.65;
-}
-
-.project-normal strong{
-  display:block;
-
-  font-size:12px;
-
-  line-height:1.5;
-
-  color:var(--text);
 }
 
 
@@ -1744,7 +1705,6 @@ footer{
 
             <div class="project-feature-top">
               <h3>Prototipe Kunci Sepeda Motor Berbasis RFID</h3>
-              <!-- Tombol Watch Demo di Bawah Judul -->
               <a href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" target="_blank" rel="noopener" class="project-feature-btn">
                 ▶ Watch Demo
               </a>
@@ -1766,32 +1726,42 @@ footer{
       </article>
 
 
-      <!-- PROJECT 3 -->
+      <!-- PROJECT 3: Suvifor Racing Plane (Featured Video Style) -->
 
-      <article class="card project project-normal reveal">
+      <article class="project project-feature reveal">
 
-        <div>
+        <video
+          class="project-feature-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
+        >
+          <source src="video-drone/sufivor.mp4" type="video/mp4">
+          Browser Anda tidak mendukung video.
+        </video>
 
-          <span class="tag">Robotics</span>
-          <span class="tag">Mechanical</span>
-          <span class="tag">UAV</span>
+        <div class="project-feature-overlay">
+          <div class="project-feature-content">
+            
+            <div class="project-feature-top">
+              <h3>Suvifor Racing Plane — Robotika UNNES</h3>
+            </div>
 
-          <h3>
-            Suvifor Racing Plane —
-            Robotika UNNES
-          </h3>
+            <div class="project-feature-bottom">
+              <p>Bertanggung jawab pada perancangan, manufaktur, dan aspek aerodinamika struktur mekanik UAV fixed-wing.</p>
+              <div class="project-tags">
+                <span class="tag">Robotics</span>
+                <span class="tag">Mechanical</span>
+                <span class="tag">UAV</span>
+              </div>
+            </div>
 
-          <p class="muted">
-            Bertanggung jawab pada perancangan,
-            manufaktur, dan aspek aerodinamika struktur
-            mekanik UAV fixed-wing.
-          </p>
-
+          </div>
         </div>
-
-        <strong>
-          Mechanical Design · Manufacturing · Aerodynamics
-        </strong>
 
       </article>
 
