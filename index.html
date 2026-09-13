@@ -5,7 +5,2547 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="id">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
+
+<title>Titis Surya | Portfolio</title>
+
+<!-- Google Font Professional & Stylistic -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+  --bg:#07111f;
+  --panel:#0d1a2b;
+  --panel2:#102238;
+  --text:#eaf2fb;
+  --muted:#9eb0c5;
+  --line:#20344b;
+  --accent:#38bdf8;
+  --accent2:#818cf8;
+  --max:1120px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #06101d 0%,
+      #081525 55%,
+      #06101d 100%
+    );
+
+  color:var(--text);
+
+  font-family:
+    "Plus Jakarta Sans",
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(var(--max),92%);
+  margin:auto;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:100;
+
+  background:rgba(6,16,29,.82);
+
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.nav{
+  height:72px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-weight:800;
+  letter-spacing:.5px;
+}
+
+.logo span{
+  color:var(--accent);
+}
+
+.navlinks{
+  display:flex;
+  gap:26px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+.navlinks a{
+  transition:.25s ease;
+}
+
+.navlinks a:hover{
+  color:var(--text);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:98vh;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding-top:200px;
+  padding-bottom:80px;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(5,18,35,.38),
+      rgba(5,18,35,.46)
+    ),
+    url("foto/profile.jpeg") center / cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,18,35,.34) 0%,
+      rgba(5,18,35,.14) 52%,
+      rgba(5,18,35,.28) 100%
+    );
+}
+
+.hero-grid{
+  display:block;
+
+  position:relative;
+  z-index:1;
+
+  width: 100%;
+  padding-left: 24px;
+}
+
+.hero-grid > .reveal{
+  max-width:850px;
+}
+
+.kicker{
+  color:rgba(255, 255, 255, 0.65);
+
+  font-weight:700;
+
+  letter-spacing:2.5px;
+
+  text-transform:uppercase;
+
+  font-size:12px;
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   HERO NAME (Font Ala-ala/Stylish & Gradient Oranye)
+========================================================= */
+
+.hero h1{
+  font-family:
+    "Outfit",
+    "Plus Jakarta Sans",
+    sans-serif;
+
+  font-size:clamp(40px, 6.5vw, 72px);
+
+  line-height:1.05;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+
+  margin:0 0 0;
+
+  max-width:850px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffffff 20%,
+      #ffedd5 50%,
+      #f97316 100%
+    );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+  color:transparent;
+
+  text-shadow:
+    0 4px 24px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+========================================================= */
+
+.hero .btns{
+  display:flex;
+
+  gap:12px;
+
+  flex-wrap:wrap;
+
+  margin-top:42px;
+
+  padding-top:4px;
+}
+
+
+.hero .btn{
+  min-height:48px;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:12px 22px;
+
+  border-radius:12px;
+
+  border:1px solid rgba(56, 189, 248, 0.35);
+
+  background:linear-gradient(135deg, rgba(13, 26, 43, 0.85), rgba(16, 34, 56, 0.85));
+
+  color:#f8fafc;
+
+  font-weight:600;
+
+  font-size:14px;
+
+  letter-spacing:.2px;
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,.2);
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    color .25s ease,
+    box-shadow .25s ease;
+}
+
+
+.hero .btn:hover{
+  transform:translateY(-3px);
+
+  border-color:#38bdf8;
+
+  background:linear-gradient(135deg, rgba(20, 40, 68, 0.95), rgba(28, 54, 88, 0.95));
+
+  color:#ffffff;
+
+  box-shadow:
+    0 8px 25px rgba(56,189,248,.15);
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section{
+  padding:92px 0;
+}
+
+.section-head{
+  display:flex;
+
+  justify-content:space-between;
+
+  gap:30px;
+
+  align-items:end;
+
+  margin-bottom:34px;
+}
+
+h2{
+  font-size:34px;
+
+  margin:0;
+}
+
+.section-head p{
+  color:var(--muted);
+
+  max-width:600px;
+
+  margin:0;
+}
+
+.muted{
+  color:var(--muted);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:24px;
+}
+
+.card{
+  background:rgba(13,26,43,.72);
+
+  border:1px solid var(--line);
+
+  border-radius:20px;
+
+  padding:25px;
+}
+
+.card h3{
+  margin-top:0;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+}
+
+.skillbox{
+  min-height:230px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:.3s ease;
+}
+
+.skillbox:hover{
+  transform:translateY(-5px);
+
+  border-color:var(--accent);
+}
+
+.skillbox h3{
+  margin-top:0;
+
+  margin-bottom:24px;
+}
+
+
+/* =========================================================
+   SKILL ICONS
+========================================================= */
+
+.skill-icons{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:18px;
+
+  align-items:flex-start;
+}
+
+.skill-item{
+  width:68px;
+
+  text-align:center;
+}
+
+.skill-icon{
+  width:64px;
+
+  height:64px;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:rgba(255,255,255,.025);
+
+  transition:.25s ease;
+
+  margin:auto;
+}
+
+.skill-icon:hover{
+  transform:translateY(-4px);
+
+  border-color:var(--accent);
+
+  background:rgba(56,189,248,.06);
+}
+
+.skill-icon img{
+  width:42px;
+
+  height:42px;
+
+  object-fit:contain;
+
+  display:block;
+}
+
+.skill-name{
+  margin-top:7px;
+
+  font-size:11px;
+
+  line-height:1.3;
+
+  color:var(--muted);
+}
+
+.custom-icon{
+  font-size:29px;
+
+  font-weight:800;
+
+  color:var(--text);
+}
+
+.custom-icon.small{
+  font-size:19px;
+}
+
+
+/* =========================================================
+   SOFTWARE LOGO
+========================================================= */
+
+.software-logo{
+  width:64px;
+
+  height:64px;
+
+  padding:9px;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  background:rgba(255,255,255,.035);
+
+  overflow:hidden;
+
+  transition:.25s ease;
+}
+
+.software-logo img{
+  width:100%;
+
+  height:100%;
+
+  object-fit:contain;
+
+  display:block;
+
+  border-radius:7px;
+}
+
+.software-logo:hover{
+  border-color:var(--accent);
+
+  background:rgba(56,189,248,.06);
+
+  transform:translateY(-4px);
+}
+
+
+/* =========================================================
+   DRONE AERIAL
+========================================================= */
+
+.drone-skill{
+  grid-column:1 / -1;
+
+  min-height:390px;
+
+  padding:0;
+
+  overflow:hidden;
+
+  position:relative;
+
+  border-radius:20px;
+}
+
+.drone-media{
+  position:relative;
+
+  z-index:1;
+
+  width:100%;
+
+  height:390px;
+
+  object-fit:cover;
+
+  display:block;
+
+  background:#050d18;
+
+  transition:.5s ease;
+}
+
+.drone-skill:hover .drone-media{
+  transform:scale(1.025);
+}
+
+.drone-overlay{
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:flex-end;
+
+  padding:30px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 25%,
+      rgba(7,17,31,.18) 48%,
+      rgba(7,17,31,.96) 100%
+    );
+
+  pointer-events:none;
+}
+
+.drone-overlay h3{
+  margin:0 0 7px;
+
+  font-size:25px;
+}
+
+.drone-overlay p{
+  margin:0;
+
+  color:#d5dfeb;
+
+  max-width:650px;
+}
+
+.drone-tags{
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+  margin-top:14px;
+}
+
+.drone-tag{
+  padding:5px 10px;
+
+  border:1px solid rgba(255,255,255,.2);
+
+  border-radius:999px;
+
+  font-size:11px;
+
+  color:#fff;
+
+  background:rgba(0,0,0,.28);
+}
+
+
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects{
+  display:grid;
+
+  grid-template-columns:repeat(3,minmax(0,1fr));
+
+  gap:18px;
+
+  align-items:stretch;
+}
+
+.project{
+  min-width:0;
+
+  min-height:360px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+}
+
+
+/* =========================================================
+   TAG
+========================================================= */
+
+.tag{
+  display:inline-block;
+
+  padding:5px 9px;
+
+  border:1px solid var(--line);
+
+  border-radius:999px;
+
+  color:var(--accent);
+
+  font-size:11px;
+
+  margin:3px 4px 3px 0;
+}
+
+
+/* =========================================================
+   PROJECT 1 & 2 (FEATURED)
+========================================================= */
+
+.project-feature{
+  position:relative;
+
+  padding:0;
+
+  overflow:hidden;
+
+  aspect-ratio:1 / 1;
+
+  min-height:0;
+
+  border-radius:20px;
+
+  background:#050d18;
+
+  border:1px solid var(--line);
+
+  box-shadow:0 18px 55px rgba(0,0,0,.25);
+}
+
+.project-feature-media{
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  background:#050d18;
+
+  transition:transform .6s ease;
+}
+
+.project-feature:hover .project-feature-media,
+.project-feature:hover .project-feature-bg{
+  transform:scale(1.025);
+}
+
+.project-feature-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+
+.project-feature-overlay{
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:flex-start;
+
+  padding:22px;
+
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,17,31,.96) 0%,
+      rgba(7,17,31,.72) 17%,
+      rgba(7,17,31,.18) 40%,
+      transparent 65%,
+      rgba(7,17,31,.15) 100%
+    );
+}
+
+.project-feature-overlay-rfid{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  display:flex;
+  align-items:flex-start;
+  justify-content:flex-start;
+  padding:22px;
+  pointer-events:none;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,17,31,.95) 0%,
+      rgba(7,17,31,.82) 40%,
+      rgba(7,17,31,.95) 100%
+    );
+}
+
+.project-feature-content{
+  width:100%;
+
+  max-width:100%;
+}
+
+.project-feature-content h3{
+  margin:0 0 10px;
+
+  font-size:clamp(18px,1.7vw,24px);
+
+  line-height:1.2;
+
+  color:#fff;
+
+  text-shadow:0 2px 10px rgba(0,0,0,.4);
+}
+
+.project-tags{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:5px;
+}
+
+.project-tags .tag{
+  margin:0;
+
+  padding:4px 8px;
+
+  color:#fff;
+
+  border-color:rgba(255,255,255,.28);
+
+  background:rgba(0,0,0,.30);
+
+  backdrop-filter:blur(7px);
+
+  font-size:10px;
+}
+
+.project-feature-content p{
+  margin:9px 0 0;
+
+  color:#d5dfeb;
+
+  font-size:11px;
+
+  line-height:1.45;
+
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
+
+/* =========================================================
+   PROJECT 3
+========================================================= */
+
+.project-normal{
+  min-height:360px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:space-between;
+}
+
+.project-normal h3{
+  font-size:21px;
+
+  line-height:1.3;
+
+  margin:13px 0 12px;
+}
+
+.project-normal p{
+  font-size:14px;
+
+  line-height:1.65;
+}
+
+.project-normal strong{
+  display:block;
+
+  font-size:12px;
+
+  line-height:1.5;
+
+  color:var(--text);
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.timeline{
+  position:relative;
+
+  border-left:1px solid var(--line);
+
+  margin-left:8px;
+
+  padding-left:28px;
+}
+
+.item{
+  position:relative;
+
+  margin:0 0 42px;
+}
+
+.item:before{
+  content:"";
+
+  position:absolute;
+
+  left:-34px;
+
+  top:8px;
+
+  width:9px;
+
+  height:9px;
+
+  border-radius:50%;
+
+  background:var(--accent);
+
+  box-shadow:0 0 0 5px #07111f;
+
+  border:1px solid var(--accent);
+}
+
+.date{
+  color:var(--accent);
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+
+/* =========================================================
+   SUMMARECON GALLERY
+========================================================= */
+
+.experience-gallery{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:16px;
+
+  margin-top:22px;
+}
+
+.experience-gallery img{
+  width:100%;
+
+  height:280px;
+
+  object-fit:cover;
+
+  border-radius:16px;
+
+  border:1px solid var(--line);
+
+  display:block;
+
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+  transition:.3s ease;
+}
+
+.experience-gallery img:hover{
+  transform:translateY(-4px);
+}
+
+
+/* =========================================================
+   KRTI GALLERY
+========================================================= */
+
+.krti-gallery{
+  display:grid;
+
+  grid-template-columns:repeat(2,1fr);
+
+  gap:16px;
+
+  margin-top:22px;
+}
+
+.krti-gallery img{
+  width:100%;
+
+  height:300px;
+
+  object-fit:cover;
+
+  border-radius:16px;
+
+  border:1px solid var(--line);
+
+  display:block;
+
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+  transition:.3s ease;
+}
+
+.krti-gallery img:hover{
+  transform:translateY(-4px);
+}
+
+
+/* =========================================================
+   EL NUSA
+========================================================= */
+
+.elnusa-item{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.elnusa-item .date,
+.elnusa-item h3,
+.elnusa-item p{
+  position:static;
+  left:auto;
+}
+
+
+/* =========================================================
+   COMMUNITY SERVICE / KKN
+========================================================= */
+
+.kkn-item{
+  position:relative;
+}
+
+.kkn-gallery{
+  display:grid;
+
+  grid-template-columns:1.4fr 1fr;
+
+  gap:16px;
+
+  margin-top:22px;
+}
+
+.kkn-gallery img,
+.kkn-gallery video{
+  width:100%;
+
+  height:300px;
+
+  object-fit:cover;
+
+  border-radius:16px;
+
+  border:1px solid var(--line);
+
+  display:block;
+
+  background:#050d18;
+
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+  transition:.3s ease;
+}
+
+.kkn-gallery img:hover,
+.kkn-gallery video:hover{
+  transform:translateY(-4px);
+}
+
+.kkn-description{
+  max-width:850px;
+}
+
+.kkn-tags{
+  display:flex;
+
+  gap:8px;
+
+  flex-wrap:wrap;
+
+  margin-top:14px;
+}
+
+.kkn-tag{
+  padding:5px 10px;
+
+  border:1px solid var(--line);
+
+  border-radius:999px;
+
+  font-size:11px;
+
+  color:var(--accent);
+
+  background:rgba(255,255,255,.025);
+}
+
+
+/* =========================================================
+   KKN MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+  .kkn-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .kkn-gallery img,
+  .kkn-gallery video{
+    height:auto;
+  }
+
+}
+
+
+/* =========================================================
+   CERTIFICATES
+========================================================= */
+
+.certs{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:18px;
+}
+
+.cert{
+  padding:18px;
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  background:var(--panel);
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+  display:grid;
+
+  grid-template-columns:1fr;
+
+  gap:20px;
+}
+
+.contact .card{
+  width:100%;
+}
+
+.contact a{
+  display:block;
+
+  padding:15px;
+
+  border:1px solid var(--line);
+
+  border-radius:14px;
+
+  margin-top:10px;
+
+  color:var(--muted);
+
+  transition:.25s ease;
+}
+
+.contact a:first-child{
+  margin-top:0;
+}
+
+.contact a:hover{
+  color:var(--text);
+
+  border-color:var(--accent);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:35px 0;
+
+  border-top:1px solid var(--line);
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal{
+  opacity:0;
+
+  transform:translateY(18px);
+
+  transition:.7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+
+  transform:none;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+  .hero-grid{
+    display:block;
+  }
+
+  .about{
+    grid-template-columns:1fr;
+  }
+
+  .projects{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    gap:12px;
+  }
+
+  .project-normal{
+    min-height:330px;
+  }
+
+  .project-normal h3{
+    font-size:18px;
+  }
+
+  .project-normal p{
+    font-size:12px;
+  }
+
+  .skills{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+  .navlinks{
+    display:none;
+  }
+
+  .hero{
+    min-height:auto;
+
+    padding:125px 0 70px;
+
+    background-position:center;
+  }
+
+  .hero h1{
+    letter-spacing:-1.2px;
+  }
+
+  .hero h1 span{
+    letter-spacing:-1.4px;
+  }
+
+  .hero .btns{
+    margin-top:38px;
+
+    gap:10px;
+  }
+
+  .hero .btn{
+    min-height:46px;
+
+    padding:11px 16px;
+
+    font-size:14px;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  .project-feature{
+    aspect-ratio:1 / 1;
+  }
+
+  .project-normal{
+    min-height:300px;
+  }
+
+  .skills{
+    grid-template-columns:1fr;
+  }
+
+  .certs{
+    grid-template-columns:1fr;
+  }
+
+  .experience-gallery,
+  .krti-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .experience-gallery img,
+  .krti-gallery img{
+    height:auto;
+  }
+
+  .elnusa-item{
+    margin-top:0;
+    margin-bottom:0;
+  }
+
+  .elnusa-item .date,
+  .elnusa-item h3,
+  .elnusa-item p{
+    position:static;
+    left:auto;
+  }
+
+  .drone-skill{
+    grid-column:auto;
+  }
+
+  .drone-media{
+    height:310px;
+  }
+
+  .drone-overlay{
+    padding:20px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:400px){
+
+  .hero h1{
+    font-size:40px;
+
+    letter-spacing:-1.1px;
+  }
+
+  .hero h1 span{
+    letter-spacing:-1.2px;
+  }
+
+  .hero .btns{
+    margin-top:34px;
+  }
+
+  .project-feature-overlay{
+    padding:18px;
+  }
+
+  .project-feature-content h3{
+    font-size:19px;
+  }
+
+  .project-feature-content p{
+    font-size:10px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+
+  <div class="container nav">
+
+    <a class="logo" href="#home">
+      PORTOFOLIO<span>.</span>
+    </a>
+
+    <div class="navlinks">
+
+      <a href="#about">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#community-service">Community</a>
+
+      <a href="#certificates">Certificates</a>
+
+      <a href="#contact">Contact</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+<main id="home">
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="container hero-grid">
+
+    <div class="reveal">
+
+      <div class="kicker">
+        
+      </div>
+
+      <h1>
+        Titis Septian Dwi Surya
+      </h1>
+
+      <div class="btns">
+
+        <a class="btn" href="#projects">
+          View Projects
+        </a>
+
+        <a class="btn" href="cv-titis-surya.pdf" download>
+          Download CV
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/titissurya/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Profile
+        </div>
+
+        <h2>
+          About Me
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="about">
+
+      <div class="card reveal">
+
+        <h3>
+          Engineering Background
+        </h3>
+
+        <p class="muted">
+          Lulusan S1 Teknik Elektro Universitas Negeri Semarang
+          (UNNES), IPK 3.51/4.00. Memiliki dasar Teknik Instalasi
+          Tenaga Listrik dari SMKN 2 Purwodadi.
+        </p>
+
+        <p class="muted">
+          Fokus tugas akhir pada embedded systems, sistem kendali
+          otomatis, dan teknik optimasi Particle Swarm Optimization
+          (PSO).
+        </p>
+
+      </div>
+
+
+      <div class="card reveal">
+
+        <h3>
+          Professional Strength
+        </h3>
+
+        <p class="muted">
+          Pengalaman Quality Control pada proyek Summarecon Mall
+          Bekasi 2 dengan fokus MEP, inspeksi instalasi kelistrikan,
+          verifikasi material, testing & commissioning, serta
+          pengecekan terhadap shop drawing.
+        </p>
+
+        <p class="muted">
+          Terbiasa bekerja di lapangan dan memiliki
+          pengalaman organisasi robotika pada divisi mekanik UAV.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section id="skills">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Capabilities
+        </div>
+
+        <h2>
+          Skills
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="skills">
+
+
+      <!-- DRONE AERIAL -->
+
+      <div class="card drone-skill reveal">
+
+        <video
+          class="drone-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
+        >
+
+          <source
+            src="video-drone/drone-mistik.mp4"
+            type="video/mp4"
+          >
+
+          Browser Anda tidak mendukung video.
+
+        </video>
+
+
+        <div class="drone-overlay">
+
+          <h3>
+            Drone Aerial
+          </h3>
+
+          <p>
+            Aerial photography, cinematic drone operation,
+            navigation, orientation, hovering, and stabilization.
+          </p>
+
+          <div class="drone-tags">
+
+            <span class="drone-tag">
+              Cinematic
+            </span>
+
+            <span class="drone-tag">
+              UAV
+            </span>
+
+            <span class="drone-tag">
+              Navigation
+            </span>
+
+            <span class="drone-tag">
+              Stabilization
+            </span>
+
+          </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ELECTRICAL -->
+
+    <div class="card skillbox reveal">
+
+      <h3>
+        Electrical & MEP
+      </h3>
+
+      <div class="skill-icons">
+
+        <div class="skill-item">
+
+          <div class="skill-icon software-logo">
+
+            <img
+              src="MEP/INSTALASI.jpeg"
+              alt="Electrical"
+              loading="eager"
+            >
+
+          </div>
+
+          <div class="skill-name">
+            Electrical & Insatalasi
+          </div>
+
+        </div>
+
+
+        <div class="skill-item">
+
+          <div class="skill-icon software-logo">
+
+            <img
+              src="MEP/SHOPDRAW.jpeg"
+              alt="Shop Drawing"
+              loading="eager"
+            >
+
+          </div>
+
+          <div class="skill-name">
+            Shop Drawing
+          </div>
+
+        </div>
+
+
+        <div class="skill-item">
+
+          <div class="skill-icon software-logo">
+
+            <img
+              src="MEP/MEP.jpeg"
+              alt="MEP"
+              loading="eager"
+            >
+
+          </div>
+
+          <div class="skill-name">
+            MEP
+          </div>
+
+        </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- EMBEDDED -->
+
+  <div class="card skillbox reveal">
+
+    <h3>
+      Embedded & Control
+    </h3>
+
+    <div class="skill-icons">
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="embeded/ARDUINOO.png"
+            alt="Arduino"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          Arduino
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="embeded/ESP.jpeg"
+            alt="ESP32"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          ESP32
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon">
+
+          <span class="custom-icon">
+            ✈
+          </span>
+
+        </div>
+
+        <div class="skill-name">
+          Pixhawk
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="embeded/PID.jpeg"
+            alt="PID Control"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          PID Control
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="embeded/pso.jpeg"
+            alt="Optimization"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          Optimization
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- SOFTWARE -->
+
+  <div class="card skillbox reveal">
+
+    <h3>
+      Software & Tools
+    </h3>
+
+    <div class="skill-icons">
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="software/matlab.png"
+            alt="MATLAB"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          MATLAB
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="software/arduino.png"
+            alt="Arduino IDE"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          Arduino IDE
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="software/easy.png"
+            alt="EasyEDA"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          EasyEDA
+        </div>
+
+      </div>
+
+
+      <div class="skill-item">
+
+        <div class="skill-icon software-logo">
+
+          <img
+            src="software/canva.png"
+            alt="Canva"
+            loading="eager"
+          >
+
+        </div>
+
+        <div class="skill-name">
+          Canva
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section id="projects">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Selected Work
+        </div>
+
+        <h2>
+          Featured Projects
+        </h2>
+
+      </div>
+
+      <p>
+        Beberapa pengalaman saya saat kuliah di
+        Universitas Negeri Semarang.
+      </p>
+
+    </div>
+
+
+    <div class="projects">
+
+
+      <!-- PROJECT 1 -->
+
+      <article class="project project-feature reveal">
+
+        <video
+          class="project-feature-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+          preload="metadata"
+          poster="video-drone/drone-footage.jpeg"
+        >
+
+          <source
+            src="video-drone/drone-project.mp4"
+            type="video/mp4"
+          >
+
+          Browser Anda tidak mendukung video.
+
+        </video>
+
+
+        <div class="project-feature-overlay">
+
+          <div class="project-feature-content">
+
+            <h3>
+              2-Axis Automatic UAV Antenna Tracker
+            </h3>
+
+            <div class="project-tags">
+
+              <span class="tag">
+                Embedded
+              </span>
+
+              <span class="tag">
+                Control
+              </span>
+
+              <span class="tag">
+                UAV
+              </span>
+
+            </div>
+
+            <p>
+              PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID -->
+
+      <article class="project project-feature reveal">
+
+        <img 
+          src="foto/rfid-project.png" 
+          alt="Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID" 
+          class="project-feature-bg"
+          loading="lazy"
+        >
+
+        <div class="project-feature-overlay-rfid">
+
+          <div class="project-feature-content">
+
+            <div class="project-tags" style="margin-bottom: 8px;">
+
+              <span class="tag">
+                Embedded
+              </span>
+
+              <span class="tag">
+                Security
+              </span>
+
+              <span class="tag">
+                IoT
+              </span>
+
+            </div>
+
+            <h3>
+              Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID untuk Peningkatan Keamanan
+            </h3>
+
+            <p>
+              Arduino · RFID RC522 · Relay · Buzzer · Perancangan Sistem Keamanan Kendaraan
+            </p>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PROJECT 3 -->
+
+      <article class="card project project-normal reveal">
+
+        <div>
+
+          <span class="tag">
+            Robotics
+          </span>
+
+          <span class="tag">
+            Mechanical
+          </span>
+
+          <span class="tag">
+            UAV
+          </span>
+
+          <h3>
+            Suvifor Racing Plane —
+            Robotika UNNES
+          </h3>
+
+          <p class="muted">
+            Bertanggung jawab pada perancangan,
+            manufaktur, dan aspek aerodinamika struktur
+            mekanik UAV fixed-wing.
+          </p>
+
+        </div>
+
+        <strong>
+          Mechanical Design · Manufacturing · Aerodynamics
+        </strong>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
+
+<section id="experience">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Career
+        </div>
+
+        <h2>
+          Experience
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <!-- SUMMARECON -->
+
+      <div class="item reveal">
+
+        <div class="date">
+          JAN 2025 — JUN 2025
+        </div>
+
+        <h3>
+          Quality Control Project —
+          PT. Garindo Mitra Sejati
+        </h3>
+
+        <p class="muted">
+          Summarecon Mall Bekasi 2 · Bekasi
+        </p>
+
+        <p class="muted">
+          Melakukan inspeksi kualitas teknis, pengawasan
+          material MEP, testing & commissioning, serta
+          inspeksi instalasi listrik, plumbing, mekanikal,
+          panel, wiring, lighting, dan grounding.
+        </p>
+
+
+        <div class="experience-gallery">
+
+          <img
+            src="foto magang/magang.png"
+            alt="Dokumentasi Quality Control Summarecon Mall Bekasi 2"
+            loading="lazy"
+          >
+
+          <img
+            src="foto magang/magang 1.png"
+            alt="Dokumentasi kegiatan Quality Control Summarecon Mall Bekasi 2"
+            loading="lazy"
+          >
+
+      </div>
+
+    </div>
+
+
+    <!-- KRTI -->
+
+    <div class="item reveal">
+
+      <div class="date">
+        JAN 2024 — DEC 2024
+      </div>
+
+      <h3>
+        Kontes Robot Terbang Indonesia (KRTI)
+        — Suvifor Racing Plane
+      </h3>
+
+      <p class="muted">
+        Robotika Universitas Negeri Semarang
+      </p>
+
+      <p class="muted">
+        Terlibat dalam peserta KRTI 2024 sebagai bagian dari
+        tim Robotika UNNES. KRTI merupakan kompetisi tahunan
+        yang diselenggarakan oleh Kementerian Pendidikan,
+        Kebudayaan, Riset, dan Teknologi (Kemendikbudristek)
+        melalui Balai Pengembangan Talenta Indonesia (BPTI)
+        dan Pusat Prestasi Nasional (Puspresnas) di Lapangan
+        Terbang Gading, Kabupaten Gunungkidul, Yogyakarta.
+      </p>
+
+
+      <div class="krti-gallery">
+
+        <img
+          src="KRTI event.jpeg"
+          alt="Dokumentasi Kontes Robot Terbang Indonesia KRTI — Robotika UNNES"
+          loading="lazy"
+        >
+
+        <img
+          src="KRTI event2.jpeg"
+          alt="Dokumentasi KRTI Robotika UNNES"
+          loading="lazy"
+        >
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     COMMUNITY SERVICE
+========================================================= -->
+
+<section id="community-service">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Social Engagement
+        </div>
+
+        <h2>
+          Community Service & Social Engagement
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <!-- KKN -->
+
+      <div class="item reveal kkn-item">
+
+        <div class="date">
+          OCT 2025 · DAWUNGSARI, KENDAL
+        </div>
+
+        <p class="muted">
+          Desa Dawungsari · Kecamatan Pegandon · Kabupaten Kendal
+        </p>
+
+
+        <p class="muted kkn-description">
+          Sebagai bentuk pengabdian kepada masyarakat penyuluhan
+          mengenai manfaat biopori untuk meningkatkan resapan
+          air dan membantu mengurangi genangan.
+        </p>
+
+
+        <div class="kkn-tags">
+
+          <span class="kkn-tag">
+            Community Service
+          </span>
+
+          <span class="kkn-tag">
+            Social Engagement
+          </span>
+
+          <span class="kkn-tag">
+            Biopori
+          </span>
+
+          <span class="kkn-tag">
+            Community Development
+          </span>
+
+        </div>
+
+
+        <div class="kkn-gallery">
+
+          <video
+            controls
+            playsinline
+            preload="metadata"
+          >
+
+            <source
+              src="Community Service/kkn2.mp4"
+              type="video/mp4"
+            >
+
+            Browser Anda tidak mendukung video.
+
+          </video>
+
+
+          <img
+            src="Community Service/kkn3.jpeg"
+            alt="Dokumentasi kegiatan KKN Desa Dawungsari"
+            loading="lazy"
+          >
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CERTIFICATES
+========================================================= -->
+
+<section id="certificates">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Credentials
+        </div>
+
+        <h2>
+          Certificates & Achievements
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="certs">
+
+
+      <div class="cert reveal">
+        Sertifikasi Kompetensi Instalasi Penerangan dan 3 Fasa
+      </div>
+
+
+      <div class="cert reveal">
+        Magang Teknisi Instalasi AC — El Nusa Teknik
+      </div>
+
+
+      <div class="cert reveal">
+        Magang Quality Control — PT. Garindo Mitra Sejati
+      </div>
+
+
+      <div class="cert reveal">
+        AI Basic: Overview of Artificial Intelligence — Huawei
+      </div>
+
+
+      <div class="cert reveal">
+        Paten: Sistem Kendali Posisi Pada Antena Pelacak
+        Terhadap Pesawat Tanpa Awak — No. 001376287
+      </div>
+
+
+      <div class="cert reveal">
+        Hak Cipta: Video Profil Desa Dawungsari — No. 001045354
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+
+        <div class="kicker">
+          Let's Connect
+        </div>
+
+        <h2>
+          Contact
+        </h2>
+
+      </div>
+
+  </div>
+
+
+  <div class="contact">
+
+    <div class="card reveal">
+
+      <a href="mailto:titisseptian02@gmail.com">
+        ✉ titisseptian02@gmail.com
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/titissurya/"
+        target="_blank"
+        rel="noopener"
+      >
+        in LinkedIn — titissurya
+      </a>
+
+      <a
+        href="https://www.instagram.com/ttis__s?stkn=MjUyZThobDNlcDUy"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram — @ttis_s
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Titis Septian Dwi Surya ·
+    Electrical Engineering Portfolio
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const observer =
+  new IntersectionObserver(
+    entries => {
+
+      entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("show");
+
+        }
+
+      });
+
+    },
+
+    {
+      threshold:.12
+    }
+
+  );
+
+
+document
+  .querySelectorAll(".reveal")
+  .forEach(element =>
+    observer.observe(element)
+  );
+
+</script>
+
+</body>
+</html>
 <meta name="description"
 content="Portfolio Titis Septian Dwi Surya — Electrical Engineering, Embedded Systems, Control Systems, MEP & UAV.">
 
