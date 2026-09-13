@@ -745,7 +745,7 @@ h2{
   transform:scale(1.025);
 }
 
-/* KHUSUS PROJECT 2: Rasio 1:1, Utuh Tanpa Crop, Background Gelap Pas */
+/* KHUSUS PROJECT 2: Rasio 1:1, Utuh & Gelap Pas */
 .project-feature-contain {
   object-fit: contain;
   padding: 10px;
@@ -774,16 +774,12 @@ h2{
     );
 }
 
-/* Tombol Watch Demo Transparan (Glassmorphism) */
+/* Tombol Watch Demo di Bawah Judul */
 .project-feature-btn {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  z-index: 5;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 7px 14px;
+  padding: 6px 14px;
   background: rgba(6, 16, 29, 0.65);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(56, 189, 248, 0.4);
@@ -792,8 +788,10 @@ h2{
   font-size: 11px;
   border-radius: 999px;
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,.4);
+  box-shadow: 0 4px 15px rgba(0,0,0,.3);
   transition: all .25s ease;
+  margin-bottom: 12px;
+  pointer-events: auto;
 }
 
 .project-feature-btn:hover {
@@ -832,12 +830,28 @@ h2{
   width:100%;
 
   max-width:100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-feature-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-feature-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .project-feature-content h3{
   margin:0 0 10px;
 
-  font-size:clamp(18px,1.7vw,24px);
+  font-size:clamp(17px,1.6vw,22px);
 
   line-height:1.2;
 
@@ -871,7 +885,7 @@ h2{
 }
 
 .project-feature-content p{
-  margin:9px 0 0;
+  margin:0 0 12px 0;
 
   color:#d5dfeb;
 
@@ -884,7 +898,7 @@ h2{
 
 
 /* =========================================================
-   PROJECT 3
+   PROJECT 3 (SUVIFOR)
 ========================================================= */
 
 .project-normal{
@@ -1693,20 +1707,27 @@ footer{
 
         <div class="project-feature-overlay">
           <div class="project-feature-content">
-            <h3>2-Axis Automatic UAV Antenna Tracker</h3>
-            <div class="project-tags">
-              <span class="tag">Embedded</span>
-              <span class="tag">Control</span>
-              <span class="tag">UAV</span>
+            
+            <div class="project-feature-top">
+              <h3>2-Axis Automatic UAV Antenna Tracker</h3>
             </div>
-            <p>PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk</p>
+
+            <div class="project-feature-bottom">
+              <p>PID · PSO · MATLAB · Arduino · ESP32 · Pixhawk</p>
+              <div class="project-tags">
+                <span class="tag">Embedded</span>
+                <span class="tag">Control</span>
+                <span class="tag">UAV</span>
+              </div>
+            </div>
+
           </div>
         </div>
 
       </article>
 
 
-      <!-- PROJECT 2: Prototipe Kunci Sepeda Motor Berbasis RFID (Rasio 1:1, Utuh & Gelap Pas) -->
+      <!-- PROJECT 2: Prototipe Kunci Sepeda Motor Berbasis RFID -->
 
       <article class="project project-feature reveal">
 
@@ -1721,38 +1742,26 @@ footer{
 
           <div class="project-feature-content">
 
-            <h3>
-              Prototipe Kunci Sepeda Motor Berbasis RFID
-            </h3>
-
-            <div class="project-tags">
-
-              <span class="tag">
-                Embedded
-              </span>
-
-              <span class="tag">
-                Security
-              </span>
-
-              <span class="tag">
-                IoT
-              </span>
-
+            <div class="project-feature-top">
+              <h3>Prototipe Kunci Sepeda Motor Berbasis RFID</h3>
+              <!-- Tombol Watch Demo di Bawah Judul -->
+              <a href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" target="_blank" rel="noopener" class="project-feature-btn">
+                ▶ Watch Demo
+              </a>
             </div>
 
-            <p>
-              Arduino · RFID RC522 · Relay · Buzzer · Perancangan Sistem Keamanan Kendaraan
-            </p>
+            <div class="project-feature-bottom">
+              <p>Arduino · RFID RC522 · Relay · Buzzer · Perancangan Sistem Keamanan Kendaraan</p>
+              <div class="project-tags">
+                <span class="tag">Embedded</span>
+                <span class="tag">Security</span>
+                <span class="tag">IoT</span>
+              </div>
+            </div>
 
           </div>
 
         </div>
-
-        <!-- Tombol Watch Demo Transparan -->
-        <a href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" target="_blank" rel="noopener" class="project-feature-btn">
-          ▶ Watch Demo
-        </a>
 
       </article>
 
