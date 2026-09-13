@@ -745,65 +745,90 @@ h2{
   transition:transform .6s ease;
 }
 
-/* =========================================================
-   PROJECT 2 CUSTOM (SKEMA RFID UTUH & LEBIH JELAS)
-========================================================= */
-
-.project-feature-contain {
-  object-fit: contain;
-  padding: 16px;
-  background: #06101d;
+.project-feature:hover .project-feature-media{
+  transform:scale(1.025);
 }
 
-.project-feature:hover .project-feature-contain {
-  transform: scale(1.025);
-}
+.project-feature-overlay{
+  position:absolute;
 
-.project-feature-overlay-rfid {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 22px;
-  pointer-events: none;
-  background: 
+  inset:0;
+
+  z-index:2;
+
+  display:flex;
+
+  align-items:flex-start;
+
+  justify-content:flex-start;
+
+  padding:22px;
+
+  pointer-events:none;
+
+  background:
     linear-gradient(
       180deg,
-      rgba(7, 17, 31, 0.90) 0%,
-      rgba(7, 17, 31, 0.65) 45%,
-      rgba(7, 17, 31, 0.85) 100%
+      rgba(7,17,31,.95) 0%,
+      rgba(7,17,31,.85) 60%,
+      rgba(7,17,31,.70) 100%
     );
 }
 
-/* Tombol Watch Demo Transparan (Glassmorphism) */
-.project-feature-btn {
-  position: absolute;
-  bottom: 18px;
-  right: 18px;
-  z-index: 5;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 14px;
-  background: rgba(7, 17, 31, 0.45);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(56, 189, 248, 0.4);
-  color: #eaf2fb;
-  font-weight: 600;
-  font-size: 11px;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0,0,0,.3);
-  transition: all .25s ease;
+.project-feature-content{
+  width:100%;
+
+  max-width:100%;
 }
 
-.project-feature-btn:hover {
-  background: rgba(56, 189, 248, 0.25);
-  border-color: #38bdf8;
-  transform: translateY(-2px);
+.project-feature-content h3{
+  margin:0 0 10px;
+
+  font-size:clamp(18px,1.7vw,24px);
+
+  line-height:1.2;
+
+  color:#fff;
+
+  text-shadow:0 2px 10px rgba(0,0,0,.4);
 }
+
+.project-tags{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:5px;
+}
+
+.project-tags .tag{
+  margin:0;
+
+  padding:4px 8px;
+
+  color:#fff;
+
+  border-color:rgba(255,255,255,.28);
+
+  background:rgba(0,0,0,.30);
+
+  backdrop-filter:blur(7px);
+
+  font-size:10px;
+}
+
+.project-feature-content p{
+  margin:9px 0 0;
+
+  color:#d5dfeb;
+
+  font-size:11px;
+
+  line-height:1.45;
+
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
+}
+
 
 /* =========================================================
    PROJECT 3
@@ -1978,14 +2003,15 @@ footer{
       </article>
 
 
-      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID (With Watch Demo Button) -->
+      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID (Full Cover, Darker Overlay, Transparent Watch Demo Button) -->
 
       <article class="project project-feature reveal">
 
         <img 
           src="foto/rfid-project.png" 
-          alt="Prototipe Kunci Sepeda Motor Berbasis RFID" 
-          class="project-feature-media project-feature-contain"
+          alt="Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID" 
+          class="project-feature-media"
+          style="object-fit: cover; object-position: center;"
           loading="lazy"
         >
 
@@ -1995,7 +2021,7 @@ footer{
           <div class="project-feature-content">
 
             <h3>
-              Prototipe Kunci Sepeda Motor Berbasis RFID
+              Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID untuk Peningkatan Keamanan
             </h3>
 
             <div class="project-tags">
@@ -2022,14 +2048,14 @@ footer{
 
         </div>
 
-        <!-- Tombol kecil di pojok bawah untuk menonton video YouTube -->
+        <!-- Tombol Transparan di Pojok Kanan Bawah untuk Nonton Video YouTube -->
         <a 
           href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" 
           target="_blank" 
           rel="noopener" 
-          style="position: absolute; bottom: 18px; right: 18px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(56, 189, 248, 0.9); color: #06101d; font-weight: 700; font-size: 11px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,.4); transition: transform .2s ease, background .2s ease;"
-          onmouseover="this.style.transform='translateY(-2px)'; this.style.background='#38bdf8';"
-          onmouseout="this.style.transform='none'; this.style.background='rgba(56, 189, 248, 0.9)';"
+          style="position: absolute; bottom: 18px; right: 18px; z-index: 5; display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; background: rgba(7, 17, 31, 0.45); backdrop-filter: blur(8px); border: 1px solid rgba(56, 189, 248, 0.4); color: #eaf2fb; font-weight: 600; font-size: 11px; border-radius: 999px; text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,.3); transition: all .25s ease;"
+          onmouseover="this.style.background='rgba(56, 189, 248, 0.25)'; this.style.borderColor='#38bdf8'; this.style.transform='translateY(-2px)';"
+          onmouseout="this.style.background='rgba(7, 17, 31, 0.45)'; this.style.borderColor='rgba(56, 189, 248, 0.4)'; this.style.transform='none';"
         >
           ▶ Watch Demo
         </a>
