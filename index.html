@@ -745,19 +745,8 @@ h2{
   transition:transform .6s ease;
 }
 
-.project-feature:hover .project-feature-media,
-.project-feature:hover .project-feature-bg{
+.project-feature:hover .project-feature-media{
   transform:scale(1.025);
-}
-
-.project-feature-bg{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  transition:transform .6s ease;
 }
 
 .project-feature-overlay{
@@ -785,24 +774,6 @@ h2{
       rgba(7,17,31,.18) 40%,
       transparent 65%,
       rgba(7,17,31,.15) 100%
-    );
-}
-
-.project-feature-overlay-rfid{
-  position:absolute;
-  inset:0;
-  z-index:2;
-  display:flex;
-  align-items:flex-start;
-  justify-content:flex-start;
-  padding:22px;
-  pointer-events:none;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(7,17,31,.78) 0%,
-      rgba(7,17,31,.45) 45%,
-      rgba(7,17,31,.78) 100%
     );
 }
 
@@ -2034,26 +2005,29 @@ footer{
       </article>
 
 
-      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID -->
+      <!-- PROJECT 2: Sistem Pemutus Arus Kunci Sepeda Motor Berbasis RFID (YouTube Link) -->
 
       <article class="project project-feature reveal">
 
+        <a href="https://youtu.be/Zn0MyZrQXsU?si=sg4BGs8n80qym147" target="_blank" rel="noopener" style="position: absolute; inset: 0; z-index: 3; display: block;" title="Tonton Video Penjelasan di YouTube"></a>
+
         <img 
           src="foto/rfid-project.png" 
-          alt="Prototipe Kunci Sepeda Motor Berbasis RFID" 
-          class="project-feature-bg"
+          alt="Prototipe Kunci Sepeda Motor Berbasis RFID (KTP)" 
+          class="project-feature-media"
           loading="lazy"
         >
 
-        <div class="project-feature-overlay-rfid">
+
+        <div class="project-feature-overlay">
 
           <div class="project-feature-content">
 
             <h3>
-              Prototipe Kunci Sepeda Motor Berbasis RFID
+             Prototipe Kunci Sepeda Motor Berbasis RFID (KTP)
             </h3>
 
-            <div class="project-tags" style="margin-bottom: 8px;">
+            <div class="project-tags">
 
               <span class="tag">
                 Embedded
